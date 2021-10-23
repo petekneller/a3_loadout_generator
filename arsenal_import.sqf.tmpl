@@ -8,55 +8,100 @@ removeBackpack this;
 removeHeadgear this;
 removeGoggles this;
 
-comment "Add weapons...";
+comment "Add weapons";
+comment "-----------";
+
+{% if config['primary'] and config['primary']['name']  %}
 comment "Primary";
 this addWeapon "{{ config['primary']['name'] }}";
-this addPrimaryWeaponItem "{{ config['primary']['rail'] }}";
-this addPrimaryWeaponItem "{{ config['primary']['sight'] }}";
-this addPrimaryWeaponItem "{{ config['primary']['bipod'] }}";
-this addPrimaryWeaponItem "{{ config['primary']['magazine'] }}";
+{% if config['primary']['rail'] %}this addPrimaryWeaponItem "{{ config['primary']['rail'] }}";{% endif +%}
+{% if config['primary']['sight'] %}this addPrimaryWeaponItem "{{ config['primary']['sight'] }}";{% endif +%}
+{% if config['primary']['bipod'] %}this addPrimaryWeaponItem "{{ config['primary']['bipod'] }}";{% endif +%}
+{% if config['primary']['muzzle'] %}this addPrimaryWeaponItem "{{ config['primary']['muzzle'] }}";{% endif +%}
+{% if config['primary']['magazine'] %}this addPrimaryWeaponItem "{{ config['primary']['magazine'] }}";{% endif +%}
+{% else %}
+comment "No primary found";
+{% endif %}
 
+{% if config['secondary'] and config['secondary']['name']  %}
 comment "Secondary";
-this addWeapon "{{ config['secondary']['weapon'] }}";
-this addSecondaryWeaponItem "{{ config['secondary']['rail'] }}";
-this addSecondaryWeaponItem "{{ config['secondary']['sight'] }}";
-this addSecondaryWeaponItem "{{ config['secondary']['bipod'] }}";
-this addSecondaryWeaponItem "{{ config['secondary']['magazine'] }}";
+this addWeapon "{{ config['secondary']['name'] }}";
+{% if config['secondary']['rail'] %}this addSecondaryWeaponItem "{{ config['secondary']['rail'] }}";{% endif +%}
+{% if config['secondary']['sight'] %}this addSecondaryWeaponItem "{{ config['secondary']['sight'] }}";{% endif +%}
+{% if config['secondary']['bipod'] %}this addSecondaryWeaponItem "{{ config['secondary']['bipod'] }}";{% endif +%}
+{% if config['secondary']['muzzle'] %}this addSecondaryWeaponItem "{{ config['secondary']['muzzle'] }}";{% endif +%}
+{% if config['secondary']['magazine'] %}this addSecondaryWeaponItem "{{ config['secondary']['magazine'] }}";{% endif +%}
+{% else %}
+comment "No secondary found";
+{% endif %}
 
 comment "Add containers";
-this forceAddUniform "{{ config['uniform']['name'] }}";
-this addVest "{{ config['vest']['name'] }}";
-this addBackpack "{{ config['backpack']['name'] }}";
+comment "--------------";
 
+{% if config['uniform'] and config['uniform']['name'] %}
+comment "Uniform";
+this forceAddUniform "{{ config['uniform']['name'] }}";
+{% else %}
+comment "No uniform found";
+{% endif %}
+
+{% if config['vest'] and config['vest']['name'] %}
+comment "Vest";
+this addVest "{{ config['vest']['name'] }}";
+{% else %}
+comment "No vest found";
+{% endif %}
+
+{% if config['backpack'] and config['backpack']['name'] %}
+comment "Backpack";
+this addBackpack "{{ config['backpack']['name'] }}";
+{% else %}
+comment "No backpack found";
+{% endif %}
+
+{% if config['binoculars'] %}
 comment "Add binoculars";
 this addWeapon "{{ config['binoculars'] }}";
+{% else %}
+comment "No binoculars found";
+{% endif %}
 
-comment "Add items to containers...";
-comment "Uniform"
+comment "Add items to containers";
+comment "-----------------------";
+
+{% if config['uniform'] and config['uniform']['contents'] %}
+comment "Uniform";
 {% for item in config['uniform']['contents'] %}
 for "_i" from 1 to {{item['qty']}} do {this addItemToUniform "{{ item['name'] }}";};
 {% endfor %}
+{% endif %}
 
-comment "Vest"
+{% if config['vest'] and config['vest']['contents'] %}
+comment "Vest";
 {% for item in config['vest']['contents'] %}
 for "_i" from 1 to {{item['qty']}} do {this addItemToVest "{{ item['name'] }}";};
 {% endfor %}
+{% endif %}
 
-comment "Backpack"
+{% if config['backpack'] and config['backpack']['contents'] %}
+comment "Backpack";
 {% for item in config['backpack']['contents'] %}
 for "_i" from 1 to {{item['qty']}} do {this addItemToBackpack "{{ item['name'] }}";};
 {% endfor %}
+{% endif %}
 
-this addHeadgear "{{ config['headgear'] }}";
-this addGoggles "{{ config['facewear'] }}";
+{% if config['headgear'] %}this addHeadgear "{{ config['headgear'] }}";{% endif +%}
+{% if config['facewear'] %}this addGoggles "{{ config['facewear'] }}";{% endif +%}
 
 comment "Add items";
-this linkItem "{{ config['map'] }}";
-this linkItem "{{ config['compass'] }}";
-this linkItem "{{ config['watch'] }}";
-this linkItem "{{ config['radio'] }}";
-this linkItem "{{ config['terminal'] }}";
+comment "---------";
+{% if config['map'] %}this linkItem "{{ config['map'] }}";{% endif +%}
+{% if config['compass'] %}this linkItem "{{ config['compass'] }}";{% endif +%}
+{% if config['watch'] %}this linkItem "{{ config['watch'] }}";{% endif +%}
+{% if config['radio'] %}this linkItem "{{ config['radio'] }}";{% endif +%}
+{% if config['terminal'] %}this linkItem "{{ config['terminal'] }}";{% endif +%}
 
 comment "Set identity";
-[this,"Default","{{ config['identity'] }}"] call BIS_fnc_setIdentity;
-[this,"{{ config['insignia'] }}"] call BIS_fnc_setUnitInsignia;
+comment "------------";
+{% if config['identity'] %}[this,"Default","{{ config['identity'] }}"] call BIS_fnc_setIdentity;{% endif +%}
+{% if config['insignia'] %}[this,"{{ config['insignia'] }}"] call BIS_fnc_setUnitInsignia;{% endif +%}
