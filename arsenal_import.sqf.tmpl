@@ -1,0 +1,62 @@
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add weapons...";
+comment "Primary";
+this addWeapon "{{ config['primary']['name'] }}";
+this addPrimaryWeaponItem "{{ config['primary']['rail'] }}";
+this addPrimaryWeaponItem "{{ config['primary']['sight'] }}";
+this addPrimaryWeaponItem "{{ config['primary']['bipod'] }}";
+this addPrimaryWeaponItem "{{ config['primary']['magazine'] }}";
+
+comment "Secondary";
+this addWeapon "{{ config['secondary']['weapon'] }}";
+this addSecondaryWeaponItem "{{ config['secondary']['rail'] }}";
+this addSecondaryWeaponItem "{{ config['secondary']['sight'] }}";
+this addSecondaryWeaponItem "{{ config['secondary']['bipod'] }}";
+this addSecondaryWeaponItem "{{ config['secondary']['magazine'] }}";
+
+comment "Add containers";
+this forceAddUniform "{{ config['uniform']['name'] }}";
+this addVest "{{ config['vest']['name'] }}";
+this addBackpack "{{ config['backpack']['name'] }}";
+
+comment "Add binoculars";
+this addWeapon "{{ config['binoculars'] }}";
+
+comment "Add items to containers...";
+comment "Uniform"
+{% for item in config['uniform']['contents'] %}
+for "_i" from 1 to {{item['qty']}} do {this addItemToUniform "{{ item['name'] }}";};
+{% endfor %}
+
+comment "Vest"
+{% for item in config['vest']['contents'] %}
+for "_i" from 1 to {{item['qty']}} do {this addItemToVest "{{ item['name'] }}";};
+{% endfor %}
+
+comment "Backpack"
+{% for item in config['backpack']['contents'] %}
+for "_i" from 1 to {{item['qty']}} do {this addItemToBackpack "{{ item['name'] }}";};
+{% endfor %}
+
+this addHeadgear "{{ config['headgear'] }}";
+this addGoggles "{{ config['facewear'] }}";
+
+comment "Add items";
+this linkItem "{{ config['map'] }}";
+this linkItem "{{ config['compass'] }}";
+this linkItem "{{ config['watch'] }}";
+this linkItem "{{ config['radio'] }}";
+this linkItem "{{ config['terminal'] }}";
+
+comment "Set identity";
+[this,"Default","{{ config['identity'] }}"] call BIS_fnc_setIdentity;
+[this,"{{ config['insignia'] }}"] call BIS_fnc_setUnitInsignia;
