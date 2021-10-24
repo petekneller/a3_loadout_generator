@@ -12,18 +12,18 @@ import yaml
 config_dir_name = sys.argv[1]
 output_dir_name = sys.argv[2]
 
-def read_config(dir_entry):
+def read_file(dir_entry):
     print(f"Reading [{dir_entry}]")
 
     try:
         with open(dir_entry, "r") as config_file:
-            config = yaml.safe_load(config_file)
-            return (config['name'], config)
+            configs = yaml.safe_load_all(config_file)
+            return [(config['name'], config) for config in configs]
 
     except Exception as exc:
         print(f"Exception raised in [{dir_entry}]: {exc}")
 
-configs = dict([read_config(entry) for entry in Path(config_dir_name).iterdir()])
+configs = dict([config for entry in Path(config_dir_name).iterdir() for config in read_file(entry)])
 env = Environment(
     loader=FileSystemLoader("."),
     keep_trailing_newline=True,
