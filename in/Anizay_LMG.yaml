@@ -1,4 +1,6 @@
-uniform: 
+name: Anizay_LMG
+
+uniform:
   name: rhs_uniform_acu_oefcp
   contents:
     - name: rhsusf_patrolcap_ocp

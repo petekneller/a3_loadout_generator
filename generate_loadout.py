@@ -4,26 +4,35 @@
 # - pyyaml
 # - jinja2
 
+from jinja2 import Environment, FileSystemLoader
+from pathlib import Path
 import sys
 import yaml
-from jinja2 import Environment, FileSystemLoader
 
-config_name = sys.argv[1];
+config_dir_name = sys.argv[1]
+output_dir_name = sys.argv[2]
 
-try:
-    with open("in/{}.yaml".format(config_name), "r") as config_file:
-        config = yaml.safe_load(config_file)
+def read_config(dir_entry):
+    print(f"Reading: {dir_entry}")
 
-        env = Environment(
-            loader=FileSystemLoader("."),
-            keep_trailing_newline=True,
-            trim_blocks=True,
-            lstrip_blocks=True
-        )
-        template = env.get_template("arsenal_import.sqf.tmpl")
+    try:
+        with open(dir_entry, "r") as config_file:
+            return yaml.safe_load(config_file)
 
-        with open("out/{}.sqf".format(config_name), "w") as output_file:
-            output_file.write(template.render(config=config))
+    except Exception as exc:
+        print(f"Exception raised in {dir_entry}: {exc}")
 
-except Exception as exc:
-    print(f"Exception raised: {exc}")
+configs = [read_config(entry) for entry in Path(config_dir_name).iterdir()]
+env = Environment(
+    loader=FileSystemLoader("."),
+    keep_trailing_newline=True,
+    trim_blocks=True,
+    lstrip_blocks=True
+)
+template = env.get_template("arsenal_import.sqf.tmpl")
+
+for config in configs:
+    file_name = Path(output_dir_name) / config['name']
+    with open(file_name, "w") as output_file:
+        print(f"Writing loadout: {file_name}")
+        output_file.write(template.render(config=config))
