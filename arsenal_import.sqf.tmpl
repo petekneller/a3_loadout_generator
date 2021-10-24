@@ -71,22 +71,22 @@ comment "-----------------------";
 
 {% if config['uniform'] and config['uniform']['contents'] %}
 comment "Uniform";
-{% for item in config['uniform']['contents'] %}
-for "_i" from 1 to {{item['qty']}} do {this addItemToUniform "{{ item['name'] }}";};
+{% for item, qty in config['uniform']['contents'].items() %}
+for "_i" from 1 to {{ qty }} do {this addItemToUniform "{{ item }}";};
 {% endfor %}
 {% endif %}
 
 {% if config['vest'] and config['vest']['contents'] %}
 comment "Vest";
-{% for item in config['vest']['contents'] %}
-for "_i" from 1 to {{item['qty']}} do {this addItemToVest "{{ item['name'] }}";};
+{% for item, qty in config['vest']['contents'].items() %}
+for "_i" from 1 to {{ qty }} do {this addItemToVest "{{ item }}";};
 {% endfor %}
 {% endif %}
 
 {% if config['backpack'] and config['backpack']['contents'] %}
 comment "Backpack";
-{% for item in config['backpack']['contents'] %}
-for "_i" from 1 to {{item['qty']}} do {this addItemToBackpack "{{ item['name'] }}";};
+{% for item, qty in config['backpack']['contents'].items() %}
+for "_i" from 1 to {{ qty }} do {this addItemToBackpack "{{ item }}";};
 {% endfor %}
 {% endif %}
 

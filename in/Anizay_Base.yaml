@@ -1,0 +1,20 @@
+name: Anizay_Base
+
+uniform:
+  name: rhs_uniform_acu_oefcp
+  contents:
+    rhsusf_patrolcap_ocp: 1
+    FirstAidKit: 4
+
+headgear: rhsusf_ach_helmet_headset_ocp
+facewear: rhsusf_shemagh_tan
+
+# Ancillary stuff
+binoculars: Rangefinder
+map: ItemMap
+compass: ItemCompass
+watch: ItemWatch
+radio: TFAR_anprc152
+terminal: ItemGPS
+identity: male08eng
+insignia: EnochJointTraining

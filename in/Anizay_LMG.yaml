@@ -1,15 +1,5 @@
 name: Anizay_LMG
-
-uniform:
-  name: rhs_uniform_acu_oefcp
-  contents:
-    - name: rhsusf_patrolcap_ocp
-      qty: 1
-    - name: FirstAidKit
-      qty: 4
-
-headgear: rhsusf_ach_helmet_headset_ocp
-facewear: rhsusf_shemagh_tan
+extends: Anizay_Base
 
 vest:
   name: rhsusf_iotv_ocp_SAW
@@ -24,15 +14,3 @@ primary:
   sight: rhsusf_acc_ACOG_RMR
   muzzle: ""
   bipod: rhsusf_acc_saw_bipod
-
-secondary:
-
-# Ancillary stuff
-binoculars: Rangefinder
-map: ItemMap
-compass: ItemCompass
-watch: ItemWatch
-radio: TFAR_anprc152
-terminal: ItemGPS
-identity: male08eng
-insignia: EnochJointTraining
