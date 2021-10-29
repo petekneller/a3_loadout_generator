@@ -26,13 +26,25 @@ comment "No primary found";
 {% if config['secondary'] and config['secondary']['name']  %}
 comment "Secondary";
 this addWeapon "{{ config['secondary']['name'] }}";
-{% if config['secondary']['rail'] %}this addSecondaryWeaponItem "{{ config['secondary']['rail'] }}";{% endif +%}
-{% if config['secondary']['sight'] %}this addSecondaryWeaponItem "{{ config['secondary']['sight'] }}";{% endif +%}
-{% if config['secondary']['bipod'] %}this addSecondaryWeaponItem "{{ config['secondary']['bipod'] }}";{% endif +%}
-{% if config['secondary']['muzzle'] %}this addSecondaryWeaponItem "{{ config['secondary']['muzzle'] }}";{% endif +%}
-{% if config['secondary']['magazine'] %}this addSecondaryWeaponItem "{{ config['secondary']['magazine'] }}";{% endif +%}
+{% if config['secondary']['rail'] %}this addHandgunItem "{{ config['secondary']['rail'] }}";{% endif +%}
+{% if config['secondary']['sight'] %}this addHandgunItem "{{ config['secondary']['sight'] }}";{% endif +%}
+{% if config['secondary']['bipod'] %}this addHandgunItem "{{ config['secondary']['bipod'] }}";{% endif +%}
+{% if config['secondary']['muzzle'] %}this addHandgunItem "{{ config['secondary']['muzzle'] }}";{% endif +%}
+{% if config['secondary']['magazine'] %}this addHandgunItem "{{ config['secondary']['magazine'] }}";{% endif +%}
 {% else %}
 comment "No secondary found";
+{% endif %}
+
+{% if config['launcher'] and config['launcher']['name']  %}
+comment "Launcher";
+this addWeapon "{{ config['launcher']['name'] }}";
+{% if config['launcher']['rail'] %}this addSecondaryWeaponItem "{{ config['launcher']['rail'] }}";{% endif +%}
+{% if config['launcher']['sight'] %}this addSecondaryWeaponItem "{{ config['launcher']['sight'] }}";{% endif +%}
+{% if config['launcher']['bipod'] %}this addSecondaryWeaponItem "{{ config['launcher']['bipod'] }}";{% endif +%}
+{% if config['launcher']['muzzle'] %}this addSecondaryWeaponItem "{{ config['launcher']['muzzle'] }}";{% endif +%}
+{% if config['launcher']['magazine'] %}this addSecondaryWeaponItem "{{ config['launcher']['magazine'] }}";{% endif +%}
+{% else %}
+comment "No launcher found";
 {% endif %}
 
 comment "Add containers";
@@ -103,5 +115,5 @@ comment "---------";
 
 comment "Set identity";
 comment "------------";
-{% if config['identity'] %}[this,"Default","{{ config['identity'] }}"] call BIS_fnc_setIdentity;{% endif +%}
+{% if config['identity'] and config['voice'] %}[this,"{{ config['identity'] }}","{{ config['voice'] }}"] call BIS_fnc_setIdentity;{% endif +%}
 {% if config['insignia'] %}[this,"{{ config['insignia'] }}"] call BIS_fnc_setUnitInsignia;{% endif +%}
