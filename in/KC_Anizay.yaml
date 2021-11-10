@@ -5,21 +5,39 @@ name: KC_Anizay_Base
 uniform:
   name: rhs_uniform_acu_oefcp
   contents:
-    rhsusf_patrolcap_ocp: 1
-    FirstAidKit: 4
+    rhsusf_shemagh_tan: 1 # both goggle/non-goggle shemaghs for day/night
+    FirstAidKit: 2
+    rhsusf_ANPVS_15: 1 # all roles get NVGs
+
+vest:
+  name: rhsusf_iotv_ocp_Rifleman
+  contents:
+    FirstAidKit: 2
+    rhs_mag_m67: 2
+    rhs_mag_an_m8hc: 2
+
+backpack:
+  name: rhsusf_assault_eagleaiii_ocp
+  contents:
+    # basic self/target marking smoke for all roles
+    rhs_mag_m18_purple: 1
+    rhs_mag_m18_red: 1
+    rhs_mag_m18_yellow: 1
+
 
 headgear: rhsusf_ach_helmet_headset_ocp
-facewear: rhsusf_shemagh_tan
+facewear: rhsusf_shemagh_gogg_tan
 
-# Ancillary stuff
 binoculars: Rangefinder
 map: ItemMap
 compass: ItemCompass
 watch: ItemWatch
 radio: TFAR_anprc152
 terminal: ItemGPS
-identity: male08eng
-insignia: EnochJointTraining
+
+identity: WhiteHead_15
+insignia: BI
+voice: male01engb
 
 ---
 
@@ -28,9 +46,14 @@ extends: KC_Anizay_Base
 
 vest:
   name: rhsusf_iotv_ocp_SAW
+  contents:
+    rhsusf_100Rnd_556x45_mixed_soft_pouch_coyote: 2
 
 backpack:
-  name: rhsusf_assault_eagleaiii_ocp
+  contents:
+    rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote: 3
+    rhs_mag_30Rnd_556x45_M855A1_EPM_Tracer_Red: 3 # backup box mags
+    rhs_mag_m67: 2
 
 primary:
   name: rhs_weap_m249_pip_S
@@ -39,3 +62,100 @@ primary:
   sight: rhsusf_acc_ACOG_RMR
   muzzle: ""
   bipod: rhsusf_acc_saw_bipod
+
+---
+
+name: KC_Anizay_Pilot
+extends: KC_Anizay_Base
+
+uniform:
+  contents:
+    rhsusf_shemagh_tan: 0
+    FirstAidKit: 2
+    rhsusf_ANPVS_15: 1
+
+headgear: rhsusf_hgu56p_visor_tan
+facewear: 
+
+secondary:
+  name: rhsusf_weap_MP7A2_folded
+  magazine: rhsusf_mag_40Rnd_46x30_FMJ
+
+vest:
+  name: rhsusf_mbav_light
+  contents:
+    rhsusf_mag_40Rnd_46x30_FMJ: 4
+    # pilots don't really need smoke screening
+    rhs_mag_an_m8hc: 0
+    # but do need self-marking
+    rhs_mag_m18_purple: 2
+
+
+backpack:
+  name:
+
+---
+
+name: KC_Anizay_Rifleman
+extends: KC_Anizay_Base
+
+primary:
+  name: rhs_weap_hk416d10_LMT_d
+  magazine: rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan
+  rail: rhsusf_acc_anpeq15side
+  sight: rhsusf_acc_ACOG_RMR
+  muzzle: rhsusf_acc_nt4_tan
+  bipod: ""
+
+vest:
+  contents:
+    rhs_mag_m67: 4
+    rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan: 6
+
+backpack:
+  contents:
+    rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan: 10
+
+---
+
+name: KC_Anizay_Grenadier
+extends: KC_Anizay_Rifleman
+
+secondary:
+  name: rhs_weap_M320
+  magazine: rhs_mag_M433_HEDP
+
+vest:
+  name: rhsusf_iotv_ocp_Grenadier
+  contents:
+    rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan: 4
+    rhs_mag_M433_HEDP: 6
+
+backpack:
+  contents:
+    rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan: 8
+    rhs_mag_M433_HEDP: 16
+    # for the rare need of a smokescreen
+    rhs_mag_m714_White: 2
+    # target marking - rare as a vanilla grenadier
+    rhs_mag_m713_Red: 2
+    rhs_mag_m716_yellow: 2
+
+---
+
+name: KC_Anizay_RTO
+extends: KC_Anizay_Grenadier
+
+backpack:
+  name: TFAR_mr3000_multicam
+  contents:
+    # reduce load of mags & grenades
+    rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan: 4
+    rhs_mag_M433_HEDP: 0
+    rhs_mag_m714_White: 0
+    # greater need than other roles for smoke marking, both thrown and 40mm
+    rhs_mag_m18_purple: 2
+    rhs_mag_m18_red: 2
+    rhs_mag_m18_yellow: 2
+    rhs_mag_m713_Red: 3
+    rhs_mag_m716_yellow: 3
