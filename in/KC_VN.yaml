@@ -1,0 +1,157 @@
+---
+
+name: KC_VN_UniformGI
+
+uniform:
+  name: vn_b_uniform_macv_01_01
+
+headgear: vn_b_helmet_m1_07_01
+facewear: ""
+
+---
+
+name: KC_VN_UniformSF
+
+uniform:
+  name: vn_b_uniform_macv_06_05
+
+headgear: vn_b_boonie_05_05
+facewear: vn_b_scarf_01_03
+
+---
+
+name: KC_VN_Base
+extends: KC_VN_UniformGI
+#extends: KC_VN_UniformSF
+
+binoculars: vn_mk21_binocs
+map: vn_b_item_map
+compass: vn_b_item_compass_sog
+watch: vn_b_item_watch
+radio: vn_b_item_radio_urc10
+terminal: ItemGPS
+
+identity: vn_b_WhiteHead_15_11
+insignia: BI
+voice: male01gre
+
+secondary: # everybody gets an .45 with silencer and flashlight
+  name: vn_mx991_m1911
+  magazine: vn_m1911_mag
+
+uniform:
+  contents:
+    vn_s_m1911: 1 # M1911 silencer
+    vn_m1911_mag: 4
+
+backpack:
+  contents:
+    # basic smoke marking
+    vn_m18_red_mag: 1
+    vn_m18_purple_mag: 1
+    vn_m18_yellow_mag: 1
+
+---
+
+name: KC_VN_Rifleman
+extends: KC_VN_Base
+
+primary:
+  name: vn_m2carbine_gl
+  magazine: vn_carbine_30_mag
+
+launcher:
+  name: vn_m72
+  magazine: vn_m72_mag
+
+uniform:
+  contents:
+    FirstAidKit: 4
+
+vest:
+  name: vn_b_vest_usarmy_02
+  contents:
+    vn_carbine_30_mag: 6
+
+backpack:
+  name: vn_b_pack_lw_01
+  contents:
+    vn_carbine_30_mag: 10
+    vn_v40_grenade_mag: 5
+    vn_m34_grenade_mag: 4
+    vn_mine_m18_x3_mag: 1 # some claymores for Wrath
+    vn_m60_100_mag: 1 # squad M60
+    vn_m127_mag: 5 # white flares
+
+
+---
+
+name: KC_VN_Grenadier
+extends: KC_VN_Rifleman
+
+uniform:
+  contents:
+    vn_m1911_mag: 0 # no point in carrying .45 ACP when handgun is an M79
+    vn_40mm_m381_he_mag: 3
+    vn_40mm_m576_buck_mag: 3
+
+secondary:
+  name: vn_m79_p
+  magazine: vn_40mm_m381_he_mag
+
+backpack:
+  contents:
+    vn_carbine_30_mag: 2 # trade mags for grenades
+    vn_v40_grenade_mag: 3
+    vn_m34_grenade_mag: 2
+    vn_40mm_m381_he_mag: 20
+    vn_40mm_m576_buck_mag: 6
+    vn_40mm_m680_smoke_w_mag: 2
+
+---
+
+name: KC_VN_RTO
+extends: KC_VN_Grenadier
+
+backpack:
+  name: vn_b_pack_lw_06
+  contents:
+    # cut back on offensive grenades to carry RTO pack
+    vn_v40_grenade_mag: 2
+    vn_40mm_m381_he_mag: 6
+    vn_40mm_m576_buck_mag: 4
+    # extended smoke marking
+    vn_m18_red_mag: 2
+    vn_m18_purple_mag: 2
+    vn_m18_yellow_mag: 2
+    vn_40mm_m682_smoke_r_mag: 2
+    vn_40mm_m716_smoke_y_mag: 2
+    vn_40mm_m717_smoke_p_mag: 2
+
+---
+
+name: KC_VN_MG
+extends: KC_VN_Base
+
+primary:
+  name: vn_rpd_shorty_01
+  magazine: vn_rpd_125_mag
+
+uniform:
+  contents:
+    FirstAidKit: 2
+
+vest:
+  name: vn_b_vest_sog_05
+  contents:
+    FirstAidKit: 2
+    vn_m34_grenade_mag: 2
+    vn_v40_grenade_mag: 2
+    vn_rpd_125_mag: 2
+
+backpack:
+  name: vn_b_pack_trp_01_02
+  contents:
+    vn_m34_grenade_mag: 2
+    vn_v40_grenade_mag: 4
+    vn_rpd_125_mag: 5
