@@ -1,0 +1,156 @@
+name: SoggyTime_M63LMG
+
+identity: vn_b_GreekHead_A3_04_10
+insignia: ""
+voice: male10eng
+
+headgear: vn_b_bandana_04
+facewear: vn_b_scarf_01_01
+
+binoculars: vn_mk21_binocs
+map: vn_b_item_map
+compass: vn_b_item_compass_sog
+watch: vn_b_item_watch
+radio: vn_b_item_radio_urc10
+terminal: ""
+
+primary:
+  name: vn_m63a_lmg
+  magazine: vn_m63a_100_t_mag
+
+secondary: # everybody gets an .45 with silencer and flashlight
+  name: vn_mx991_m1911
+  magazine: vn_m1911_mag
+
+uniform:
+  name: vn_b_uniform_macv_01_03
+  contents:
+    vn_s_m1911: 1 # M1911 silencer
+    FirstAidKit: 3
+    vn_m1911_mag: 4
+  
+vest:
+  name: vn_b_vest_sog_05
+  contents:
+    FirstAidKit: 3
+    vn_m34_grenade_mag: 4
+    vn_v40_grenade_mag: 4
+    vn_m63a_100_t_mag: 2
+
+
+backpack:
+  name: vn_b_pack_trp_01
+  contents:
+    taro_vs17_panel: 1
+    FirstAidKit: 3
+    vn_m34_grenade_mag: 2
+    vn_v40_grenade_mag: 2
+    ACE_M14: 2 # demo grenades
+    vn_mine_m14_mag: 10 # toe poppers
+    vn_m63a_100_t_mag: 7
+
+---
+
+name: SoggyTime_M63A
+
+identity: vn_b_GreekHead_A3_04_10
+insignia: ""
+voice: male10eng
+
+headgear: vn_b_bandana_04
+facewear: vn_b_scarf_01_01
+
+binoculars: vn_mk21_binocs
+map: vn_b_item_map
+compass: vn_b_item_compass_sog
+watch: vn_b_item_watch
+radio: vn_b_item_radio_urc10
+terminal: ""
+
+primary:
+  name: vn_m63a_cdo
+  magazine: vn_m63a_150_t_mag
+
+secondary: # everybody gets an .45 with silencer and flashlight
+  name: vn_mx991_m1911
+  magazine: vn_m1911_mag
+
+uniform:
+  name: vn_b_uniform_macv_01_03
+  contents:
+    vn_s_m1911: 1 # M1911 silencer
+    FirstAidKit: 3
+    vn_m1911_mag: 4
+  
+vest:
+  name: vn_b_vest_sog_05
+  contents:
+    FirstAidKit: 3
+    vn_m34_grenade_mag: 4
+    vn_v40_grenade_mag: 4
+    vn_m63a_150_t_mag: 1
+
+
+backpack:
+  name: vn_b_pack_trp_01
+  contents:
+    taro_vs17_panel: 1
+    FirstAidKit: 3
+    vn_m34_grenade_mag: 2
+    vn_v40_grenade_mag: 2
+    ACE_M14: 2 # demo grenades
+    vn_mine_m14_mag: 10 # toe poppers
+    vn_m63a_150_t_mag: 5
+
+---
+
+name: SoggyTime_RPD
+
+identity: vn_b_GreekHead_A3_04_10
+insignia: ""
+voice: male10eng
+
+headgear: vn_b_bandana_04
+facewear: vn_b_scarf_01_01
+
+binoculars: vn_mk21_binocs
+map: vn_b_item_map
+compass: vn_b_item_compass_sog
+watch: vn_b_item_watch
+radio: vn_b_item_radio_urc10
+terminal: ""
+
+primary:
+  name: vn_rpd_shorty_01
+  magazine: vn_rpd_125_mag
+
+secondary: # everybody gets an .45 with silencer and flashlight
+  name: vn_mx991_m1911
+  magazine: vn_m1911_mag
+
+uniform:
+  name: vn_b_uniform_macv_01_03
+  contents:
+    vn_s_m1911: 1 # M1911 silencer
+    FirstAidKit: 3
+    vn_m1911_mag: 4
+  
+vest:
+  name: vn_b_vest_sog_05
+  contents:
+    FirstAidKit: 3
+    vn_m34_grenade_mag: 4
+    vn_v40_grenade_mag: 4
+    vn_rpd_125_mag: 1
+
+
+backpack:
+  name: vn_b_pack_trp_01
+  contents:
+    taro_vs17_panel: 1
+    FirstAidKit: 3
+    vn_m34_grenade_mag: 2
+    vn_v40_grenade_mag: 2
+    ACE_M14: 2 # demo grenades
+    vn_mine_m14_mag: 10 # toe poppers
+    vn_rpd_125_mag: 5
