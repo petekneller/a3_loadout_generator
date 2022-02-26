@@ -20,9 +20,7 @@ facewear: vn_b_scarf_01_03
 
 ---
 
-name: KC_VN_Base
-extends: [KC_VN_UniformGI]
-#extends: [KC_VN_UniformSF]
+name: KC_VN_Basics
 
 binoculars: vn_mk21_binocs
 map: vn_b_item_map
@@ -54,7 +52,7 @@ backpack:
 ---
 
 name: KC_VN_Rifleman
-extends: [KC_VN_Base]
+extends: [KC_VN_Basics]
 
 primary:
   name: vn_m2carbine_gl
@@ -83,11 +81,14 @@ backpack:
     vn_m60_100_mag: 1 # squad M60
     vn_m127_mag: 5 # white flares
 
-
 ---
 
 name: KC_VN_Grenadier
 extends: [KC_VN_Rifleman]
+
+secondary:
+  name: vn_m79_p
+  magazine: vn_40mm_m381_he_mag
 
 uniform:
   contents:
@@ -95,15 +96,13 @@ uniform:
     vn_40mm_m381_he_mag: 3
     vn_40mm_m576_buck_mag: 3
 
-secondary:
-  name: vn_m79_p
-  magazine: vn_40mm_m381_he_mag
-
 backpack:
   contents:
-    vn_carbine_30_mag: 2 # trade mags for grenades
+    # trade mags and thrown grenades for 40mm
+    vn_carbine_30_mag: 2
     vn_v40_grenade_mag: 3
     vn_m34_grenade_mag: 2
+    #
     vn_40mm_m381_he_mag: 20
     vn_40mm_m576_buck_mag: 6
     vn_40mm_m680_smoke_w_mag: 2
@@ -131,7 +130,7 @@ backpack:
 ---
 
 name: KC_VN_MG
-extends: [KC_VN_Base]
+extends: [KC_VN_Basics]
 
 primary:
   name: vn_rpd_shorty_01
@@ -155,3 +154,18 @@ backpack:
     vn_m34_grenade_mag: 2
     vn_v40_grenade_mag: 4
     vn_rpd_125_mag: 5
+
+--- # Concrete loadouts
+
+name: KC_VN_GI_Rifleman
+extends: [KC_VN_UniformGI, KC_VN_Rifleman]
+---
+name: KC_VN_GI_Grenadier
+extends: [KC_VN_UniformGI, KC_VN_Grenadier]
+---
+name: KC_VN_GI_RTO
+extends: [KC_VN_UniformGI, KC_VN_RTO]
+---
+name: KC_VN_SF_MG
+extends: [KC_VN_UniformSF, KC_VN_MG]
+---
