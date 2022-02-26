@@ -23,15 +23,6 @@ def read_file(dir_entry):
     except Exception as exc:
         print(f"Exception raised in [{dir_entry}]: {exc}")
 
-configs = dict([config for entry in Path(config_dir_name).iterdir() for config in read_file(entry)])
-env = Environment(
-    loader=FileSystemLoader("."),
-    keep_trailing_newline=True,
-    trim_blocks=True,
-    lstrip_blocks=True
-)
-template = env.get_template("arsenal_import.sqf.tmpl")
-
 def merge_configs(parent, child):
     out = parent.copy()
     for key in iter(child):
@@ -44,20 +35,35 @@ def merge_configs(parent, child):
 
     return out
 
-def fetch_config(config_name):
+def resolve_config(config_name, configs):
     config = configs[config_name]
     if "extends" in config:
         print(f"Config {config_name} extends [{config['extends']}]")
-        base_config = fetch_config(config['extends'])
+        base_config = resolve_config(config['extends'], configs)
         print(f"Merging base config into [{config_name}]")
         return merge_configs(base_config, config)
     else:
         return config
 
-for config_name in iter(configs):
-    file_name = Path(output_dir_name) / f"{config_name}.sqf"
-    with open(file_name, "w") as output_file:
-        print(f"Processing config [{config_name}]")
-        config = fetch_config(config_name)
-        print(f"Writing loadout [{file_name}]")
-        output_file.write(template.render(config=config))
+def main(config_dir_name, output_dir_name):
+    configs = dict([config
+                    for entry in Path(config_dir_name).iterdir()
+                    for config in read_file(entry)])
+
+    env = Environment(
+        loader=FileSystemLoader("."),
+        keep_trailing_newline=True,
+        trim_blocks=True,
+        lstrip_blocks=True
+    )
+    template = env.get_template("arsenal_import.sqf.tmpl")
+
+    for config_name in iter(configs):
+        file_name = Path(output_dir_name) / f"{config_name}.sqf"
+        with open(file_name, "w") as output_file:
+            print(f"Processing config [{config_name}]")
+            config = resolve_config(config_name, configs)
+            print(f"Writing loadout [{file_name}]")
+            output_file.write(template.render(config=config))
+
+main(config_dir_name, output_dir_name)
