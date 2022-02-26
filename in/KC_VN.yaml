@@ -21,8 +21,8 @@ facewear: vn_b_scarf_01_03
 ---
 
 name: KC_VN_Base
-extends: KC_VN_UniformGI
-#extends: KC_VN_UniformSF
+extends: [KC_VN_UniformGI]
+#extends: [KC_VN_UniformSF]
 
 binoculars: vn_mk21_binocs
 map: vn_b_item_map
@@ -54,7 +54,7 @@ backpack:
 ---
 
 name: KC_VN_Rifleman
-extends: KC_VN_Base
+extends: [KC_VN_Base]
 
 primary:
   name: vn_m2carbine_gl
@@ -87,7 +87,7 @@ backpack:
 ---
 
 name: KC_VN_Grenadier
-extends: KC_VN_Rifleman
+extends: [KC_VN_Rifleman]
 
 uniform:
   contents:
@@ -111,7 +111,7 @@ backpack:
 ---
 
 name: KC_VN_RTO
-extends: KC_VN_Grenadier
+extends: [KC_VN_Grenadier]
 
 backpack:
   name: vn_b_pack_lw_06
@@ -131,7 +131,7 @@ backpack:
 ---
 
 name: KC_VN_MG
-extends: KC_VN_Base
+extends: [KC_VN_Base]
 
 primary:
   name: vn_rpd_shorty_01

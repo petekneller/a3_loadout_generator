@@ -45,7 +45,7 @@ backpack:
 
 ---
 name: SoggyTime_M63LMG
-extends: SoggyTime_Base
+extends: [SoggyTime_Base]
 
 primary:
   name: vn_m63a_lmg
@@ -63,7 +63,7 @@ backpack:
 ---
 
 name: SoggyTime_M63CMD
-extends: SoggyTime_Base
+extends: [SoggyTime_Base]
 
 primary:
   name: vn_m63a_cdo
@@ -81,7 +81,7 @@ backpack:
 ---
 
 name: SoggyTime_RPD
-extends: SoggyTime_Base
+extends: [SoggyTime_Base]
 
 primary:
   name: vn_rpd_shorty_01

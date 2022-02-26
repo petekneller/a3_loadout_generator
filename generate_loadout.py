@@ -4,6 +4,7 @@
 # - pyyaml
 # - jinja2
 
+from functools import reduce
 from jinja2 import Environment, FileSystemLoader
 from pathlib import Path
 import sys
@@ -39,11 +40,12 @@ def resolve_config(config_name, configs):
     config = configs[config_name]
     if "extends" in config:
         print(f"Config {config_name} extends [{config['extends']}]")
-        base_config = resolve_config(config['extends'], configs)
-        print(f"Merging base config into [{config_name}]")
-        return merge_configs(base_config, config)
+        inherited = [resolve_config(base_name, configs) for base_name in config["extends"]]
     else:
-        return config
+        inherited = []
+
+    inherited.append(config)
+    return reduce(merge_configs, inherited)
 
 def main(config_dir_name, output_dir_name):
     configs = dict([config
