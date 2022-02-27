@@ -1,5 +1,3 @@
----
-
 name: KC_VN_UniformGI
 
 uniform:
@@ -168,4 +166,3 @@ extends: [KC_VN_UniformGI, KC_VN_RTO]
 ---
 name: KC_VN_SF_MG
 extends: [KC_VN_UniformSF, KC_VN_MG]
----
