@@ -1,0 +1,86 @@
+name: KC_VN2_Uniform
+
+identity: vn_b_WhiteHead_15_11
+insignia: BI
+voice: male01gre
+
+headgear: vn_i_helmet_m1_03_01
+facewear: ""
+
+uniform:
+  name: vn_b_uniform_sog_02_04
+
+---
+
+name: KC_VN2_Basics
+
+binoculars: vn_m19_binocs_grn
+map: vn_b_item_map
+compass: vn_b_item_compass_sog
+watch: vn_b_item_watch
+radio: vn_b_item_radio_urc10
+terminal: ""
+
+# everybody gets a pistol with flashlight and silencer
+secondary:
+  name: vn_fkb1_pm
+  magazine: vn_pm_mag
+  rail: ""
+  sight: ""
+  muzzle: ""
+
+uniform:
+  contents:
+    vn_s_pm: 1 # silencer
+    vn_pm_mag: 4
+    FirstAidKit: 4
+
+backpack:
+  contents:
+    # basic smoke marking
+    vn_m18_red_mag: 1
+    vn_m18_purple_mag: 1
+    vn_m18_yellow_mag: 1
+    #
+    ACE_M14: 1 # demolitions
+
+---
+
+name: KC_VN2_RiflemanM2
+
+vest:
+  name: vn_b_vest_usarmy_02 # one of the best for load (outside of S&S)
+  contents:
+    vn_m34_grenade_mag: 2
+    vn_v40_grenade_mag: 2
+    vn_carbine_30_mag: 4
+
+backpack:
+  name: vn_b_pack_lw_05 # one of the best for load
+  contents:
+    vn_m34_grenade_mag: 2
+    vn_v40_grenade_mag: 4
+    vn_carbine_30_mag: 8
+
+primary:
+  name: vn_m2carbine_gl
+  magazine: vn_carbine_30_mag
+  rail: ""
+  sight: ""
+  muzzle: ""
+
+---
+
+name: KC_VN2_GrenadierRifle
+extends: [KC_VN2_RiflemanM2]
+
+backpack:
+  contents:
+    # trade mags and hand grenades for rifle grenades
+    vn_m34_grenade_mag: 0
+    vn_v40_grenade_mag: 2
+    vn_carbine_30_mag: 4
+    #
+    wp rounds: 2
+    heat rounds: 2
+    frag rounds: as many as poss
