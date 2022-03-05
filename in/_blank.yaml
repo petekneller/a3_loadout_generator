@@ -1,0 +1,56 @@
+name: _blank
+extends: []
+
+identity: ""
+insignia: ""
+voice: ""
+
+headgear: ""
+facewear: ""
+
+binoculars: ""
+map: ""
+compass: ""
+watch: ""
+radio: ""
+terminal: ""
+nvgs: ""
+
+primary:
+  name: ""
+  magazine: ""
+  rail: ""
+  sight: ""
+  muzzle: ""
+  bipod: ""
+
+secondary:
+  name: ""
+  magazine: ""
+  rail: ""
+  sight: ""
+  muzzle: ""
+  bipod: ""
+
+launcher:
+  name: ""
+  magazine: ""
+  rail: ""
+  sight: ""
+  muzzle: ""
+  bipod: ""
+
+uniform:
+  name: ""
+  contents:
+    className: 0
+
+vest:
+  name: ""
+  contents:
+    className: 0
+
+backpack:
+  name: ""
+  contents:
+    className: 0
