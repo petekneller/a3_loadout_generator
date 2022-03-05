@@ -58,9 +58,9 @@ def main(config_dir_name, output_dir_name):
         trim_blocks=True,
         lstrip_blocks=True
     )
-    vanilla_template = env.get_template("arsenal_import.sqf.tmpl")
+    vanilla_template = env.get_template("arsenal_import.vanilla.tmpl")
     ace_template = env.get_template("arsenal_import.ace.tmpl")
-    weight_template = env.get_template("weight.yaml.tmpl")
+    weight_template = env.get_template("weights.tmpl")
 
     with open("weights.yaml", "r") as weights_file:
         weights = yaml.safe_load(weights_file)
@@ -70,17 +70,17 @@ def main(config_dir_name, output_dir_name):
             print(f"Processing config [{config_name}]")
             config = resolve_config(config_name, configs)
 
-            file_name = Path(output_dir_name) / f"{config_name}.sqf"
+            file_name = Path(output_dir_name) / f"{config_name}.vanilla.sqf"
             with open(file_name, "w") as output_file:
                 print(f"Writing loadout [{file_name}]")
                 output_file.write(vanilla_template.render(config=config))
 
-            file_name = Path(output_dir_name) / f"{config_name}.ace"
+            file_name = Path(output_dir_name) / f"{config_name}.ace.sqf"
             with open(file_name, "w") as output_file:
                 print(f"Writing loadout [{file_name}]")
                 output_file.write(ace_template.render(config=config))
 
-            file_name = Path(output_dir_name) / f"{config_name}.yaml"
+            file_name = Path(output_dir_name) / f"{config_name}.weights.yaml"
             with open(file_name, "w") as output_file:
                 print(f"Writing loadout [{file_name}]")
                 output_file.write(weight_template.render(config=config, weights=weights))
