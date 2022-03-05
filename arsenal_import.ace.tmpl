@@ -1,0 +1,105 @@
+[
+  {% if config['primary'] and config['primary']['name'] %}
+  [
+    "{{ config['primary']['name'] }}",
+    "{{ config['primary']['muzzle'] }}",
+    "{{ config['primary']['rail'] }}",
+    "{{ config['primary']['scope'] }}",
+    ["{{ config['primary']['magazine'] }}", 1],
+    ["", 1],
+    "{{ config['primary']['bipod'] }}"
+  ],
+  {% else %}
+  [],
+  {% endif %}
+
+  {% if config['launcher'] and config['launcher']['name'] %}
+  [
+    "{{ config['launcher']['name'] }}",
+    "{{ config['launcher']['muzzle'] }}",
+    "{{ config['launcher']['rail'] }}",
+    "{{ config['launcher']['scope'] }}",
+    ["{{ config['launcher']['magazine'] }}", 1],
+    ["", 1],
+    "{{ config['launcher']['bipod'] }}"
+  ],
+  {% else %}
+  [],
+  {% endif %}
+
+  {% if config['secondary'] and config['secondary']['name'] %}
+  [
+    "{{ config['secondary']['name'] }}",
+    "{{ config['secondary']['muzzle'] }}",
+    "{{ config['secondary']['rail'] }}",
+    "{{ config['secondary']['scope'] }}",
+    ["{{ config['secondary']['magazine'] }}", 1],
+    ["", 1],
+    "{{ config['secondary']['bipod'] }}"
+  ],
+  {% else %}
+  [],
+  {% endif %}
+
+  {% if config['uniform'] and config['uniform']['name'] %}
+  ["{{ config['uniform']['name'] }}",
+    {% if config['uniform']['contents'] %}
+    [
+      {% for item, qty in config['uniform']['contents'].items() %}
+      ["{{ item }}", {{ qty }}]{{ ", " if not loop.last }}
+      {% endfor %}
+    ]
+    {% else %}
+    []
+    {% endif %}
+  ],
+  {% else %}
+  [],
+  {% endif %}
+
+  {% if config['vest'] and config['vest']['name'] %}
+  ["{{ config['vest']['name'] }}",
+    {% if config['vest']['contents'] %}
+    [
+      {% for item, qty in config['vest']['contents'].items() %}
+      ["{{ item }}", {{ qty }}]{{ ", " if not loop.last }}
+      {% endfor %}
+    ]
+    {% else %}
+    []
+    {% endif %}
+  ],
+  {% else %}
+  [],
+  {% endif %}
+
+  {% if config['backpack'] and config['backpack']['name'] %}
+  ["{{ config['backpack']['name'] }}",
+    {% if config['backpack']['contents'] %}
+    [
+      {% for item, qty in config['backpack']['contents'].items() %}
+      ["{{ item }}", {{ qty }}]{{ ", " if not loop.last }}
+      {% endfor %}
+    ]
+    {% else %}
+    []
+    {% endif %}
+  ],
+  {% else %}
+  [],
+  {% endif %}
+
+  "{{ config['headgear'] }}",
+  "{{ config['facewear'] }}",
+
+  ["{{ config['binoculars'] }}","","","",[],[],""],
+
+  [
+    "{{ config['map'] }}",
+    "{{ config['terminal'] }}",
+    "{{ config['radio'] }}",
+    "{{ config['compass'] }}",
+    "{{ config['watch'] }}",
+    "{{ config['nvgs'] }}"
+  ]
+]

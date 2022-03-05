@@ -58,14 +58,21 @@ def main(config_dir_name, output_dir_name):
         trim_blocks=True,
         lstrip_blocks=True
     )
-    template = env.get_template("arsenal_import.sqf.tmpl")
+    vanilla_template = env.get_template("arsenal_import.sqf.tmpl")
+    ace_template = env.get_template("arsenal_import.ace.tmpl")
 
     for config_name in iter(configs):
+        print(f"Processing config [{config_name}]")
+        config = resolve_config(config_name, configs)
+
         file_name = Path(output_dir_name) / f"{config_name}.sqf"
         with open(file_name, "w") as output_file:
-            print(f"Processing config [{config_name}]")
-            config = resolve_config(config_name, configs)
             print(f"Writing loadout [{file_name}]")
-            output_file.write(template.render(config=config))
+            output_file.write(vanilla_template.render(config=config))
+
+        file_name = Path(output_dir_name) / f"{config_name}.ace"
+        with open(file_name, "w") as output_file:
+            print(f"Writing loadout [{file_name}]")
+            output_file.write(ace_template.render(config=config))
 
 main(config_dir_name, output_dir_name)
