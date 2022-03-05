@@ -1,14 +1,14 @@
-name: KC_VN2_Uniform
+name: KC_VN2_UniformGI
 
 identity: vn_b_WhiteHead_15_11
 insignia: BI
 voice: male01gre
 
-headgear: vn_i_helmet_m1_03_01
+headgear: vn_b_helmet_m1_10_01
 facewear: ""
 
 uniform:
-  name: vn_b_uniform_sog_02_04
+  name: vn_b_uniform_sog_02_04 # holds 3.63 kg
 
 ---
 
@@ -42,21 +42,22 @@ backpack:
     vn_m18_purple_mag: 1
     vn_m18_yellow_mag: 1
     #
-    ACE_M14: 1 # demolitions
+    vn_m14_grenade_mag: 1 # demolitions
 
 ---
 
 name: KC_VN2_RiflemanM2
+extends: [KC_VN2_UniformGI, KC_VN2_Basics]
 
 vest:
-  name: vn_b_vest_usarmy_02 # one of the best for load (outside of S&S)
+  name: vn_b_vest_usarmy_02 # one of the best for load (outside of S&S); holds 3.63 kg
   contents:
     vn_m34_grenade_mag: 2
     vn_v40_grenade_mag: 2
-    vn_carbine_30_mag: 4
+    vn_carbine_30_mag: 3 # all it will hold
 
 backpack:
-  name: vn_b_pack_lw_05 # one of the best for load
+  name: vn_b_pack_lw_05 # one of the best for load; holds 16.33 kg
   contents:
     vn_m34_grenade_mag: 2
     vn_v40_grenade_mag: 4
@@ -81,6 +82,6 @@ backpack:
     vn_v40_grenade_mag: 2
     vn_carbine_30_mag: 4
     #
-    wp rounds: 2
-    heat rounds: 2
-    frag rounds: as many as poss
+    vn_22mm_m17_frag_mag: 10
+    vn_22mm_m9_heat_mag: 2
+    vn_22mm_m19_wp_mag: 2
