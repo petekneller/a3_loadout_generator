@@ -60,19 +60,29 @@ def main(config_dir_name, output_dir_name):
     )
     vanilla_template = env.get_template("arsenal_import.sqf.tmpl")
     ace_template = env.get_template("arsenal_import.ace.tmpl")
+    weight_template = env.get_template("weight.yaml.tmpl")
 
-    for config_name in iter(configs):
-        print(f"Processing config [{config_name}]")
-        config = resolve_config(config_name, configs)
+    with open("weights.yaml", "r") as weights_file:
+        weights = yaml.safe_load(weights_file)
+        weights = dict([(key, value / 10 / 2.205) for key, value in weights.items()])
 
-        file_name = Path(output_dir_name) / f"{config_name}.sqf"
-        with open(file_name, "w") as output_file:
-            print(f"Writing loadout [{file_name}]")
-            output_file.write(vanilla_template.render(config=config))
+        for config_name in iter(configs):
+            print(f"Processing config [{config_name}]")
+            config = resolve_config(config_name, configs)
 
-        file_name = Path(output_dir_name) / f"{config_name}.ace"
-        with open(file_name, "w") as output_file:
-            print(f"Writing loadout [{file_name}]")
-            output_file.write(ace_template.render(config=config))
+            file_name = Path(output_dir_name) / f"{config_name}.sqf"
+            with open(file_name, "w") as output_file:
+                print(f"Writing loadout [{file_name}]")
+                output_file.write(vanilla_template.render(config=config))
+
+            file_name = Path(output_dir_name) / f"{config_name}.ace"
+            with open(file_name, "w") as output_file:
+                print(f"Writing loadout [{file_name}]")
+                output_file.write(ace_template.render(config=config))
+
+            file_name = Path(output_dir_name) / f"{config_name}.yaml"
+            with open(file_name, "w") as output_file:
+                print(f"Writing loadout [{file_name}]")
+                output_file.write(weight_template.render(config=config, weights=weights))
 
 main(config_dir_name, output_dir_name)

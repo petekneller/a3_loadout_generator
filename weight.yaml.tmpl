@@ -1,0 +1,196 @@
+{# Macros -#}
+
+{% macro render_item(item_name) %}
+{% if item_name %}
+{{ item_name }} # {% if weights[item_name] %}{{ "{:.2f} kg".format(weights[item_name]) }}{% else %}???{% endif %}
+{% endif %}
+{% endmacro -%}
+
+{% macro render_items(item_name, qty) %}
+{{ item_name }}: {{ qty }} # {% if weights[item_name] %}{{ "{} x {:.2f} = {:.2f} kg".format(qty, weights[item_name], qty * weights[item_name]) }}{% else %}???{% endif %}
+{% endmacro -%}
+
+{% macro render_weapon_weight(weapon) %}
+{% set weight_weapon = weights[weapon['name']] if weapon['name'] and weights[weapon['name']] else 0 %}
+{% set weight_magazine = weights[weapon['magazine']] if weapon['magazine'] and weights[weapon['magazine']] else 0 %}
+{% set weight_rail = weights[weapon['rail']] if weapon['rail'] and weights[weapon['rail']] else 0 %}
+{% set weight_sight = weights[weapon['sight']] if weapon['sight'] and weights[weapon['sight']] else 0 %}
+{% set weight_muzzle = weights[weapon['muzzle']] if weapon['muzzle'] and weights[weapon['muzzle']] else 0 %}
+{% set weight_bipod = weights[weapon['bipod']] if weapon['bipod'] and weights[weapon['bipod']] else 0 %}
+# {{ "{:.2f}".format([weight_weapon, weight_magazine, weight_rail, weight_sight, weight_muzzle, weight_bipod] | sum) }} kg
+{%- endmacro -%}
+
+{% macro render_container_contents_weight(container) %}
+{% if container['contents'] %}
+{% set ns = namespace(found=false) %}
+{% set ns.weight = 0 %}
+{% for item, qty in container['contents'].items() %}
+  {% set item_weight = (weights[item] * qty) if weights[item] else 0 %}
+  {% set ns.weight = ns.weight + item_weight %}
+{% endfor %}
+# {{ "{:.2f}".format(ns.weight) }} kg
+{%- endif %}
+{% endmacro -%}
+
+{% macro render_container_weight(container) %}
+{% set ns = namespace(found=false) %}
+{% set ns.weight = weights[container['name']] if container['name'] and weights[container['name']] else 0 %}
+{% if container['contents'] %}
+{% for item, qty in container['contents'].items() %}
+  {% set item_weight = (weights[item] * qty) if weights[item] else 0 %}
+  {% set ns.weight = ns.weight + item_weight %}
+{% endfor %}
+{% endif %}
+# {{ "{:.2f}".format(ns.weight) }} kg
+{%- endmacro -%}
+
+{% macro render_total_weight() -%}
+{% set ns = namespace(found=false) %}
+{% set ns.weight = 0 %}
+{% set ns.weight = ns.weight + (weights[config['headgear']] if config['headgear'] and weights[config['headgear']] else 0) %}
+{% set ns.weight = ns.weight + (weights[config['facewear']] if config['facewear'] and weights[config['facewear']] else 0) %}
+{% set ns.weight = ns.weight + (weights[config['binoculars']] if config['binoculars'] and weights[config['binoculars']] else 0) %}
+{% set ns.weight = ns.weight + (weights[config['map']] if config['map'] and weights[config['map']] else 0) %}
+{% set ns.weight = ns.weight + (weights[config['compass']] if config['compass'] and weights[config['compass']] else 0) %}
+{% set ns.weight = ns.weight + (weights[config['watch']] if config['watch'] and weights[config['watch']] else 0) %}
+{% set ns.weight = ns.weight + (weights[config['radio']] if config['radio'] and weights[config['radio']] else 0) %}
+{% set ns.weight = ns.weight + (weights[config['terminal']] if config['terminal'] and weights[config['terminal']] else 0) %}
+{% set ns.weight = ns.weight + (weights[config['nvgs']] if config['nvgs'] and weights[config['nvgs']] else 0) %}
+{% if config['primary'] %}
+  {% set ns.weight = ns.weight + (weights[config['primary']['name']] if config['primary']['name'] and weights[config['primary']['name']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['primary']['magazine']] if config['primary']['magazine'] and weights[config['primary']['magazine']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['primary']['rail']] if config['primary']['rail'] and weights[config['primary']['rail']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['primary']['sight']] if config['primary']['sight'] and weights[config['primary']['sight']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['primary']['sight']] if config['primary']['sight'] and weights[config['primary']['sight']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['primary']['muzzle']] if config['primary']['muzzle'] and weights[config['primary']['muzzle']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['primary']['bipod']] if config['primary']['bipod'] and weights[config['primary']['bipod']] else 0) %}
+{% endif %}
+{% if config['secondary'] %}
+  {% set ns.weight = ns.weight + (weights[config['secondary']['name']] if config['secondary']['name'] and weights[config['secondary']['name']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['secondary']['magazine']] if config['secondary']['magazine'] and weights[config['secondary']['magazine']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['secondary']['rail']] if config['secondary']['rail'] and weights[config['secondary']['rail']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['secondary']['sight']] if config['secondary']['sight'] and weights[config['secondary']['sight']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['secondary']['sight']] if config['secondary']['sight'] and weights[config['secondary']['sight']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['secondary']['muzzle']] if config['secondary']['muzzle'] and weights[config['secondary']['muzzle']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['secondary']['bipod']] if config['secondary']['bipod'] and weights[config['secondary']['bipod']] else 0) %}
+{% endif %}
+{% if config['launcher'] %}
+  {% set ns.weight = ns.weight + (weights[config['launcher']['name']] if config['launcher']['name'] and weights[config['launcher']['name']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['launcher']['magazine']] if config['launcher']['magazine'] and weights[config['launcher']['magazine']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['launcher']['rail']] if config['launcher']['rail'] and weights[config['launcher']['rail']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['launcher']['sight']] if config['launcher']['sight'] and weights[config['launcher']['sight']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['launcher']['sight']] if config['launcher']['sight'] and weights[config['launcher']['sight']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['launcher']['muzzle']] if config['launcher']['muzzle'] and weights[config['launcher']['muzzle']] else 0) %}
+  {% set ns.weight = ns.weight + (weights[config['launcher']['bipod']] if config['launcher']['bipod'] and weights[config['launcher']['bipod']] else 0) %}
+{% endif %}
+{% if config['uniform'] %}
+  {% set ns.weight = ns.weight + (weights[config['uniform']['name']] if config['uniform']['name'] and weights[config['uniform']['name']] else 0) %}
+  {% if config['uniform']['contents'] %}
+    {% for item, qty in config['uniform']['contents'].items() %}
+      {% set ns.weight = ns.weight + qty * (weights[item] if weights[item] else 0) %}
+    {% endfor %}
+  {% endif %}
+{% endif %}
+{% if config['vest'] %}
+  {% set ns.weight = ns.weight + (weights[config['vest']['name']] if config['vest']['name'] and weights[config['vest']['name']] else 0) %}
+  {% if config['vest']['contents'] %}
+    {% for item, qty in config['vest']['contents'].items() %}
+      {% set ns.weight = ns.weight + qty * (weights[item] if weights[item] else 0) %}
+    {% endfor %}
+  {% endif %}
+{% endif %}
+{% if config['backpack'] %}
+  {% set ns.weight = ns.weight + (weights[config['backpack']['name']] if config['backpack']['name'] and weights[config['backpack']['name']] else 0) %}
+  {% if config['backpack']['contents'] %}
+    {% for item, qty in config['backpack']['contents'].items() %}
+      {% set ns.weight = ns.weight + qty * (weights[item] if weights[item] else 0) %}
+    {% endfor %}
+  {% endif %}
+{% endif %}
+# {{ "{:.2f}".format(ns.weight) }} kg
+{% endmacro %}
+
+{# Template -#}
+
+{{ render_total_weight() }}
+headgear: {{ render_item(config['headgear']) }}
+facewear: {{ render_item(config['facewear']) }}
+
+{% set weight_binoculars = weights[config['binoculars']] if config['binoculars'] and weights[config['binoculars']] else 0 %}
+{% set weight_map = weights[config['map']] if config['map'] and weights[config['map']] else 0 %}
+{% set weight_compass = weights[config['compass']] if config['compass'] and weights[config['compass']] else 0 %}
+{% set weight_watch = weights[config['watch']] if config['watch'] and weights[config['watch']] else 0 %}
+{% set weight_radio = weights[config['radio']] if config['radio'] and weights[config['radio']] else 0 %}
+{% set weight_terminal = weights[config['terminal']] if config['terminal'] and weights[config['terminal']] else 0 %}
+{% set weight_nvgs = weights[config['nvgs']] if config['nvgs'] and weights[config['nvgs']] else 0 %}
+# {{ "{:.2f}".format([weight_binoculars, weight_map, weight_compass, weight_watch, weight_radio, weight_terminal, weight_nvgs] | sum) }} kg
+binoculars: {{ render_item(config['binoculars']) }}
+map: {{ render_item(config['map']) }}
+compass: {{ render_item(config['compass']) }}
+watch: {{ render_item(config['watch']) }}
+radio: {{ render_item(config['radio']) }}
+terminal: {{ render_item(config['terminal']) }}
+nvgs: {{ render_item(config['nvgs']) }}
+
+{% if config['primary'] %}
+primary: {{ render_weapon_weight(config['primary']) }}
+  name: {{ render_item(config['primary']['name']) }}
+  magazine: {{ render_item(config['primary']['magazine']) }}
+  rail: {{ render_item(config['primary']['rail']) }}
+  sight: {{ render_item(config['primary']['sight']) }}
+  muzzle: {{ render_item(config['primary']['muzzle']) }}
+  bipod: {{ render_item(config['primary']['bipod']) }}
+{% endif %}
+
+{% if config['secondary'] %}
+secondary: {{ render_weapon_weight(config['secondary']) }}
+  name: {{ render_item(config['secondary']['name']) }}
+  magazine: {{ render_item(config['secondary']['magazine']) }}
+  rail: {{ render_item(config['secondary']['rail']) }}
+  sight: {{ render_item(config['secondary']['sight']) }}
+  muzzle: {{ render_item(config['secondary']['muzzle']) }}
+  bipod: {{ render_item(config['secondary']['bipod']) }}
+{% endif %}
+
+{% if config['launcher'] %}
+launcher: {{ render_weapon_weight(config['launcher']) }}
+  name: {{ render_item(config['launcher']['name']) }}
+  magazine: {{ render_item(config['launcher']['magazine']) }}
+  rail: {{ render_item(config['launcher']['rail']) }}
+  sight: {{ render_item(config['launcher']['sight']) }}
+  muzzle: {{ render_item(config['launcher']['muzzle']) }}
+  bipod: {{ render_item(config['launcher']['bipod']) }}
+{% endif %}
+
+{% if config['uniform'] %}
+uniform: {{ render_container_weight(config['uniform']) }}
+  name: {{ render_item(config['uniform']['name']) }}
+  {% if config['uniform']['contents'] %}
+  contents: {{ render_container_contents_weight(config['uniform']) }}
+    {% for item, qty in config['uniform']['contents'].items() %}
+    {{ render_items(item, qty) }}
+    {% endfor %}
+  {% endif %}
+{% endif %}
+
+{% if config['vest'] %}
+vest: {{ render_container_weight(config['vest']) }}
+  name: {{ render_item(config['vest']['name']) }}
+  {% if config['vest']['contents'] %}
+  contents: {{ render_container_contents_weight(config['vest']) }}
+    {% for item, qty in config['vest']['contents'].items() %}
+    {{ render_items(item, qty) }}
+    {% endfor %}
+  {% endif %}
+{% endif %}
+
+{% if config['backpack'] %}
+backpack: {{ render_container_weight(config['backpack']) }}
+  name: {{ render_item(config['backpack']['name']) }}
+  {% if config['backpack']['contents'] %}
+  contents: {{ render_container_contents_weight(config['backpack']) }}
+    {% for item, qty in config['backpack']['contents'].items() %}
+    {{ render_items(item, qty) }}
+    {% endfor %}
+  {% endif %}
+{% endif %}
