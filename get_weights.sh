@@ -1,1 +1,1 @@
-yq -y 'with_entries(select(.value != 0))' <from_get_weights.sqf>.yaml | sort
+yq -y 'to_entries | sort_by(.key) | from_entries' <from_get_weights.sqf>.yaml 

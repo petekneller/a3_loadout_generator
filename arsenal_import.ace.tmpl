@@ -5,7 +5,7 @@
     "{{ config['primary']['muzzle'] }}",
     "{{ config['primary']['rail'] }}",
     "{{ config['primary']['scope'] }}",
-    ["{{ config['primary']['magazine'] }}", 1],
+    ["{{ config['primary']['magazine'] }}", 1000],
     ["", 1],
     "{{ config['primary']['bipod'] }}"
   ],
@@ -19,7 +19,7 @@
     "{{ config['launcher']['muzzle'] }}",
     "{{ config['launcher']['rail'] }}",
     "{{ config['launcher']['scope'] }}",
-    ["{{ config['launcher']['magazine'] }}", 1],
+    ["{{ config['launcher']['magazine'] }}", 1000],
     ["", 1],
     "{{ config['launcher']['bipod'] }}"
   ],
@@ -33,7 +33,7 @@
     "{{ config['secondary']['muzzle'] }}",
     "{{ config['secondary']['rail'] }}",
     "{{ config['secondary']['scope'] }}",
-    ["{{ config['secondary']['magazine'] }}", 1],
+    ["{{ config['secondary']['magazine'] }}", 1000],
     ["", 1],
     "{{ config['secondary']['bipod'] }}"
   ],
@@ -46,7 +46,7 @@
     {% if config['uniform']['contents'] %}
     [
       {% for item, qty in config['uniform']['contents'].items() %}
-      ["{{ item }}", {{ qty }}]{{ ", " if not loop.last }}
+      ["{{ item }}", {{ qty }} {%- if item in magazines %}, 1000{% endif %}] {{- ", " if not loop.last }}
       {% endfor %}
     ]
     {% else %}
@@ -62,7 +62,7 @@
     {% if config['vest']['contents'] %}
     [
       {% for item, qty in config['vest']['contents'].items() %}
-      ["{{ item }}", {{ qty }}]{{ ", " if not loop.last }}
+      ["{{ item }}", {{ qty }} {%- if item in magazines %}, 1000{% endif %}] {{- ", " if not loop.last }}
       {% endfor %}
     ]
     {% else %}
@@ -78,7 +78,7 @@
     {% if config['backpack']['contents'] %}
     [
       {% for item, qty in config['backpack']['contents'].items() %}
-      ["{{ item }}", {{ qty }}]{{ ", " if not loop.last }}
+      ["{{ item }}", {{ qty }} {%- if item in magazines %}, 1000{% endif %}] {{- ", " if not loop.last }}
       {% endfor %}
     ]
     {% else %}

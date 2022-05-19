@@ -63,8 +63,9 @@ def main(config_dir_name, output_dir_name):
     weight_template = env.get_template("weights.tmpl")
 
     with open("weights.yaml", "r") as weights_file:
-        weights = yaml.safe_load(weights_file)
-        weights = dict([(key, value / 10 / 2.205) for key, value in weights.items()])
+        weights_info = yaml.safe_load(weights_file)
+        weights = dict([(key, value["mass"] / 10 / 2.205) for key, value in weights_info.items()])
+        magazines = [key for key, value in weights_info.items() if ("magazine" in value and value["magazine"] is True)]
 
         for config_name in iter(configs):
             print(f"Processing config [{config_name}]")
@@ -78,7 +79,7 @@ def main(config_dir_name, output_dir_name):
             file_name = Path(output_dir_name) / f"{config_name}.ace.sqf"
             with open(file_name, "w") as output_file:
                 print(f"Writing loadout [{file_name}]")
-                output_file.write(ace_template.render(config=config))
+                output_file.write(ace_template.render(config=config, magazines=magazines))
 
             file_name = Path(output_dir_name) / f"{config_name}.weights.yaml"
             with open(file_name, "w") as output_file:
