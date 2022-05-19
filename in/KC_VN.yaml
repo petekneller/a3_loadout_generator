@@ -139,7 +139,7 @@ uniform:
     FirstAidKit: 2
 
 vest:
-  name: vn_b_vest_sog_05
+  name: vn_b_vest_sog_05 # holds 7.5 kg
   contents:
     FirstAidKit: 2
     vn_m34_grenade_mag: 2
@@ -147,7 +147,7 @@ vest:
     vn_rpd_125_mag: 2
 
 backpack:
-  name: vn_b_pack_trp_01_02
+  name: vn_b_pack_trp_01_02 # holds 15.7 kg
   contents:
     vn_m34_grenade_mag: 2
     vn_v40_grenade_mag: 4
