@@ -41,17 +41,17 @@ terminal: ""
 
 # everybody gets a pistol with flashlight and silencer
 secondary:
-  name: vn_fkb1_pm
-  magazine: vn_pm_mag
+  name: vn_mx991_m1911
+  magazine: vn_m1911_mag
   rail: ""
   sight: ""
   muzzle: ""
 
 uniform:
   contents:
-    vn_s_pm: 1 # silencer
-    vn_pm_mag: 4
-    FirstAidKit: 4
+    vn_s_m1911: 1 # silencer
+    vn_m1911_mag: 3
+    FirstAidKit: 3
 
 backpack:
   contents:
