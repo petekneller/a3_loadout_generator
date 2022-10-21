@@ -6,6 +6,7 @@ _classes = [_classes, [], {configName _x},"ASCEND"] call BIS_fnc_sortBy;
 	if (!isNull (_x >> "mass")) then {
 		_export = _export + (configName _x) + ":" + endl;
 		_export = _export + "  mass: " + (str getNumber (_x >> "mass")) + endl;
+		_export = _export + "  from: CfgAmmo" + endl;
 	};
 } forEach _classes;
 
@@ -16,6 +17,7 @@ _classes = [_classes, [], {configName _x},"ASCEND"] call BIS_fnc_sortBy;
 		_export = _export + (configName _x) + ":" + endl;
 		_export = _export + "  mass: " + (str getNumber (_x >> "mass")) + endl;
 		_export = _export + "  magazine: true" + endl;
+		_export = _export + "  from: CfgMagazines" + endl;
 	};
 } forEach _classes;
 
@@ -25,6 +27,7 @@ _classes = [_classes, [], {configName _x},"ASCEND"] call BIS_fnc_sortBy;
 	if (!isNull (_x >> "mass")) then {
 		_export = _export + (configName _x) + ":" + endl;
 		_export = _export + "  mass: " + (str getNumber (_x >> "mass")) + endl;
+		_export = _export + "  from: CfgVehicles" + endl;
 	};
 } forEach _classes;
 
@@ -35,6 +38,7 @@ _classes = [_classes, [], {configName _x},"ASCEND"] call BIS_fnc_sortBy;
 	if (!isNull (_info >> "mass")) then {
 		_export = _export + (configName _x) + ":" + endl;
 		_export = _export + "  mass: " + (str getNumber (_info >> "mass")) + endl;
+		_export = _export + "  from: CfgWeapons" + endl;
 	};
 } forEach _classes;
 
