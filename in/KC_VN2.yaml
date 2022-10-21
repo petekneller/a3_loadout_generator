@@ -107,6 +107,45 @@ backpack:
 
 ---
 
+name: KC_VN2_LMG_M60
+extends: [KC_VN2_UniformGI, KC_VN2_Basics, KC_VN2_BasicGrenades]
+
+primary:
+  name: vn_m60
+  magazine: vn_m60_100_mag
+
+vest:
+  name: vn_b_vest_sog_05
+  contents:
+    vn_m60_100_mag: 2
+
+backpack:
+  name: vn_b_pack_lw_05
+  contents:
+    vn_m60_100_mag: 3
+
+---
+
+name: KC_VN2_LMG_BAR
+extends: [KC_VN2_UniformGI, KC_VN2_Basics, KC_VN2_BasicGrenades]
+
+primary:
+  name: vn_m1918
+  bipod: vn_bipod_m1918
+  magazine: vn_m1918_t_mag
+
+vest:
+  name: vn_b_vest_sog_05
+  contents:
+    vn_m1918_t_mag: 6
+
+backpack:
+  name: vn_b_pack_lw_05
+  contents:
+    vn_m1918_t_mag: 14
+
+---
+
 name: KC_VN2_RiflemanM2
 extends: [KC_VN2_UniformGI, KC_VN2_Basics, KC_VN2_BasicGrenades]
 
