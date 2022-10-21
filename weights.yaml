@@ -118,6 +118,10 @@
 10Rnd_9x21_Mag:
   mass: 4
   magazine: true
+10Rnd_GBU12_LGB_ANZ_CASModule:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
 10Rnd_Mk14_762x51_Mag:
   mass: 6
   magazine: true
@@ -718,6 +722,10 @@
 2Rnd_GBU12_LGB:
   mass: 8
   magazine: true
+2Rnd_GBU12_LGB_ANZ_CASModule:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
 2Rnd_GBU12_LGB_MI10:
   mass: 8
   magazine: true
@@ -1069,6 +1077,10 @@
 4Rnd_GAA_missiles:
   mass: 8
   magazine: true
+4Rnd_GBU12_LGB_ANZ_CASModule:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
 4Rnd_LG_Jian:
   mass: 8
   magazine: true
@@ -1216,6 +1228,10 @@
 6Rnd_ACE_Hydra70_DAGR:
   mass: 8
   magazine: true
+6Rnd_GBU12_LGB_ANZ_CASModule:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
 6Rnd_GreenSignal_F:
   mass: 12
   magazine: true
@@ -1312,6 +1328,10 @@
 8Rnd_82mm_Mo_shells:
   mass: 8
   magazine: true
+8Rnd_GBU12_LGB_ANZ_CASModule:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
 8Rnd_LG_scalpel:
   mass: 8
   magazine: true
@@ -3516,6 +3536,34 @@ ACE_rope6:
   mass: 18
 ACE_wirecutter:
   mass: 25
+ANZ_1RndNapalmMag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+ANZ_2RndNapalmMag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+ANZ_2RndNapalm_CASModule_Mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+ANZ_4RndNapalm_CASModule_Mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+ANZ_6RndNapalm_CASModule_Mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+ANZ_7RndWPMag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+ANZ_8RndNapalm_CASModule_Mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
 APERSBoundingMine_Range_Mag:
   mass: 20
   magazine: true
@@ -16428,6 +16476,18 @@ PylonMissile_1Rnd_Missile_AA_04_F:
 PylonMissile_1Rnd_Mk82_F:
   mass: 227
   magazine: true
+PylonMissile_ANZ_1RndNapalmMag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+PylonMissile_ANZ_2RndNapalmMag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+PylonMissile_ANZ_SW_6RndNapalmMag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
 PylonMissile_Bomb_GBU12_x1:
   mass: 8
   magazine: true
@@ -16542,6 +16602,10 @@ PylonRack_7Rnd_Rocket_04_AP_F:
 PylonRack_7Rnd_Rocket_04_HE_F:
   mass: 88.3
   magazine: true
+PylonRack_ANZ_7RndWPMag:
+  mass: 88.3
+  magazine: true
+  from: CfgMagazines
 PylonRack_Bomb_GBU12_x2:
   mass: 8
   magazine: true
