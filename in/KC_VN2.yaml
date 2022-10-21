@@ -86,6 +86,7 @@ backpack:
   name: vn_b_pack_lw_05
   contents:
     vn_carbine_30_mag: 8
+    vn_o_3x_m84: 1 # scope
 
 primary:
   name: vn_m2carbine_gl
