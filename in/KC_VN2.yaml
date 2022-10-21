@@ -368,3 +368,28 @@ backpack:
   contents:
     vn_ppsh41_35_t_mag: 12
 
+---
+
+name: KC_VN2_MedicThompson
+extends: [KC_VN2_UniformSF, KC_VN2_Basics, KC_VN2_BasicGrenades]
+headgear: vn_i_beret_03_04
+
+vest:
+  name: vn_b_vest_sas_04
+  contents:
+    vn_v40_grenade_mag: 3
+    vn_m1a1_30_t_mag: 6
+
+backpack:
+  name: vn_b_pack_lw_05
+  contents:
+    vn_m1a1_30_t_mag: 20
+    vn_b_item_medikit_01: 1
+
+primary:
+  name: vn_m1928a1_tommy
+  magazine: vn_m1a1_30_t_mag
+  rail: ""
+  sight: ""
+  muzzle: ""
+
