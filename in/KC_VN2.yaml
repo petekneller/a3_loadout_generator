@@ -90,7 +90,7 @@ primary:
 
 ---
 
-name: KC_VN2_GrenadierRifle
+name: KC_VN2_GrenadierM2_Rifle
 extends: [KC_VN2_RiflemanM2]
 
 backpack:
