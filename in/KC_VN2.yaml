@@ -80,6 +80,11 @@ uniform:
     vn_s_m1911: 1 # silencer
     vn_m1911_mag: 3
     FirstAidKit: 3
+    grad_paceCountBeads_functions_paceCountBeads: 1
+    ACE_DefusalKit: 1
+    ACE_Clacker: 1
+    ACE_MapTools: 1
+
 ---
 
 name: KC_VN2_BasicGrenades
