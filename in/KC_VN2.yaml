@@ -52,6 +52,14 @@ uniform:
     vn_s_m1911: 1 # silencer
     vn_m1911_mag: 3
     FirstAidKit: 3
+---
+
+name: KC_VN2_BasicGrenades
+
+vest:
+  contents:
+    vn_m34_grenade_mag: 2
+    vn_v40_grenade_mag: 2
 
 backpack:
   contents:
@@ -61,24 +69,22 @@ backpack:
     vn_m18_yellow_mag: 1
     #
     vn_m14_grenade_mag: 1 # demolitions
+    vn_m34_grenade_mag: 2
+    vn_v40_grenade_mag: 2
 
 ---
 
 name: KC_VN2_RiflemanM2
-extends: [KC_VN2_UniformGI, KC_VN2_Basics]
+extends: [KC_VN2_UniformGI, KC_VN2_Basics, KC_VN2_BasicGrenades]
 
 vest:
   name: vn_b_vest_usarmy_02
   contents:
-    vn_m34_grenade_mag: 2
-    vn_v40_grenade_mag: 2
-    vn_carbine_30_mag: 3 # all it will hold
+    vn_carbine_30_mag: 2 # all it will hold
 
 backpack:
   name: vn_b_pack_lw_05
   contents:
-    vn_m34_grenade_mag: 2
-    vn_v40_grenade_mag: 4
     vn_carbine_30_mag: 8
 
 primary:
@@ -90,16 +96,55 @@ primary:
 
 ---
 
+name: KC_VN2_Pilot
+extends: [KC_VN2_Basics]
+
+identity: vn_b_WhiteHead_15_11
+insignia: BI
+voice: male01gre
+
+headgear: vn_b_helmet_svh4_01_01
+facewear: vn_b_aviator
+
+uniform:
+  name: vn_b_uniform_heli_01_01
+  contents:
+    # remove superfluous basic kit
+    vn_s_m1911: 0 # silencer
+    vn_m1911_mag: 0
+    grad_paceCountBeads_functions_paceCountBeads: 0
+    ACE_DefusalKit: 0
+    ACE_Clacker: 0
+    #
+    vn_mc10_mag: 4
+
+primary:
+  name: vn_mc10
+  magazine: vn_mc10_mag
+
+secondary:
+  name: vn_mx991_red # flashlight
+  magazine: ""
+
+vest:
+  name: vn_b_vest_aircrew_03
+  contents:
+    vn_m14_grenade_mag: 1 # denial of equipment
+    vn_m34_grenade_mag: 2
+    # smoke signalling
+    vn_m18_purple_mag: 1
+    vn_m18_yellow_mag: 1
+
+---
+
 name: KC_VN2_GrenadierM2_Rifle
 extends: [KC_VN2_RiflemanM2]
 
 backpack:
   contents:
-    # trade mags and hand grenades for rifle grenades
-    vn_m34_grenade_mag: 0
-    vn_v40_grenade_mag: 2
-    vn_carbine_30_mag: 4
+    # trade mags for rifle grenades
+    vn_carbine_30_mag: 6
     #
-    vn_22mm_m17_frag_mag: 10
+    vn_22mm_m17_frag_mag: 12
+    vn_22mm_m19_wp_mag: 4
     vn_22mm_m9_heat_mag: 2
-    vn_22mm_m19_wp_mag: 2
