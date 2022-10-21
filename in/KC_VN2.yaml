@@ -44,6 +44,20 @@ uniform:
 
 ---
 
+name: KC_VN2_UniformAnzac
+
+identity: vn_b_WhiteHead_15_11
+insignia: BI
+voice: male01gre
+
+headgear: vn_b_boonie_07_01
+facewear: vn_b_acc_towel_01
+
+uniform:
+  name: vn_b_uniform_aus_06_01 # holds 3.63 kg
+
+---
+
 name: KC_VN2_Basics
 
 binoculars: vn_m19_binocs_grn
@@ -186,6 +200,30 @@ backpack:
 primary:
   name: vn_m14
   magazine: vn_m14_t_mag
+  rail: ""
+  sight: ""
+  muzzle: ""
+
+---
+
+name: KC_VN2_RiflemanSLR
+extends: [KC_VN2_UniformAnzac, KC_VN2_Basics, KC_VN2_BasicGrenades]
+
+vest:
+  name: vn_b_vest_anzac_02
+  contents:
+    vn_l1a1_20_mag: 4
+
+backpack:
+  name: vn_b_pack_p44_02
+  contents:
+    vn_o_3x_l1a1: 1 # scope for SLR
+    vn_b_l1a1: 1 # bayonet for SLR
+    vn_l1a1_20_mag: 10
+
+primary:
+  name: vn_l1a1_01
+  magazine: vn_l1a1_20_mag
   rail: ""
   sight: ""
   muzzle: ""
