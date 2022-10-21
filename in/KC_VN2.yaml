@@ -1,3 +1,21 @@
+# vests
+#  vn_b_vest_usarmy_02 - the 'rifleman 1'; US army; one of the best 'normal' vests for load (outside of S&S); holds 3.63 kg
+#  vn_b_vest_seal_05   - 'SEAL scout'; army belt with NVA chest rig; holds nearly 10 kg
+#  vn_b_vest_sog_05    - 'SOG MG'; holds 7.5 kg
+#  vn_b_vest_anzac_01  - 'ANZAC rifleman 1', holds 3.63 kg
+#  vn_b_vest_anzac_02  - 'ANZAC rifleman 2', has the classic loop of cord attached; holds 3.17 kg
+#  vn_b_vest_sas_04    - 'SAS patrol commander'; good mix/variety of visible stuff; holds 4.99 kg
+#  vn_b_vest_sas_03    - 'SAS MG'; holds 5.9 kg
+
+# backpacks
+#   vn_b_pack_lw_05    - 'Army MG Ammo'; one of the best for load; holds 16.33 kg
+#   vn_b_pack_lw_02    - 'Army MG'; lighter than the _05 but holds 16.1 kg
+#   vn_b_pack_p44_01   - 'ANZAC P44 1'; clean medium size pack; holds 12.7 kg
+#   vn_b_pack_p44_02   - 'ANZAC P44 1'; medium size pack with entrenching tool; holds 13.5 kg
+#   vn_b_pack_pfield_02- 'ANZAC field 2'; large pack with entrenching tool; holds 14.51 kg
+#   vn_b_pack_trp_04_02- 'Army Tropical RTO'; largest RTO pack; holds 12.7 kg
+
+
 name: KC_VN2_UniformGI
 
 identity: vn_b_WhiteHead_15_11
@@ -50,14 +68,14 @@ name: KC_VN2_RiflemanM2
 extends: [KC_VN2_UniformGI, KC_VN2_Basics]
 
 vest:
-  name: vn_b_vest_usarmy_02 # one of the best for load (outside of S&S); holds 3.63 kg
+  name: vn_b_vest_usarmy_02
   contents:
     vn_m34_grenade_mag: 2
     vn_v40_grenade_mag: 2
     vn_carbine_30_mag: 3 # all it will hold
 
 backpack:
-  name: vn_b_pack_lw_05 # one of the best for load; holds 16.33 kg
+  name: vn_b_pack_lw_05
   contents:
     vn_m34_grenade_mag: 2
     vn_v40_grenade_mag: 4
