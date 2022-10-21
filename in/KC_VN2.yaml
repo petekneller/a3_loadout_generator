@@ -304,3 +304,17 @@ backpack:
     vn_22mm_m17_frag_mag: 12
     vn_22mm_m19_wp_mag: 4
     vn_22mm_m9_heat_mag: 2
+
+---
+
+name: KC_VN2_GrenadierM1_Rifle
+extends: [KC_VN2_RiflemanM1]
+
+backpack:
+  contents:
+    # trade mags for rifle grenades
+    vn_m1_garand_mag: 20
+    #
+    vn_22mm_m17_frag_mag: 12
+    vn_22mm_m19_wp_mag: 4
+    vn_22mm_m9_heat_mag: 2
