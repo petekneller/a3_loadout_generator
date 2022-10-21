@@ -30,6 +30,20 @@ uniform:
 
 ---
 
+name: KC_VN2_UniformSF
+
+identity: vn_b_WhiteHead_15_11
+insignia: BI
+voice: male01gre
+
+headgear: vn_b_boonie_05_02
+facewear: vn_o_scarf_01_03
+
+uniform:
+  name: vn_b_uniform_macv_06_02 # holds 2.5 kg
+
+---
+
 name: KC_VN2_Basics
 
 binoculars: vn_m19_binocs_grn
@@ -71,6 +85,25 @@ backpack:
     vn_m14_grenade_mag: 1 # demolitions
     vn_m34_grenade_mag: 2
     vn_v40_grenade_mag: 2
+
+---
+
+name: KC_VN2_LMG_RPD
+extends: [KC_VN2_UniformSF, KC_VN2_Basics, KC_VN2_BasicGrenades]
+
+primary:
+  name: vn_rpd_shorty_01
+  magazine: vn_rpd_125_mag
+
+vest:
+  name: vn_b_vest_sog_05
+  contents:
+    vn_rpd_125_mag: 2
+
+backpack:
+  name: vn_b_pack_lw_02
+  contents:
+    vn_rpd_125_mag: 4
 
 ---
 
