@@ -413,3 +413,13 @@ backpack:
     vn_40mm_m717_smoke_p_mag: 2
     vn_40mm_m716_smoke_y_mag: 2
 
+---
+
+name: KC_VN2_temp
+extends: []
+
+backpack:
+  name: vn_b_pack_trp_04_02
+  contents:
+    ACE_Banana: 280
+
