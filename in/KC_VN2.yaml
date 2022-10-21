@@ -169,6 +169,29 @@ primary:
 
 ---
 
+name: KC_VN2_RiflemanM14
+extends: [KC_VN2_UniformGI, KC_VN2_Basics, KC_VN2_BasicGrenades]
+
+vest:
+  name: vn_b_vest_usarmy_02
+  contents:
+    vn_m14_t_mag: 2 # all it will hold
+
+backpack:
+  name: vn_b_pack_lw_05
+  contents:
+    vn_m14_t_mag: 10
+    vn_o_9x_m14: 1 # scope
+
+primary:
+  name: vn_m14
+  magazine: vn_m14_t_mag
+  rail: ""
+  sight: ""
+  muzzle: ""
+
+---
+
 name: KC_VN2_Pilot
 extends: [KC_VN2_Basics]
 
