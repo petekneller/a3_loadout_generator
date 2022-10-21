@@ -393,3 +393,18 @@ primary:
   sight: ""
   muzzle: ""
 
+---
+
+name: KC_VN2_RTO_M2M79
+extends: [KC_VN2_GrenadierM2_M79]
+
+backpack:
+  name: vn_b_pack_trp_04_02
+  contents: 
+    vn_m34_grenade_mag: 0 # sacrifice WP for 40mm
+    vn_40mm_m406_he_mag: 10
+    vn_40mm_m576_buck_mag: 10
+    vn_40mm_m682_smoke_r_mag: 2
+    vn_40mm_m717_smoke_p_mag: 2
+    vn_40mm_m716_smoke_y_mag: 2
+
