@@ -1504,6 +1504,13 @@ ACE_Sandbag_empty:
 ACE_SatchelCharge_Remote_Mag_Throwable:
   mass: 80
   magazine: true
+ACE_SpareBarrel:
+  mass: 60
+  magazine: true
+  from: CfgMagazines
+ACE_SpareBarrel_Item:
+  mass: 60
+  from: CfgWeapons
 ACE_SpraypaintBlack:
   mass: 10
 ACE_SpraypaintBlue:
@@ -1516,8 +1523,26 @@ ACE_VMH3:
   mass: 55
 ACE_VMM3:
   mass: 77
+ACE_adenosine:
+  mass: 1
+  from: CfgWeapons
 ACE_artilleryTable:
   mass: 0.5
+ACE_atropine:
+  mass: 1
+  from: CfgWeapons
+ACE_bloodIV:
+  mass: 10
+  from: CfgWeapons
+ACE_bloodIV_250:
+  mass: 2.5
+  from: CfgWeapons
+ACE_bloodIV_500:
+  mass: 5
+  from: CfgWeapons
+ACE_bodyBag:
+  mass: 7
+  from: CfgWeapons
 ACE_dogtag:
   mass: 0
 ACE_dogtag_1:
@@ -3520,6 +3545,36 @@ ACE_dogtag_998:
   mass: 0
 ACE_dogtag_999:
   mass: 0
+ACE_elasticBandage:
+  mass: 1
+  from: CfgWeapons
+ACE_epinephrine:
+  mass: 1
+  from: CfgWeapons
+ACE_fieldDressing:
+  mass: 1
+  from: CfgWeapons
+ACE_morphine:
+  mass: 1
+  from: CfgWeapons
+ACE_packingBandage:
+  mass: 1
+  from: CfgWeapons
+ACE_personalAidKit:
+  mass: 10
+  from: CfgWeapons
+ACE_plasmaIV:
+  mass: 10
+  from: CfgWeapons
+ACE_plasmaIV_250:
+  mass: 2.5
+  from: CfgWeapons
+ACE_plasmaIV_500:
+  mass: 5
+  from: CfgWeapons
+ACE_quikclot:
+  mass: 1
+  from: CfgWeapons
 ACE_rope12:
   mass: 36
 ACE_rope15:
@@ -3534,6 +3589,24 @@ ACE_rope36:
   mass: 108
 ACE_rope6:
   mass: 18
+ACE_salineIV:
+  mass: 10
+  from: CfgWeapons
+ACE_salineIV_250:
+  mass: 2.5
+  from: CfgWeapons
+ACE_salineIV_500:
+  mass: 5
+  from: CfgWeapons
+ACE_splint:
+  mass: 2
+  from: CfgWeapons
+ACE_surgicalKit:
+  mass: 15
+  from: CfgWeapons
+ACE_tourniquet:
+  mass: 1
+  from: CfgWeapons
 ACE_wirecutter:
   mass: 25
 ANZ_1RndNapalmMag:
@@ -34977,6 +35050,15 @@ Vorona_HEAT:
 Wallet_ID:
   mass: 5
   magazine: true
+ZSN_Bugle:
+  mass: 10
+  from: CfgWeapons
+ZSN_TrenchWhistle:
+  mass: 1
+  from: CfgWeapons
+ZSN_Whistle:
+  mass: 1
+  from: CfgWeapons
 acc_esd_01_flashlight:
   mass: 3
 acc_flashlight:
@@ -35133,6 +35215,10 @@ ace_csw_staticM2ShieldCarry:
   mass: 1000
 ace_csw_staticMortarCarry:
   mass: 620
+ace_intelitems_base:
+  mass: 1
+  magazine: true
+  from: CfgMagazines
 ace_marker_flags_black:
   mass: 1
 ace_marker_flags_blue:
@@ -35149,6 +35235,18 @@ ace_marker_flags_white:
   mass: 1
 ace_marker_flags_yellow:
   mass: 1
+acex_intelitems_document:
+  mass: 1
+  magazine: true
+  from: CfgMagazines
+acex_intelitems_notepad:
+  mass: 1
+  magazine: true
+  from: CfgMagazines
+acex_intelitems_photo:
+  mass: 1
+  magazine: true
+  from: CfgMagazines
 anduk_1_addon:
   mass: 10
 anduk_2_addon:
