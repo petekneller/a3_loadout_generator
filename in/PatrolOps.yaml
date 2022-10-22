@@ -1,0 +1,88 @@
+# Adds to KC_VN2 a few of the specifics used for Wrath's patrols on Fox maps
+
+##
+## Uniforms
+##
+
+# The KC_VN2 SF uniform doesn't hold enough for the new ACE medical kit
+name: PatrolOps_UniformSF
+
+identity: vn_b_WhiteHead_15_11
+insignia: BI
+voice: male01gre
+
+headgear: vn_b_boonie_05_02
+facewear: vn_o_scarf_01_03
+
+uniform:
+  name: vn_b_uniform_sog_02_05 # holds 3.63 kg
+
+---
+
+##
+## Kit
+##
+
+name: PatrolOps_PersonalKit
+
+uniform:
+  contents:
+    grad_paceCountBeads_functions_paceCountBeads: 1
+    ACE_DefusalKit: 1
+    ACE_Clacker: 1
+    ACE_MapTools: 1
+    ZSN_Whistle: 1
+
+---
+
+name: PatrolOps_ACEMedical_Personal
+
+uniform:
+  contents:
+    FirstAidKit: 0 # remove vanilla medical
+    ACE_tourniquet: 2
+    ACE_splint: 1
+    ACE_personalAidKit: 1
+    ACE_morphine: 5
+    ACE_epinephrine: 5
+    ACE_fieldDressing: 10
+    ACE_bloodIV_500: 2
+
+---
+
+name: PatrolOps_ACEMedical_Medic
+
+backpack:
+  contents:
+    vn_b_item_medikit_01: 0 # remove vanilla medical
+    ACE_tourniquet: 2
+    ACE_splint: 4
+    ACE_personalAidKit: 2
+    ACE_morphine: 10
+    ACE_epinephrine: 10
+    ACE_fieldDressing: 40
+    ACE_bloodIV_500: 20
+
+---
+
+##
+## Medics
+##
+
+name: PatrolOps_Medic_Thompson
+extends: [PatrolOps_UniformSF, KC_VN2_Basics, KC_VN2_BasicGrenades, PatrolOps_PersonalKit, PatrolOps_ACEMedical_Personal, PatrolOps_ACEMedical_Medic]
+
+primary:
+  name: vn_m1928a1_tommy
+  magazine: vn_m1a1_30_t_mag
+  rail: ""
+  sight: ""
+  muzzle: ""
+
+vest:
+  name: vn_b_vest_seal_05
+  contents:
+    vn_m1a1_30_t_mag: 20
+
+backpack:
+  name: vn_b_pack_lw_02
