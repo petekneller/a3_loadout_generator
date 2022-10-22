@@ -15,6 +15,9 @@
 #   vn_b_pack_pfield_02- 'ANZAC field 2'; large pack with entrenching tool; holds 14.51 kg
 #   vn_b_pack_trp_04_02- 'Army Tropical RTO'; largest RTO pack; holds 12.7 kg
 
+##
+## Uniforms
+##
 
 name: KC_VN2_UniformGI
 
@@ -57,6 +60,10 @@ uniform:
   name: vn_b_uniform_aus_06_01 # holds 3.63 kg
 
 ---
+
+##
+## Common kit
+##
 
 name: KC_VN2_Basics
 
@@ -106,6 +113,10 @@ backpack:
     vn_v40_grenade_mag: 2
 
 ---
+
+##
+## Machine gunners
+##
 
 name: KC_VN2_LMG_RPD
 extends: [KC_VN2_UniformSF, KC_VN2_Basics, KC_VN2_BasicGrenades]
@@ -164,6 +175,10 @@ backpack:
     vn_m1918_t_mag: 14
 
 ---
+
+##
+## Riflemen
+##
 
 name: KC_VN2_RiflemanM2
 extends: [KC_VN2_UniformGI, KC_VN2_Basics, KC_VN2_BasicGrenades]
@@ -257,6 +272,10 @@ primary:
 
 ---
 
+##
+## Pilot
+##
+
 name: KC_VN2_Pilot
 extends: [KC_VN2_Basics]
 
@@ -298,6 +317,10 @@ vest:
 
 ---
 
+##
+## Grenadiers - rifle grenades
+##
+
 name: KC_VN2_GrenadierM2_Rifle
 extends: [KC_VN2_RiflemanM2]
 
@@ -325,6 +348,10 @@ backpack:
     vn_22mm_m9_heat_mag: 2
 
 ---
+
+##
+## Grenadiers - 40mm
+##
 
 name: KC_VN2_GrenadierM79_Kit
 
@@ -375,6 +402,29 @@ backpack:
 
 ---
 
+##
+## RTOs
+##
+
+name: KC_VN2_RTO_M2M79
+extends: [KC_VN2_GrenadierM2_M79]
+
+backpack:
+  name: vn_b_pack_trp_04_02
+  contents: 
+    vn_m34_grenade_mag: 0 # sacrifice WP for 40mm
+    vn_40mm_m406_he_mag: 10
+    vn_40mm_m576_buck_mag: 10
+    vn_40mm_m682_smoke_r_mag: 2
+    vn_40mm_m717_smoke_p_mag: 2
+    vn_40mm_m716_smoke_y_mag: 2
+
+---
+
+##
+## Medics
+##
+
 name: KC_VN2_MedicThompson
 extends: [KC_VN2_UniformSF, KC_VN2_Basics, KC_VN2_BasicGrenades]
 headgear: vn_i_beret_03_04
@@ -400,20 +450,9 @@ primary:
 
 ---
 
-name: KC_VN2_RTO_M2M79
-extends: [KC_VN2_GrenadierM2_M79]
-
-backpack:
-  name: vn_b_pack_trp_04_02
-  contents: 
-    vn_m34_grenade_mag: 0 # sacrifice WP for 40mm
-    vn_40mm_m406_he_mag: 10
-    vn_40mm_m576_buck_mag: 10
-    vn_40mm_m682_smoke_r_mag: 2
-    vn_40mm_m717_smoke_p_mag: 2
-    vn_40mm_m716_smoke_y_mag: 2
-
----
+##
+## Transient stuff
+##
 
 name: KC_VN2_temp
 extends: []
@@ -422,4 +461,3 @@ backpack:
   name: vn_b_pack_trp_04_02
   contents:
     ACE_Banana: 280
-
