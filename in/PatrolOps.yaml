@@ -66,6 +66,31 @@ backpack:
 ---
 
 ##
+## Rifleman bases
+##
+
+name: PatrolOps_RiflemanF1
+extends: [KC_VN2_UniformAnzac, KC_VN2_Basics, KC_VN2_BasicGrenades, PatrolOps_PersonalKit, PatrolOps_ACEMedical_Personal]
+
+primary:
+  name: vn_f1_smg
+  magazine: vn_f1_smg_t_mag
+  rail: ""
+  sight: ""
+  muzzle: "vn_b_l1a1"
+
+vest:
+  name: vn_b_vest_anzac_01
+  contents:
+    vn_f1_smg_t_mag: 4
+
+backpack:
+  contents:
+    vn_f1_smg_t_mag: 10
+  
+---
+
+##
 ## Medics
 ##
 
@@ -86,3 +111,38 @@ vest:
 
 backpack:
   name: vn_b_pack_lw_02
+
+---
+
+name: PatrolOps_Medic_F1
+extends: [PatrolOps_RiflemanF1, PatrolOps_ACEMedical_Medic]
+
+backpack:
+  name: vn_b_pack_pfield_02
+  contents:
+    vn_f1_smg_t_mag: 7 # reduce mag count to what the backpack will hold
+
+---
+
+##
+## RTOs
+##
+
+name: PatrolOps_RTO_F1
+extends: [PatrolOps_RiflemanF1, KC_VN2_GrenadierM79_Kit]
+
+uniform:
+  contents:
+    vn_40mm_m576_buck_mag: 4
+
+vest:
+  contents:
+    vn_40mm_m576_buck_mag: 2
+
+backpack:
+  name: vn_b_pack_trp_04_02
+  contents:
+    vn_f1_smg_t_mag: 8
+    vn_40mm_m576_buck_mag: 0 # sacrifice most of the and shift the rest to the uniform and vest
+    vn_40mm_m406_he_mag: 20
+    
