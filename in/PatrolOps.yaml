@@ -69,6 +69,11 @@ backpack:
 ## Rifleman bases
 ##
 
+name: PatrolOps_RiflemanSLR
+extends: [KC_VN2_RiflemanSLR, PatrolOps_PersonalKit, PatrolOps_ACEMedical_Personal]
+
+---
+
 name: PatrolOps_RiflemanF1
 extends: [KC_VN2_UniformAnzac, KC_VN2_Basics, KC_VN2_BasicGrenades, PatrolOps_PersonalKit, PatrolOps_ACEMedical_Personal]
 
