@@ -151,3 +151,25 @@ backpack:
     vn_40mm_m576_buck_mag: 0 # sacrifice most of the and shift the rest to the uniform and vest
     vn_40mm_m406_he_mag: 20
     
+---
+    
+##
+## MG's
+##
+
+name: PatrolOps_LMG_M60
+extends: [KC_VN2_UniformAnzac, KC_VN2_Basics, KC_VN2_BasicGrenades, PatrolOps_PersonalKit, PatrolOps_ACEMedical_Personal]
+
+primary:
+  name: vn_m60
+  magazine: vn_m60_100_mag
+
+vest:
+  name: vn_b_vest_sas_03
+  contents:
+    vn_m60_100_mag: 2
+
+backpack:
+  name: vn_b_pack_p44_02
+  contents:
+    vn_m60_100_mag: 4
