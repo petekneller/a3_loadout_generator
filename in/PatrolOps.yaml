@@ -5,7 +5,7 @@
 ##
 
 # The KC_VN2 SF uniform doesn't hold enough for the new ACE medical kit
-name: PatrolOps_UniformSF
+name: PatrolOps_UniformSOG
 
 identity: vn_b_WhiteHead_15_11
 insignia: BI
@@ -69,12 +69,12 @@ backpack:
 ## Rifleman bases
 ##
 
-name: PatrolOps_RiflemanSLR
+name: PatrolOps_Anzac_RiflemanSLR
 extends: [KC_VN2_RiflemanSLR, PatrolOps_PersonalKit, PatrolOps_ACEMedical_Personal]
 
 ---
 
-name: PatrolOps_RiflemanF1
+name: PatrolOps_Anzac_RiflemanF1
 extends: [KC_VN2_UniformAnzac, KC_VN2_Basics, KC_VN2_BasicGrenades, PatrolOps_PersonalKit, PatrolOps_ACEMedical_Personal]
 
 primary:
@@ -92,15 +92,15 @@ vest:
 backpack:
   contents:
     vn_f1_smg_t_mag: 10
-  
+
 ---
 
 ##
 ## Medics
 ##
 
-name: PatrolOps_Medic_Thompson
-extends: [PatrolOps_UniformSF, KC_VN2_Basics, KC_VN2_BasicGrenades, PatrolOps_PersonalKit, PatrolOps_ACEMedical_Personal, PatrolOps_ACEMedical_Medic]
+name: PatrolOps_SOG_Medic_Thompson
+extends: [PatrolOps_UniformSOG, KC_VN2_Basics, KC_VN2_BasicGrenades, PatrolOps_PersonalKit, PatrolOps_ACEMedical_Personal, PatrolOps_ACEMedical_Medic]
 
 primary:
   name: vn_m1928a1_tommy
@@ -119,8 +119,8 @@ backpack:
 
 ---
 
-name: PatrolOps_Medic_F1
-extends: [PatrolOps_RiflemanF1, PatrolOps_ACEMedical_Medic]
+name: PatrolOps_Anzac_Medic_F1
+extends: [PatrolOps_Anzac_RiflemanF1, PatrolOps_ACEMedical_Medic]
 
 backpack:
   name: vn_b_pack_pfield_02
@@ -133,8 +133,8 @@ backpack:
 ## RTOs
 ##
 
-name: PatrolOps_RTO_F1
-extends: [PatrolOps_RiflemanF1, KC_VN2_GrenadierM79_Kit]
+name: PatrolOps_Anzac_RTO_F1
+extends: [PatrolOps_Anzac_RiflemanF1, KC_VN2_GrenadierM79_Kit]
 
 uniform:
   contents:
@@ -150,14 +150,14 @@ backpack:
     vn_f1_smg_t_mag: 8
     vn_40mm_m576_buck_mag: 0 # sacrifice most of the and shift the rest to the uniform and vest
     vn_40mm_m406_he_mag: 20
-    
+
 ---
-    
+
 ##
 ## MG's
 ##
 
-name: PatrolOps_LMG_M60
+name: PatrolOps_Anzac_LMG_M60
 extends: [KC_VN2_UniformAnzac, KC_VN2_Basics, KC_VN2_BasicGrenades, PatrolOps_PersonalKit, PatrolOps_ACEMedical_Personal]
 
 primary:
