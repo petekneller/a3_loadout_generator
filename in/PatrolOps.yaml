@@ -165,6 +165,16 @@ backpack:
 
 ---
 
+name: PatrolOps_Anzac_Medic_SLR
+extends: [PatrolOps_Anzac_RiflemanSLR, PatrolOps_ACEMedical_Medic]
+
+backpack:
+  name: vn_b_pack_pfield_02
+  contents:
+    vn_l1a1_20_mag: 0
+
+---
+
 ##
 ## RTOs
 ##
