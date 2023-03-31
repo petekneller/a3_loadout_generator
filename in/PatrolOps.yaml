@@ -241,3 +241,22 @@ backpack:
   name: vn_b_pack_p44_02
   contents:
     vn_m60_100_mag: 4
+
+---
+
+name: PatrolOps_SOG_LMG_RPD
+extends: [PatrolOps_UniformSOG, KC_VN2_Basics, KC_VN2_BasicGrenades, PatrolOps_PersonalKit, PatrolOps_ACEMedical_Personal]
+
+primary:
+  name: vn_rpd_shorty_01
+  magazine: vn_rpd_125_mag
+
+vest:
+  name: vn_b_vest_sog_05
+  contents:
+    vn_rpd_125_mag: 2
+
+backpack:
+  name: vn_b_pack_lw_02
+  contents:
+    vn_rpd_125_mag: 4
