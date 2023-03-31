@@ -95,6 +95,28 @@ backpack:
 
 ---
 
+name: PatrolOps_SOG_RiflemanUzi
+extends: [PatrolOps_UniformSOG, KC_VN2_Basics, KC_VN2_BasicGrenades, PatrolOps_PersonalKit, PatrolOps_ACEMedical_Personal]
+
+primary:
+  name: vn_mpu
+  magazine: vn_mpu_mag
+  rail: ""
+  sight: ""
+  muzzle: ""
+
+vest:
+  name: vn_b_vest_seal_05
+  contents:
+    vn_mpu_mag: 10
+
+backpack:
+  contents:
+    vn_s_mpu: 1 # silencer for Uzi
+    vn_mpu_mag: 10
+
+---
+
 ##
 ## Medics
 ##
@@ -116,6 +138,20 @@ vest:
 
 backpack:
   name: vn_b_pack_lw_02
+
+---
+
+name: PatrolOps_SOG_Medic_Uzi
+extends: [PatrolOps_SOG_RiflemanUzi, PatrolOps_ACEMedical_Medic]
+
+vest:
+  contents:
+    vn_mpu_mag: 12
+
+backpack:
+  name: vn_b_pack_lw_02
+  contents:
+    vn_mpu_mag: 6
 
 ---
 
@@ -148,6 +184,28 @@ backpack:
   name: vn_b_pack_trp_04_02
   contents:
     vn_f1_smg_t_mag: 8
+    vn_40mm_m576_buck_mag: 0 # sacrifice most of the and shift the rest to the uniform and vest
+    vn_40mm_m406_he_mag: 20
+
+---
+
+name: PatrolOps_SOG_RTO_Uzi
+extends: [PatrolOps_SOG_RiflemanUzi, KC_VN2_GrenadierM79_Kit]
+
+uniform:
+  contents:
+    vn_40mm_m576_buck_mag: 4
+
+vest:
+  contents:
+    vn_mpu_mag: 12
+    vn_40mm_m576_buck_mag: 4
+    vn_40mm_m406_he_mag: 10
+
+backpack:
+  name: vn_b_pack_trp_04_02
+  contents:
+    vn_mpu_mag: 6
     vn_40mm_m576_buck_mag: 0 # sacrifice most of the and shift the rest to the uniform and vest
     vn_40mm_m406_he_mag: 20
 
