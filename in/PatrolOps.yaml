@@ -33,6 +33,11 @@ uniform:
     ACE_MapTools: 1
     ZSN_Whistle: 1
 
+backpack:
+  contents:
+    vn_mine_m18_mag: 2
+    ace_marker_flags_blue: 2
+
 ---
 
 name: PatrolOps_ACEMedical_Personal
