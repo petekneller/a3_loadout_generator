@@ -1,0 +1,284 @@
+name: HM_Identity
+
+identity: vn_b_WhiteHead_15_11
+insignia: BI
+voice: male01gre
+
+---
+
+##
+## Standard Kit
+##
+
+name: HM_BasicKit
+
+binoculars: vn_m19_binocs_grn
+map: vn_b_item_map
+compass: vn_b_item_compass_sog
+watch: vn_b_item_watch
+radio: ""
+terminal: ""
+
+uniform:
+  contents: # 3.31 kg
+    # Navigation
+    grad_paceCountBeads_functions_paceCountBeads: 1
+    ACE_MapTools: 1
+    ZSN_Whistle: 1
+    # Explosives
+    ACE_DefusalKit: 1
+    ACE_Clacker: 1
+    # Personal medical
+    ACE_tourniquet: 2
+    ACE_splint: 1
+    ACE_morphine: 5
+    ACE_epinephrine: 5
+    ACE_fieldDressing: 10
+    ACE_bloodIV_500: 2
+    ACE_personalAidKit: 1
+    # Secondary weapon
+    vn_hd_mag: 1
+    pk_22LR_50Rnd_box: 1
+
+vest:
+  contents: # 1.54 kg
+    # Grenades
+    vn_m34_grenade_mag: 2
+    vn_v40_grenade_mag: 2
+
+backpack:
+  contents: # 4.54 kg
+    # Torch
+    vn_mx991_red: 1
+    # Grenades
+    vn_m34_grenade_mag: 2
+    vn_v40_grenade_mag: 2
+    # - basic smoke marking
+    vn_m18_red_mag: 1
+    vn_m18_purple_mag: 1
+    vn_m18_yellow_mag: 1
+    # - demolitions
+    vn_m14_grenade_mag: 1 
+    # For hasty defensive positions
+    vn_mine_m18_mag: 1
+    ace_marker_flags_blue: 1
+    # Other
+    ACE_SpraypaintBlue: 1
+    ACE_CableTie: 1
+
+secondary:
+  name: vn_hd
+  magazine: vn_hd_mag
+  rail: ""
+  sight: ""
+  muzzle: ""
+
+---
+
+name: HM_MedicKit
+
+backpack:
+  contents:
+    ACE_tourniquet: 2
+    ACE_splint: 2
+    ACE_personalAidKit: 1
+    ACE_morphine: 10
+    ACE_epinephrine: 10
+    ACE_fieldDressing: 30
+    ACE_bloodIV_500: 20
+
+---
+
+###
+### SOG
+#########
+
+## Uniforms
+#  - vn_b_uniform_macv_06_02 - 'MACV 6'; holds 6 lbs - _02 is tiger stripe trousers, black tee
+#  - vn_b_uniform_sog_02_05  - 'SOG 2'; holds 8 lbs - _05 is tiger stripe jacket, black trousers, fingerless gloves
+
+name: HM_Uniform_SOG
+extends: [HM_Identity]
+
+headgear: vn_b_boonie_05_02
+facewear: vn_o_scarf_01_03
+uniform:
+  name: vn_b_uniform_sog_02_05
+
+---
+
+## Vests
+# - vn_b_vest_usarmy_02 - 'Rifleman 1'; US army; one of the best 'normal' vests for load (outside of S&S); holds 8 lbs
+# - vn_b_vest_seal_03   - 'SEAL MG'; looks relatively normal; army belt with dual MG belts; holds 22 lbs
+# - vn_b_vest_seal_05   - 'SEAL scout'; army belt with NVA chest rig; holds 20 lbs
+# - vn_b_vest_sog_03    - 'SOG Demo'; holds 14 lbs
+# - vn_b_vest_sog_05    - 'SOG MG'; holds 15 lbs
+
+## Backpacks
+#  - vn_b_pack_lw_05    - 'Army MG Ammo'; one of the best for load; holds 36 lbs
+#  - vn_b_pack_lw_02    - 'Army MG'; lighter than the _05 by 0.7 lbs but only holds 34 lbs
+#  - vn_b_pack_lw_01    - 'Army Rifleman'; holds 33 lbs
+#  - vn_b_pack_lw_03    - 'Army Scout'; has entrenching tool; holds 32 lbs
+#  - vn_b_pack_trp_01_02- 'Army Tropical MG'; holds 35 lbs
+#  - vn_b_pack_trp_04_02- 'Army Tropical RTO'; largest RTO pack; holds 28 lbs
+# looks to be a couple of good SOG ones - to look at?
+
+## Riflemen
+
+name: HM_SOG_RiflemanCAR15
+extends: [HM_Uniform_SOG, HM_BasicKit]
+
+vest:
+  name: vn_b_vest_usarmy_02
+  contents:
+    vn_m16_20_t_mag: 6
+
+backpack:
+  name: vn_b_pack_lw_01
+  contents:
+    pk_556_45_clip_bandolier: 2
+  
+
+primary:
+  name: vn_xm177e1
+  magazine: vn_m16_20_t_mag
+
+---
+
+## LMGs
+
+name: HM_SOG_LMG_RPD
+extends: [HM_Uniform_SOG, HM_BasicKit]
+
+vest:
+  name: vn_b_vest_sog_05
+  contents:
+    vn_rpd_125_mag: 2
+
+backpack:
+  name: vn_b_pack_lw_02
+  contents:
+    pk_762_39_100Rnd_belt: 4
+    ACE_Canteen: 2 # for cooling barrels
+
+primary:
+  name: vn_rpd_shorty_01
+  magazine: vn_rpd_125_mag
+
+---
+
+### Medics
+
+name: HM_SOG_Medic_CAR15
+extends: [HM_SOG_RiflemanCAR15, HM_MedicKit]
+
+---
+
+###
+### SAS
+#########
+
+## Uniforms
+#  - vn_b_uniform_aus_06_01 - 'AUS 6'; olive BDUs, sleeves rolled up; holds 8 lbs
+
+name: HM_Uniform_SAS
+
+headgear: vn_b_boonie_07_01
+facewear: vn_b_acc_towel_01
+uniform:
+  name: vn_b_uniform_aus_06_01
+
+---
+
+## Vests
+## - vn_b_vest_anzac_01 - 'Rifleman 1'; holds 8 lbs
+## - vn_b_vest_anzac_02 - 'Rifleman 2'; holds 7 lbs
+## - vn_b_vest_sas_01   - 'SAS Scout'; doesn't hold as much, but looks scout-ish; holds 10 lbs
+## - vn_b_vest_sas_02   - 'SAS Grenadier'; 40mm pouches on the straps; holds 12 lbs
+## - vn_b_vest_sas_03   - 'SAS MG'; nothing really MG-ish about it, just lots of large pouches; holds 13 lbs
+
+## Backpacks
+## - vn_b_pack_p44_02    - 'P44 2'; medium size pack w/entrenching tool; holds 29 lbs
+## - vn_b_pack_pfield_02 - 'Field 2'; large pack w/entrenching tool; holds 32 lbs
+
+## Riflemen
+
+name: HM_SAS_Rifleman_SLR
+extends: [HM_Uniform_SAS, HM_BasicKit]
+
+vest:
+  name: vn_b_vest_anzac_02
+  contents:
+    vn_l1a1_20_mag: 4
+
+backpack:
+  name: vn_b_pack_p44_02
+  contents:
+    vn_o_3x_l1a1: 1 # scope for SLR
+    vn_b_l1a1: 1 # bayonet for SLR
+    pk_762_51_60Rnd_clip_bandolier: 3
+
+primary:
+  name: vn_l1a1_01
+  magazine: vn_l1a1_20_mag
+  rail: ""
+  sight: ""
+  muzzle: ""
+
+---
+
+name: HM_SAS_Rifleman_F1
+extends: [HM_Uniform_SAS, HM_BasicKit]
+
+vest:
+  name: vn_b_vest_anzac_01
+  contents:
+    vn_f1_smg_t_mag: 4
+
+backpack:
+  name: vn_b_pack_p44_02
+  contents:
+    pk_9_19_10Rnd_clip: 30
+
+primary:
+  name: vn_f1_smg
+  magazine: vn_f1_smg_t_mag
+  rail: ""
+  sight: ""
+  muzzle: "vn_b_l1a1" # bayonet
+
+---
+
+## LMGs
+
+name: HM_SAS_LMG_M60
+extends: [HM_Uniform_SAS, HM_BasicKit]
+
+vest:
+  name: vn_b_vest_sas_03
+  contents:
+    vn_m60_100_mag: 2
+
+backpack:
+  name: vn_b_pack_p44_02
+  contents:
+    pk_762_51_100Rnd_belt: 4
+    ACE_SpareBarrel_Item: 1
+
+primary:
+  name: vn_m60
+  magazine: vn_m60_100_mag
+
+---
+
+### Medics
+
+name: HM_SAS_Medic_SLR
+extends: [HM_SAS_Rifleman_SLR, HM_MedicKit]
+
+backpack:
+  name: vn_b_pack_pfield_02
+
+
+
+    #toe poppers for everyone
