@@ -1564,6 +1564,9 @@ ACE_SpareBarrel:
 ACE_SpareBarrel_Item:
   mass: 60
   from: CfgWeapons
+ACE_SpottingScope:
+  mass: 40
+  from: CfgWeapons
 ACE_SpraypaintBlack:
   mass: 10
 ACE_SpraypaintBlue:
@@ -77443,6 +77446,22 @@ uns_xm177e1:
 vn_10rnd_cmflare_chaff_magazine:
   mass: 8
   magazine: true
+vn_20mm_dgn_wp_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+vn_20mm_f1n60_frag_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+vn_20mm_kgn_frag_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+vn_20mm_pgn60_heat_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
 vn_22mm_cs_mag:
   mass: 8
   magazine: true
@@ -77538,8 +77557,15 @@ vn_acc_bipod_base:
   mass: 1
 vn_acc_camowrap_base:
   mass: 1
+vn_ak_01:
+  mass: 110
+  from: CfgWeapons
 vn_anpvs2_binoc:
   mass: 16
+vn_ato54_v_999_mag:
+  mass: 0
+  magazine: true
+  from: CfgMagazines
 vn_b_backpack_base:
   mass: 56.2
 vn_b_bandana_01:
@@ -77574,6 +77600,15 @@ vn_b_beret_01_07:
   mass: 10
 vn_b_beret_01_08:
   mass: 10
+vn_b_beret_01_09:
+  mass: 10
+  from: CfgWeapons
+vn_b_beret_01_10:
+  mass: 10
+  from: CfgWeapons
+vn_b_beret_01_11:
+  mass: 10
+  from: CfgWeapons
 vn_b_beret_03_01:
   mass: 10
 vn_b_beret_04_01:
@@ -77594,6 +77629,9 @@ vn_b_boonie_01_07:
   mass: 10
 vn_b_boonie_01_08:
   mass: 10
+vn_b_boonie_01_09:
+  mass: 10
+  from: CfgWeapons
 vn_b_boonie_02_01:
   mass: 10
 vn_b_boonie_02_02:
@@ -77610,6 +77648,9 @@ vn_b_boonie_02_07:
   mass: 10
 vn_b_boonie_02_08:
   mass: 10
+vn_b_boonie_02_09:
+  mass: 10
+  from: CfgWeapons
 vn_b_boonie_03_01:
   mass: 10
 vn_b_boonie_03_02:
@@ -77626,6 +77667,9 @@ vn_b_boonie_03_07:
   mass: 10
 vn_b_boonie_03_08:
   mass: 10
+vn_b_boonie_03_09:
+  mass: 10
+  from: CfgWeapons
 vn_b_boonie_04_01:
   mass: 10
 vn_b_boonie_04_02:
@@ -77642,6 +77686,9 @@ vn_b_boonie_04_07:
   mass: 10
 vn_b_boonie_04_08:
   mass: 10
+vn_b_boonie_04_09:
+  mass: 10
+  from: CfgWeapons
 vn_b_boonie_05_01:
   mass: 10
 vn_b_boonie_05_02:
@@ -77658,6 +77705,9 @@ vn_b_boonie_05_07:
   mass: 10
 vn_b_boonie_05_08:
   mass: 10
+vn_b_boonie_05_09:
+  mass: 10
+  from: CfgWeapons
 vn_b_boonie_06_01:
   mass: 10
 vn_b_boonie_06_02:
@@ -77670,16 +77720,55 @@ vn_b_boonie_08_01:
   mass: 10
 vn_b_boonie_08_02:
   mass: 10
+vn_b_boonie_09_01:
+  mass: 10
+  from: CfgWeapons
+vn_b_boonie_09_02:
+  mass: 10
+  from: CfgWeapons
+vn_b_boonie_09_03:
+  mass: 10
+  from: CfgWeapons
+vn_b_boonie_09_04:
+  mass: 10
+  from: CfgWeapons
+vn_b_boonie_09_05:
+  mass: 10
+  from: CfgWeapons
+vn_b_boonie_09_06:
+  mass: 10
+  from: CfgWeapons
+vn_b_boonie_09_07:
+  mass: 10
+  from: CfgWeapons
+vn_b_boonie_09_08:
+  mass: 10
+  from: CfgWeapons
+vn_b_boonie_09_09:
+  mass: 10
+  from: CfgWeapons
+vn_b_camo_k98k:
+  mass: 4
+  from: CfgWeapons
 vn_b_camo_m14:
   mass: 4
 vn_b_camo_m14a1:
   mass: 4
+vn_b_camo_m1903:
+  mass: 4
+  from: CfgWeapons
 vn_b_camo_m1_garand:
   mass: 4
+vn_b_camo_m36:
+  mass: 4
+  from: CfgWeapons
 vn_b_camo_m40a1:
   mass: 4
 vn_b_camo_m9130:
   mass: 4
+vn_b_camo_svd:
+  mass: 4
+  from: CfgWeapons
 vn_b_camo_vz54:
   mass: 4
 vn_b_carbine:
@@ -77774,6 +77863,48 @@ vn_b_helmet_m1_12_01:
   mass: 10
 vn_b_helmet_m1_12_02:
   mass: 10
+vn_b_helmet_m1_14_01:
+  mass: 10
+  from: CfgWeapons
+vn_b_helmet_m1_14_02:
+  mass: 10
+  from: CfgWeapons
+vn_b_helmet_m1_15_01:
+  mass: 10
+  from: CfgWeapons
+vn_b_helmet_m1_15_02:
+  mass: 10
+  from: CfgWeapons
+vn_b_helmet_m1_16_01:
+  mass: 10
+  from: CfgWeapons
+vn_b_helmet_m1_16_02:
+  mass: 10
+  from: CfgWeapons
+vn_b_helmet_m1_17_01:
+  mass: 10
+  from: CfgWeapons
+vn_b_helmet_m1_17_02:
+  mass: 10
+  from: CfgWeapons
+vn_b_helmet_m1_18_01:
+  mass: 10
+  from: CfgWeapons
+vn_b_helmet_m1_18_02:
+  mass: 10
+  from: CfgWeapons
+vn_b_helmet_m1_19_01:
+  mass: 10
+  from: CfgWeapons
+vn_b_helmet_m1_19_02:
+  mass: 10
+  from: CfgWeapons
+vn_b_helmet_m1_20_01:
+  mass: 10
+  from: CfgWeapons
+vn_b_helmet_m1_20_02:
+  mass: 10
+  from: CfgWeapons
 vn_b_helmet_sog_01:
   mass: 10
 vn_b_helmet_sph4_01_01:
@@ -79856,6 +79987,9 @@ vn_b_item_watch:
   mass: 2
 vn_b_item_wiretap:
   mass: 10
+vn_b_k98k:
+  mass: 6.6
+  from: CfgWeapons
 vn_b_l1a1:
   mass: 6.6
 vn_b_m14:
@@ -79864,12 +79998,30 @@ vn_b_m16:
   mass: 5
 vn_b_m1897:
   mass: 8
+vn_b_m1903:
+  mass: 6.6
+  from: CfgWeapons
 vn_b_m1_garand:
   mass: 6.6
+vn_b_m36:
+  mass: 6.6
+  from: CfgWeapons
 vn_b_m38:
   mass: 8
 vn_b_m4956:
   mass: 6.6
+vn_b_melee_k98k:
+  mass: 2
+  from: CfgWeapons
+vn_b_melee_m1903:
+  mass: 2
+  from: CfgWeapons
+vn_b_melee_m36:
+  mass: 2
+  from: CfgWeapons
+vn_b_melee_m43_etool_01:
+  mass: 4
+  from: CfgWeapons
 vn_b_pack_01:
   mass: 50
 vn_b_pack_01_02:
@@ -79888,6 +80040,12 @@ vn_b_pack_01_eng_m1897_pl:
   mass: 50
 vn_b_pack_01_eng_m45_pl:
   mass: 50
+vn_b_pack_01_hp_pl:
+  mass: 50
+  from: CfgVehicles
+vn_b_pack_01_m14_pl:
+  mass: 50
+  from: CfgVehicles
 vn_b_pack_01_m45_pl:
   mass: 50
 vn_b_pack_01_m79_pl:
@@ -79944,10 +80102,16 @@ vn_b_pack_03:
   mass: 36.25
 vn_b_pack_03_02:
   mass: 36.25
+vn_b_pack_03_02_m14_pl:
+  mass: 36.25
+  from: CfgVehicles
 vn_b_pack_03_02_m63a_pl:
   mass: 36.25
 vn_b_pack_03_02_type56_pl:
   mass: 36.25
+vn_b_pack_03_02_type64_pl:
+  mass: 36.25
+  from: CfgVehicles
 vn_b_pack_03_02_xm177_pl:
   mass: 36.25
 vn_b_pack_03_m3a1_pl:
@@ -79960,6 +80124,9 @@ vn_b_pack_04:
   mass: 56.2
 vn_b_pack_04_02:
   mass: 56.2
+vn_b_pack_04_02_l2a3_pl:
+  mass: 56.2
+  from: CfgVehicles
 vn_b_pack_04_02_m16_pl:
   mass: 56.2
 vn_b_pack_04_02_m1_pl:
@@ -79984,12 +80151,141 @@ vn_b_pack_05_02_eng_mat49_pl:
   mass: 59.45
 vn_b_pack_05_02_m1897_pl:
   mass: 59.45
+vn_b_pack_05_02_type64_pl:
+  mass: 59.45
+  from: CfgVehicles
+vn_b_pack_arvn_01:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_arvn_01_m14_pl:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_arvn_01_m16_pl:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_arvn_01_m1918_pl:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_arvn_01_m1_garand_pl:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_arvn_01_m45_eng_pl:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_arvn_01_m45_m72_eng_pl:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_arvn_01_m60_pl:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_arvn_01_medic_m16_pl:
+  mass: 47.05
+  from: CfgVehicles
+vn_b_pack_arvn_01_type56_pl:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_arvn_02:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_arvn_02_m14_eng_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_arvn_02_m14_m72_eng_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_arvn_02_m14_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_arvn_02_m16_eng_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_arvn_02_m16_m72_eng_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_arvn_02_m16_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_arvn_02_m1897_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_arvn_02_m1_garand_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_arvn_02_m36_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_arvn_02_m40a1_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_arvn_02_medic_pps_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_arvn_02_sks_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_arvn_03:
+  mass: 59.45
+  from: CfgVehicles
+vn_b_pack_arvn_03_eng_m16_pl:
+  mass: 59.45
+  from: CfgVehicles
+vn_b_pack_arvn_03_eng_m1897_m72_pl:
+  mass: 59.45
+  from: CfgVehicles
+vn_b_pack_arvn_03_m14_pl:
+  mass: 59.45
+  from: CfgVehicles
+vn_b_pack_arvn_03_m16_m20_pl:
+  mass: 59.45
+  from: CfgVehicles
+vn_b_pack_arvn_03_m79_pl:
+  mass: 59.45
+  from: CfgVehicles
+vn_b_pack_arvn_03_medic_m14_pl:
+  mass: 59.45
+  from: CfgVehicles
+vn_b_pack_arvn_03_medic_m16_pl:
+  mass: 59.45
+  from: CfgVehicles
+vn_b_pack_arvn_03_medic_m1carbine_pl:
+  mass: 59.45
+  from: CfgVehicles
+vn_b_pack_arvn_03_ppsh_pl:
+  mass: 59.45
+  from: CfgVehicles
+vn_b_pack_arvn_04:
+  mass: 50
+  from: CfgVehicles
+vn_b_pack_arvn_04_m14_pl:
+  mass: 50
+  from: CfgVehicles
+vn_b_pack_arvn_04_m16_m72_pl:
+  mass: 50
+  from: CfgVehicles
+vn_b_pack_arvn_04_m16_pl:
+  mass: 50
+  from: CfgVehicles
+vn_b_pack_arvn_04_m1897_pl:
+  mass: 50
+  from: CfgVehicles
+vn_b_pack_arvn_04_m1_garand_pl:
+  mass: 50
+  from: CfgVehicles
+vn_b_pack_arvn_04_m1a1_pl:
+  mass: 50
+  from: CfgVehicles
+vn_b_pack_arvn_04_m79_pl:
+  mass: 50
+  from: CfgVehicles
 vn_b_pack_ba18_01:
   mass: 120
 vn_b_pack_ba22_01:
   mass: 120
 vn_b_pack_lw_01:
   mass: 59.45
+vn_b_pack_lw_01_m16_m72_pl:
+  mass: 59.45
+  from: CfgVehicles
 vn_b_pack_lw_01_m16_pl:
   mass: 59.45
 vn_b_pack_lw_01_m1_carbine_gl_pl:
@@ -80042,8 +80338,14 @@ vn_b_pack_lw_04_eng_m1a1_pl:
   mass: 66.25
 vn_b_pack_lw_04_m16_pl:
   mass: 66.25
+vn_b_pack_lw_04_m1903_pl:
+  mass: 66.25
+  from: CfgVehicles
 vn_b_pack_lw_04_m1_garand_pl:
   mass: 66.25
+vn_b_pack_lw_04_m36_pl:
+  mass: 66.25
+  from: CfgVehicles
 vn_b_pack_lw_05:
   mass: 69.8
 vn_b_pack_lw_05_m1897_pl:
@@ -80064,6 +80366,102 @@ vn_b_pack_lw_07_medic_m16_pl:
   mass: 56.2
 vn_b_pack_lw_07_medic_mat49_pl:
   mass: 56.2
+vn_b_pack_m41_01:
+  mass: 47.05
+  from: CfgVehicles
+vn_b_pack_m41_01_m14_m20_pl:
+  mass: 47.05
+  from: CfgVehicles
+vn_b_pack_m41_01_m14_pl:
+  mass: 47.05
+  from: CfgVehicles
+vn_b_pack_m41_01_m16_m20_pl:
+  mass: 47.05
+  from: CfgVehicles
+vn_b_pack_m41_01_m16_m72_pl:
+  mass: 47.05
+  from: CfgVehicles
+vn_b_pack_m41_01_m16_pl:
+  mass: 47.05
+  from: CfgVehicles
+vn_b_pack_m41_01_m1_garand_pl:
+  mass: 47.05
+  from: CfgVehicles
+vn_b_pack_m41_01_medic_m16_pl:
+  mass: 47.05
+  from: CfgVehicles
+vn_b_pack_m41_01_medic_m1911_pl:
+  mass: 47.05
+  from: CfgVehicles
+vn_b_pack_m41_02:
+  mass: 50
+  from: CfgVehicles
+vn_b_pack_m41_02_eng_m14_pl:
+  mass: 50
+  from: CfgVehicles
+vn_b_pack_m41_02_m14_pl:
+  mass: 50
+  from: CfgVehicles
+vn_b_pack_m41_02_m16_pl:
+  mass: 50
+  from: CfgVehicles
+vn_b_pack_m41_02_m1_garand_gl_pl:
+  mass: 50
+  from: CfgVehicles
+vn_b_pack_m41_03:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_m41_03_m14_pl:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_m41_03_m16_m20_pl:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_m41_03_m16_pl:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_m41_03_m1897_pl:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_m41_03_m20_pl:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_m41_03_m40a1_pl:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_m41_03_m60_pl:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_m41_04:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_m41_04_eng_m16_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_m41_04_eng_m2_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_m41_04_m14_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_m41_04_m16_m72_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_m41_04_m16_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_m41_04_m79_pl:
+  mass: 56.2
+  from: CfgVehicles
+vn_b_pack_m41_05:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_m41_05_m16_pl:
+  mass: 53.05
+  from: CfgVehicles
+vn_b_pack_m41_05_m2_pl:
+  mass: 53.05
+  from: CfgVehicles
 vn_b_pack_m5_01:
   mass: 41.45
 vn_b_pack_m5_01_medic_m16_pl:
@@ -80096,6 +80494,9 @@ vn_b_pack_p08_03_l1a1_gl_pl:
   mass: 36.25
 vn_b_pack_p44_01:
   mass: 44.2
+vn_b_pack_p44_01_eng_l34a1_pl:
+  mass: 44.2
+  from: CfgVehicles
 vn_b_pack_p44_01_eng_sten_pl:
   mass: 44.2
 vn_b_pack_p44_01_f1_pl:
@@ -80154,10 +80555,19 @@ vn_b_pack_pfield_02_medic_l1a1_pl:
   mass: 56.2
 vn_b_pack_prc77_01:
   mass: 21.2
+vn_b_pack_prc77_01_m14_pl:
+  mass: 21.2
+  from: CfgVehicles
 vn_b_pack_prc77_01_m16_pl:
   mass: 21.2
 vn_b_pack_prc77_01_m1_garand_pl:
   mass: 21.2
+vn_b_pack_prc77_01_m79_pl:
+  mass: 21.2
+  from: CfgVehicles
+vn_b_pack_prc77_01_ppsh_pl:
+  mass: 21.2
+  from: CfgVehicles
 vn_b_pack_seal_01:
   mass: 10
 vn_b_pack_static_ammo_01:
@@ -80178,6 +80588,12 @@ vn_b_pack_static_m2_high_01:
   mass: 180
 vn_b_pack_static_m2_low_01:
   mass: 180
+vn_b_pack_static_m2_scoped_high_01:
+  mass: 180
+  from: CfgVehicles
+vn_b_pack_static_m2_scoped_low_01:
+  mass: 180
+  from: CfgVehicles
 vn_b_pack_static_m60_high_01:
   mass: 180
 vn_b_pack_static_m60_low_01:
@@ -80186,6 +80602,9 @@ vn_b_pack_static_mk18:
   mass: 180
 vn_b_pack_static_tow:
   mass: 180
+vn_b_pack_t10_01:
+  mass: 120
+  from: CfgVehicles
 vn_b_pack_trp_01:
   mass: 66.25
 vn_b_pack_trp_01_02:
@@ -80316,6 +80735,21 @@ vn_b_uniform_macv_01_17:
   mass: 70
 vn_b_uniform_macv_01_18:
   mass: 70
+vn_b_uniform_macv_01_22:
+  mass: 60
+  from: CfgWeapons
+vn_b_uniform_macv_01_23:
+  mass: 60
+  from: CfgWeapons
+vn_b_uniform_macv_01_24:
+  mass: 60
+  from: CfgWeapons
+vn_b_uniform_macv_01_25:
+  mass: 60
+  from: CfgWeapons
+vn_b_uniform_macv_01_26:
+  mass: 60
+  from: CfgWeapons
 vn_b_uniform_macv_02_01:
   mass: 70
 vn_b_uniform_macv_02_02:
@@ -80626,6 +81060,33 @@ vn_b_vest_usarmy_13:
   mass: 20
 vn_b_vest_usarmy_14:
   mass: 22.5
+vn_b_vest_usmc_01:
+  mass: 30
+  from: CfgWeapons
+vn_b_vest_usmc_02:
+  mass: 27.5
+  from: CfgWeapons
+vn_b_vest_usmc_03:
+  mass: 30
+  from: CfgWeapons
+vn_b_vest_usmc_04:
+  mass: 22.5
+  from: CfgWeapons
+vn_b_vest_usmc_05:
+  mass: 20
+  from: CfgWeapons
+vn_b_vest_usmc_06:
+  mass: 22.5
+  from: CfgWeapons
+vn_b_vest_usmc_07:
+  mass: 27.5
+  from: CfgWeapons
+vn_b_vest_usmc_08:
+  mass: 30
+  from: CfgWeapons
+vn_b_vest_usmc_09:
+  mass: 25
+  from: CfgWeapons
 vn_backpack_base:
   mass: 56.2
 vn_bipod_m14:
@@ -80634,6 +81095,9 @@ vn_bipod_m16:
   mass: 4
 vn_bipod_m1918:
   mass: 4
+vn_bipod_m63a:
+  mass: 4
+  from: CfgWeapons
 vn_bomb_1000_fab500_he_mag_x1:
   mass: 554
   magazine: true
@@ -80646,6 +81110,10 @@ vn_bomb_100_m47_wp_mag_x1:
 vn_bomb_15000_blu82_dc_mag_x1:
   mass: 6800
   magazine: true
+vn_bomb_15000_blu82_dc_parachute_mag_x1:
+  mass: 6800
+  magazine: true
+  from: CfgMagazines
 vn_bomb_2000_gbu8_he_mag_x1:
   mass: 1108
   magazine: true
@@ -81041,6 +81509,9 @@ vn_c_pack_01_medic_pl:
   mass: 36.25
 vn_c_pack_02:
   mass: 185
+vn_camera_01:
+  mass: 10
+  from: CfgWeapons
 vn_cannon_105mm_mag_he_base:
   mass: 8
   magazine: true
@@ -81101,6 +81572,22 @@ vn_carbine_30_t_mag:
 vn_chicom_grenade_mag:
   mass: 10
   magazine: true
+vn_d10t2s_v_10_aphe_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+vn_d10t2s_v_16_he_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+vn_d10t2s_v_4_heat_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+vn_d10t2s_v_4_hvap_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
 vn_d56_v_18_he_mag:
   mass: 8
   magazine: true
@@ -81216,6 +81703,22 @@ vn_fuel_mig19_760_mag:
 vn_fuel_mig19_760_mag_empty:
   mass: 0
   magazine: true
+vn_fuel_mig21_490_camo_01_mag:
+  mass: 490
+  magazine: true
+  from: CfgMagazines
+vn_fuel_mig21_490_camo_01_mag_empty:
+  mass: 0
+  magazine: true
+  from: CfgMagazines
+vn_fuel_mig21_490_mag:
+  mass: 490
+  magazine: true
+  from: CfgMagazines
+vn_fuel_mig21_490_mag_empty:
+  mass: 0
+  magazine: true
+  from: CfgMagazines
 vn_gau5a:
   mass: 60
 vn_gau5a_mrk:
@@ -81223,6 +81726,66 @@ vn_gau5a_mrk:
 vn_gun_m61a1_640_mag:
   mass: 8
   magazine: true
+vn_gunpod_gau2_v_1500_mag:
+  mass: 45
+  magazine: true
+  from: CfgMagazines
+vn_gunpod_gau2_v_2000_mag:
+  mass: 60
+  magazine: true
+  from: CfgMagazines
+vn_gunpod_gau2_v_3500_mag:
+  mass: 105
+  magazine: true
+  from: CfgMagazines
+vn_gunpod_gau2_v_5000_mag:
+  mass: 150
+  magazine: true
+  from: CfgMagazines
+vn_gunpod_gau2_v_6500_mag:
+  mass: 195
+  magazine: true
+  from: CfgMagazines
+vn_gunpod_gau2_v_8000_mag:
+  mass: 240
+  magazine: true
+  from: CfgMagazines
+vn_gunpod_gau4_v_1500_api_mag:
+  mass: 390
+  magazine: true
+  from: CfgMagazines
+vn_gunpod_gau4_v_1500_hei_mag:
+  mass: 390
+  magazine: true
+  from: CfgMagazines
+vn_gunpod_gau4_v_2100_api_mag:
+  mass: 546
+  magazine: true
+  from: CfgMagazines
+vn_gunpod_gau4_v_2100_hei_mag:
+  mass: 546
+  magazine: true
+  from: CfgMagazines
+vn_gunpod_gau4_v_2500_api_mag:
+  mass: 650
+  magazine: true
+  from: CfgMagazines
+vn_gunpod_gau4_v_2500_hei_mag:
+  mass: 650
+  magazine: true
+  from: CfgMagazines
+vn_gunpod_gau4_v_750_api_mag:
+  mass: 195
+  magazine: true
+  from: CfgMagazines
+vn_gunpod_gau4_v_750_hei_mag:
+  mass: 195
+  magazine: true
+  from: CfgMagazines
+vn_gunpod_gsh23l_v_200_mag:
+  mass: 150
+  magazine: true
+  from: CfgMagazines
 vn_gunpod_m18_v_1500_mag:
   mass: 250
   magazine: true
@@ -81290,6 +81853,9 @@ vn_hp:
 vn_hp_mag:
   mass: 6
   magazine: true
+vn_hp_sd:
+  mass: 25
+  from: CfgWeapons
 vn_i_beret_01_01:
   mass: 10
 vn_i_beret_03_01:
@@ -81332,6 +81898,40 @@ vn_izh54_so_mag:
   magazine: true
 vn_k50m:
   mass: 40
+vn_k98k:
+  mass: 75
+  from: CfgWeapons
+vn_k98k_bayo:
+  mass: 75
+  from: CfgWeapons
+vn_k98k_mag:
+  mass: 4
+  magazine: true
+  from: CfgMagazines
+vn_k98k_mrk:
+  mass: 75
+  from: CfgWeapons
+vn_k98k_mrk_camo:
+  mass: 75
+  from: CfgWeapons
+vn_k98k_t_mag:
+  mass: 4
+  magazine: true
+  from: CfgMagazines
+vn_kbkg:
+  mass: 120
+  from: CfgWeapons
+vn_kbkg_gl:
+  mass: 130
+  from: CfgWeapons
+vn_kbkg_mag:
+  mass: 3
+  magazine: true
+  from: CfgMagazines
+vn_kbkg_t_mag:
+  mass: 3
+  magazine: true
+  from: CfgMagazines
 vn_l1a1_01:
   mass: 110
 vn_l1a1_01_bayo:
@@ -81386,6 +81986,24 @@ vn_l1a1_xm148_camo:
   mass: 130
 vn_l2a1_01:
   mass: 110
+vn_l2a3:
+  mass: 45
+  from: CfgWeapons
+vn_l2a3_f:
+  mass: 45
+  from: CfgWeapons
+vn_l34a1:
+  mass: 65
+  from: CfgWeapons
+vn_l34a1_f:
+  mass: 65
+  from: CfgWeapons
+vn_l34a1_xm148:
+  mass: 85
+  from: CfgWeapons
+vn_l4:
+  mass: 190
+  from: CfgWeapons
 vn_lmagazine:
   mass: 30
   magazine: true
@@ -81401,6 +82019,10 @@ vn_m10_mag:
   magazine: true
 vn_m10_sd:
   mass: 35
+vn_m10_v_999_mag:
+  mass: 0
+  magazine: true
+  from: CfgMagazines
 vn_m127:
   mass: 6
 vn_m127_mag:
@@ -81475,6 +82097,12 @@ vn_m14a1_camo:
   mass: 120
 vn_m14a1_nvg:
   mass: 120
+vn_m14a1_shorty:
+  mass: 100
+  from: CfgWeapons
+vn_m14a1_shorty_fs:
+  mass: 100
+  from: CfgWeapons
 vn_m14a1_sniper:
   mass: 120
 vn_m16:
@@ -81592,6 +82220,30 @@ vn_m18_white_mag:
 vn_m18_yellow_mag:
   mass: 9
   magazine: true
+vn_m1903:
+  mass: 100
+  from: CfgWeapons
+vn_m1903_bayo:
+  mass: 100
+  from: CfgWeapons
+vn_m1903_gl:
+  mass: 120
+  from: CfgWeapons
+vn_m1903_mag:
+  mass: 4
+  magazine: true
+  from: CfgMagazines
+vn_m1903_sniper:
+  mass: 100
+  from: CfgWeapons
+vn_m1903_t_mag:
+  mass: 4
+  magazine: true
+  from: CfgMagazines
+vn_m1910_v_250_mag:
+  mass: 15
+  magazine: true
+  from: CfgMagazines
 vn_m1911:
   mass: 23
 vn_m1911_mag:
@@ -81615,6 +82267,10 @@ vn_m1919_v_250_mag:
 vn_m1919_v_500_mag:
   mass: 8
   magazine: true
+vn_m1919_v_twin_500_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
 vn_m1928_mag:
   mass: 19
   magazine: true
@@ -81668,8 +82324,22 @@ vn_m1carbine_bayo:
   mass: 100
 vn_m1carbine_gl:
   mass: 100
+vn_m1carbine_shorty:
+  mass: 90
+  from: CfgWeapons
 vn_m1carbine_sniper:
   mass: 100
+vn_m20a1b1_01:
+  mass: 140
+  from: CfgWeapons
+vn_m20a1b1_heat_mag:
+  mass: 30
+  magazine: true
+  from: CfgMagazines
+vn_m20a1b1_wp_mag:
+  mass: 30
+  magazine: true
+  from: CfgMagazines
 vn_m21:
   mass: 100
 vn_m21_nvg:
@@ -81678,12 +82348,40 @@ vn_m21_nvg_sd:
   mass: 100
 vn_m21_sd:
   mass: 100
+vn_m24a1_v_1200_api_mag:
+  mass: 300
+  magazine: true
+  from: CfgMagazines
+vn_m24a1_v_1200_hei_mag:
+  mass: 300
+  magazine: true
+  from: CfgMagazines
+vn_m24a1_v_400_api_mag:
+  mass: 300
+  magazine: true
+  from: CfgMagazines
+vn_m24a1_v_400_hei_mag:
+  mass: 300
+  magazine: true
+  from: CfgMagazines
+vn_m24a1_v_800_api_mag:
+  mass: 300
+  magazine: true
+  from: CfgMagazines
+vn_m24a1_v_800_hei_mag:
+  mass: 300
+  magazine: true
+  from: CfgMagazines
 vn_m2_v_100_mag:
   mass: 8
   magazine: true
 vn_m2_v_200_mag:
   mass: 8
   magazine: true
+vn_m2_v_400_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
 vn_m2_v_800_mag:
   mass: 8
   magazine: true
@@ -81719,6 +82417,23 @@ vn_m32a1_v_6_can_mag:
 vn_m34_grenade_mag:
   mass: 12
   magazine: true
+vn_m36:
+  mass: 100
+  from: CfgWeapons
+vn_m36_bayo:
+  mass: 100
+  from: CfgWeapons
+vn_m36_camo:
+  mass: 100
+  from: CfgWeapons
+vn_m36_mag:
+  mass: 4
+  magazine: true
+  from: CfgMagazines
+vn_m36_t_mag:
+  mass: 4
+  magazine: true
+  from: CfgMagazines
 vn_m38:
   mass: 110
 vn_m38_bayo:
@@ -81776,6 +82491,30 @@ vn_m40a1rr_v_8_heat_mag:
 vn_m40a1rr_v_8_hept_mag:
   mass: 16
   magazine: true
+vn_m41_v_12_heat_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+vn_m41_v_18_can_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+vn_m41_v_18_he_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+vn_m41_v_4_apc_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+vn_m41_v_4_hvap_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+vn_m41_v_6_wp_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
 vn_m45:
   mass: 38.6
 vn_m45_camo:
@@ -81836,6 +82575,10 @@ vn_m60_v_twin_1000:
 vn_m60_v_twin_2000:
   mass: 54
   magazine: true
+vn_m60_v_twin_200_mag:
+  mass: 54
+  magazine: true
+  from: CfgMagazines
 vn_m60_v_twin_3000:
   mass: 54
   magazine: true
@@ -81866,8 +82609,14 @@ vn_m63a_30_t_mag:
   magazine: true
 vn_m63a_cdo:
   mass: 90
+vn_m63a_cdo_bipod:
+  mass: 110
+  from: CfgWeapons
 vn_m63a_lmg:
   mass: 90
+vn_m63a_lmg_bipod:
+  mass: 110
+  from: CfgWeapons
 vn_m67_grenade_mag:
   mass: 6.6
   magazine: true
@@ -81902,6 +82651,10 @@ vn_m79_tiger3:
 vn_m7_grenade_mag:
   mass: 9
   magazine: true
+vn_m7_v_999_mag:
+  mass: 0
+  magazine: true
+  from: CfgMagazines
 vn_m7_v_cs_ammo:
   mass: 100
 vn_m8c_v_10_bat_mag:
@@ -81971,6 +82724,10 @@ vn_mat49_vc:
 vn_mat49_vc_mag:
   mass: 8
   magazine: true
+vn_mat49_vc_t_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
 vn_mc10:
   mass: 50
 vn_mc10_mag:
@@ -81981,6 +82738,17 @@ vn_mc10_sd:
 vn_mc10_t_mag:
   mass: 6
   magazine: true
+vn_mg42:
+  mass: 190
+  from: CfgWeapons
+vn_mg42_50_mag:
+  mass: 37
+  magazine: true
+  from: CfgMagazines
+vn_mg42_50_t_mag:
+  mass: 37
+  magazine: true
+  from: CfgMagazines
 vn_mg42_v_250_mag:
   mass: 15
   magazine: true
@@ -82041,12 +82809,28 @@ vn_mine_m15_mag:
 vn_mine_m16_mag:
   mass: 6
   magazine: true
+vn_mine_m18_fuze10_mag:
+  mass: 9
+  magazine: true
+  from: CfgMagazines
 vn_mine_m18_mag:
   mass: 9
   magazine: true
 vn_mine_m18_range_mag:
   mass: 9
   magazine: true
+vn_mine_m18_wp_fuze10_mag:
+  mass: 11
+  magazine: true
+  from: CfgMagazines
+vn_mine_m18_wp_mag:
+  mass: 11
+  magazine: true
+  from: CfgMagazines
+vn_mine_m18_wp_range_mag:
+  mass: 11
+  magazine: true
+  from: CfgMagazines
 vn_mine_m18_x3_mag:
   mass: 27
   magazine: true
@@ -82197,6 +82981,14 @@ vn_missile_kh66_mag_01_x1:
 vn_missile_mig19_01_aa2_mag_x1:
   mass: 8
   magazine: true
+vn_missile_mig21_aa2_mag_x1:
+  mass: 100
+  magazine: true
+  from: CfgMagazines
+vn_missile_mig21_kh66_mag_x1:
+  mass: 200
+  magazine: true
+  from: CfgMagazines
 vn_missile_sa7b_mag_x2:
   mass: 120
   magazine: true
@@ -82223,6 +83015,12 @@ vn_mk22_mag:
   magazine: true
 vn_mk22_sd:
   mass: 20
+vn_mk24_v_red_flare_ammo:
+  mass: 100
+  from: CfgAmmo
+vn_mk24_v_white_flare_ammo:
+  mass: 100
+  from: CfgAmmo
 vn_mk2_v_60_mag:
   mass: 8
   magazine: true
@@ -82312,6 +83110,9 @@ vn_nr30_v_195_mag:
 vn_ns23_v_250_mag:
   mass: 8
   magazine: true
+vn_o_1_5x_k98k:
+  mass: 8
+  from: CfgWeapons
 vn_o_1x_sp_m16:
   mass: 6
 vn_o_3x_l1a1:
@@ -82320,12 +83121,21 @@ vn_o_3x_m84:
   mass: 8
 vn_o_3x_m9130:
   mass: 6
+vn_o_3x_sks:
+  mass: 6
+  from: CfgWeapons
 vn_o_3x_vz54:
   mass: 6
 vn_o_4x_m16:
   mass: 6
 vn_o_4x_m4956:
   mass: 8
+vn_o_4x_svd:
+  mass: 8
+  from: CfgWeapons
+vn_o_8x_m1903:
+  mass: 8
+  from: CfgWeapons
 vn_o_9x_m14:
   mass: 8
 vn_o_9x_m16:
@@ -84413,10 +85223,28 @@ vn_o_item_radio_m252_998:
   mass: 8
 vn_o_item_radio_m252_999:
   mass: 8
+vn_o_m14_front:
+  mass: 8
+  from: CfgWeapons
 vn_o_pack_01:
   mass: 25
 vn_o_pack_01_ish54_pl:
   mass: 25
+vn_o_pack_01_m16_m72_pl:
+  mass: 25
+  from: CfgVehicles
+vn_o_pack_01_m16_pl:
+  mass: 25
+  from: CfgVehicles
+vn_o_pack_01_m1_garand_pl:
+  mass: 25
+  from: CfgVehicles
+vn_o_pack_01_m1a1_pl:
+  mass: 25
+  from: CfgVehicles
+vn_o_pack_01_m38_pl:
+  mass: 25
+  from: CfgVehicles
 vn_o_pack_01_medic_ish54_pl:
   mass: 25
 vn_o_pack_01_medic_m712_pl:
@@ -84427,20 +85255,44 @@ vn_o_pack_01_mp40_pl:
   mass: 25
 vn_o_pack_01_ppsh_pl:
   mass: 25
+vn_o_pack_01_sks_pl:
+  mass: 25
+  from: CfgVehicles
+vn_o_pack_01_sten_pl:
+  mass: 25
+  from: CfgVehicles
+vn_o_pack_01_tt33_pl:
+  mass: 25
+  from: CfgVehicles
+vn_o_pack_01_type56_pl:
+  mass: 25
+  from: CfgVehicles
 vn_o_pack_02:
   mass: 29.2
 vn_o_pack_02_eng_pps_pl:
   mass: 29.2
 vn_o_pack_02_eng_ppsh_pl:
   mass: 29.2
+vn_o_pack_02_m16_pl:
+  mass: 29.2
+  from: CfgVehicles
+vn_o_pack_02_m1918_pl:
+  mass: 29.2
+  from: CfgVehicles
 vn_o_pack_02_m1_garand_pl:
   mass: 29.2
 vn_o_pack_02_m1a1_pl:
   mass: 29.2
+vn_o_pack_02_m36_pl:
+  mass: 29.2
+  from: CfgVehicles
 vn_o_pack_02_m38_pl:
   mass: 29.2
 vn_o_pack_02_m4956_pl:
   mass: 29.2
+vn_o_pack_02_m79_pl:
+  mass: 59.45
+  from: CfgVehicles
 vn_o_pack_02_mat49_pl:
   mass: 29.2
 vn_o_pack_02_medic_mat49_pl:
@@ -84453,6 +85305,9 @@ vn_o_pack_02_ppsh_pl:
   mass: 29.2
 vn_o_pack_02_sks_pl:
   mass: 29.2
+vn_o_pack_02_type56_pl:
+  mass: 29.2
+  from: CfgVehicles
 vn_o_pack_03:
   mass: 33.8
 vn_o_pack_03_rpg2_ish54_pl:
@@ -84461,12 +85316,21 @@ vn_o_pack_03_rpg2_m4956_pl:
   mass: 33.8
 vn_o_pack_03_rpg2_pps_pl:
   mass: 33.8
+vn_o_pack_03_rpg2_sks_gl_pl:
+  mass: 33.8
+  from: CfgVehicles
 vn_o_pack_03_rpg2_sks_pl:
   mass: 33.8
 vn_o_pack_03_rpg2_tt33_pl:
   mass: 33.8
+vn_o_pack_03_rpg7_ish54_gl_pl:
+  mass: 33.8
+  from: CfgVehicles
 vn_o_pack_03_rpg7_sks_pl:
   mass: 33.8
+vn_o_pack_03_rpg7_tt33_pl:
+  mass: 33.8
+  from: CfgVehicles
 vn_o_pack_03_rpg7_type56_pl:
   mass: 33.8
 vn_o_pack_03_sa7_sks_pl:
@@ -84475,14 +85339,26 @@ vn_o_pack_04:
   mass: 38.8
 vn_o_pack_04_dp28_pl:
   mass: 38.8
+vn_o_pack_04_kbkg_pl:
+  mass: 38.8
+  from: CfgVehicles
 vn_o_pack_04_m1_pl:
   mass: 38.8
+vn_o_pack_04_m1a1_eng_pl:
+  mass: 38.8
+  from: CfgVehicles
 vn_o_pack_04_m3a1_pl:
   mass: 38.8
 vn_o_pack_04_m4956_pl:
   mass: 38.8
+vn_o_pack_04_mat49_eng_pl:
+  mass: 38.8
+  from: CfgVehicles
 vn_o_pack_04_mg42_pl:
   mass: 38.8
+vn_o_pack_04_pps_eng_pl:
+  mass: 38.8
+  from: CfgVehicles
 vn_o_pack_04_rpd_pl:
   mass: 38.8
 vn_o_pack_04_sks_pl:
@@ -84493,6 +85369,9 @@ vn_o_pack_05_eng_m3a1_pl:
   mass: 44.2
 vn_o_pack_05_eng_sks_pl:
   mass: 44.2
+vn_o_pack_05_eng_type56_pl:
+  mass: 44.2
+  from: CfgVehicles
 vn_o_pack_05_type56_pl:
   mass: 44.2
 vn_o_pack_06:
@@ -84509,6 +85388,9 @@ vn_o_pack_06_rpd_pl:
   mass: 50
 vn_o_pack_06_sks_pl:
   mass: 50
+vn_o_pack_06_svd_pl:
+  mass: 50
+  from: CfgVehicles
 vn_o_pack_07:
   mass: 56.2
 vn_o_pack_07_m79_pl:
@@ -84539,6 +85421,15 @@ vn_o_pack_static_dshkm_low_01:
   mass: 180
 vn_o_pack_static_dshkm_low_02:
   mass: 180
+vn_o_pack_static_m1910_high_01:
+  mass: 180
+  from: CfgVehicles
+vn_o_pack_static_m1910_low_01:
+  mass: 180
+  from: CfgVehicles
+vn_o_pack_static_m1910_low_02:
+  mass: 180
+  from: CfgVehicles
 vn_o_pack_static_mg42_high:
   mass: 180
 vn_o_pack_static_mg42_low:
@@ -84567,6 +85458,9 @@ vn_o_pack_t884_ish54_01_pl:
   mass: 16.25
 vn_o_pack_t884_m1_01_pl:
   mass: 16.25
+vn_o_pack_t884_m36_01_pl:
+  mass: 16.25
+  from: CfgVehicles
 vn_o_pack_t884_m38_01_pl:
   mass: 16.25
 vn_o_pack_t884_pps_01_pl:
@@ -84831,6 +85725,16 @@ vn_o_vest_vc_05:
   mass: 32.5
 vn_optic_base:
   mass: 8
+vn_p38:
+  mass: 23
+  from: CfgWeapons
+vn_p38_mag:
+  mass: 6
+  magazine: true
+  from: CfgMagazines
+vn_p38_sd:
+  mass: 23
+  from: CfgWeapons
 vn_p38s:
   mass: 35
 vn_pistol:
@@ -84865,6 +85769,16 @@ vn_pm_mag:
   magazine: true
 vn_pm_sd:
   mass: 16
+vn_ppk:
+  mass: 19
+  from: CfgWeapons
+vn_ppk_mag:
+  mass: 6
+  magazine: true
+  from: CfgMagazines
+vn_ppk_sd:
+  mass: 19
+  from: CfgWeapons
 vn_pps43:
   mass: 50
 vn_pps52:
@@ -85254,6 +86168,22 @@ vn_rkg3_grenade_mag:
 vn_rocket_base:
   mass: 8
   magazine: true
+vn_rocket_ffar_ah1_m151_he_x12:
+  mass: 180
+  magazine: true
+  from: CfgMagazines
+vn_rocket_ffar_ah1_m156_wp_x12:
+  mass: 180
+  magazine: true
+  from: CfgMagazines
+vn_rocket_ffar_ah1_m229_he_x10:
+  mass: 200
+  magazine: true
+  from: CfgMagazines
+vn_rocket_ffar_ah1_wdu4_flechette_x12:
+  mass: 180
+  magazine: true
+  from: CfgMagazines
 vn_rocket_ffar_f4_in_lau3_m151_he_x19:
   mass: 220
   magazine: true
@@ -85562,6 +86492,10 @@ vn_rpd_v_100_mag:
   magazine: true
 vn_rpg2:
   mass: 140
+vn_rpg2_fuze_mag:
+  mass: 30
+  magazine: true
+  from: CfgMagazines
 vn_rpg2_mag:
   mass: 30
   magazine: true
@@ -85572,6 +86506,9 @@ vn_rpg7_mag:
   magazine: true
 vn_rsp30_v_flare_ammo:
   mass: 100
+vn_s_hp:
+  mass: 10
+  from: CfgWeapons
 vn_s_m14:
   mass: 12
 vn_s_m16:
@@ -85596,6 +86533,9 @@ vn_s_mpu:
   mass: 10
 vn_s_pm:
   mass: 4
+vn_s_ppk:
+  mass: 10
+  from: CfgWeapons
 vn_s_sten:
   mass: 10
 vn_sa2_camo_mag_x1:
@@ -85656,6 +86596,10 @@ vn_smg:
 vn_smgmag_base:
   mass: 8
   magazine: true
+vn_smokegen_v_14_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
 vn_sten:
   mass: 40
 vn_sten_mag:
@@ -85676,6 +86620,23 @@ vn_suppressor_9_base:
   mass: 4
 vn_suppressor_smg_base:
   mass: 10
+vn_svd:
+  mass: 140
+  from: CfgWeapons
+vn_svd_mag:
+  mass: 4
+  magazine: true
+  from: CfgMagazines
+vn_svd_sniper:
+  mass: 140
+  from: CfgWeapons
+vn_svd_sniper_camo:
+  mass: 140
+  from: CfgWeapons
+vn_svd_t_mag:
+  mass: 4
+  magazine: true
+  from: CfgMagazines
 vn_t62_v_20_he_mag:
   mass: 8
   magazine: true
@@ -85718,6 +86679,27 @@ vn_type56_v_12_he_mag:
 vn_type56_v_12_heat_mag:
   mass: 10
   magazine: true
+vn_type64:
+  mass: 43
+  from: CfgWeapons
+vn_type64_f_smg:
+  mass: 40
+  from: CfgWeapons
+vn_type64_mag:
+  mass: 6
+  magazine: true
+  from: CfgMagazines
+vn_type64_smg:
+  mass: 40
+  from: CfgWeapons
+vn_type64_smg_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
+vn_type64_smg_t_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
 vn_v11m_v_12_he_mag:
   mass: 8
   magazine: true
@@ -85739,6 +86721,14 @@ vn_v_m61_mag:
 vn_v_m7_mag:
   mass: 227
   magazine: true
+vn_v_mk24_r_mag:
+  mass: 227
+  magazine: true
+  from: CfgMagazines
+vn_v_mk24_w_mag:
+  mass: 227
+  magazine: true
+  from: CfgMagazines
 vn_v_rdg2_mag:
   mass: 227
   magazine: true
@@ -85802,6 +86792,12 @@ vn_xm177_camo:
   mass: 60
 vn_xm177_fg:
   mass: 65
+vn_xm177_m203:
+  mass: 120
+  from: CfgWeapons
+vn_xm177_m203_camo:
+  mass: 120
+  from: CfgWeapons
 vn_xm177_mrk:
   mass: 65
 vn_xm177_muzzle:
@@ -85830,6 +86826,10 @@ vn_xm177e1_nvg:
   mass: 60
 vn_xm177e1_sniper:
   mass: 60
+vn_zgu1_v_70_mag:
+  mass: 8
+  magazine: true
+  from: CfgMagazines
 vn_zpu4_v_4800_02_mag:
   mass: 8
   magazine: true
