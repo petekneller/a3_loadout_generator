@@ -60466,6 +60466,10 @@ optic_tws_mg:
   mass: 16
 pdw2000_base_F:
   mass: 2
+pk_22LR_50Rnd_box:
+  mass: 5
+  magazine: true
+  from: CfgMagazines
 pk_45ACP_10Rnd_clip:
   mass: 2
   magazine: true
@@ -60496,6 +60500,14 @@ pk_762_51_100Rnd_belt:
   from: CfgMagazines
 pk_762_51_10Rnd_clip:
   mass: 3
+  magazine: true
+  from: CfgMagazines
+pk_762_51_5Rnd_clip:
+  mass: 1
+  magazine: true
+  from: CfgMagazines
+pk_762_51_60Rnd_clip_bandolier:
+  mass: 18
   magazine: true
   from: CfgMagazines
 pk_9_18_8Rnd_clip:
