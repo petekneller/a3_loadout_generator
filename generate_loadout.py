@@ -1,9 +1,5 @@
 #! /bin/env python
 
-# Requires the following python libs to be installed:
-# - pyyaml
-# - jinja2
-
 from functools import reduce
 from jinja2 import Environment, FileSystemLoader
 from pathlib import Path
