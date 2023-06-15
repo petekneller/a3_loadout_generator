@@ -20,7 +20,7 @@ radio: ""
 terminal: ""
 
 uniform:
-  contents: # 3.31 kg
+  contents: # 7.20 lbs
     # Navigation
     grad_paceCountBeads_functions_paceCountBeads: 1
     ACE_MapTools: 1
@@ -37,17 +37,17 @@ uniform:
     ACE_bloodIV_500: 2
     ACE_personalAidKit: 1
     # Secondary weapon
-    vn_hd_mag: 1
+    vn_hd_mag: 2
     pk_22LR_50Rnd_box: 1
 
 vest:
-  contents: # 1.54 kg
+  contents: # 3.40 lbs
     # Grenades
     vn_m34_grenade_mag: 2
     vn_v40_grenade_mag: 2
 
 backpack:
-  contents: # 4.54 kg
+  contents: # 12.10 lbs
     # Torch
     vn_mx991_red: 1
     # Grenades
@@ -58,13 +58,14 @@ backpack:
     vn_m18_purple_mag: 1
     vn_m18_yellow_mag: 1
     # - demolitions
-    vn_m14_grenade_mag: 1 
+    vn_m14_grenade_mag: 1
     # For hasty defensive positions
-    vn_mine_m18_mag: 1
+    vn_mine_m18_mag: 1 # claymore
     ace_marker_flags_blue: 1
     # Other
     ACE_SpraypaintBlue: 1
-    ACE_CableTie: 1
+    ACE_CableTie: 1 # for capturing prisoners
+    vn_mine_m14_mag: 5 # a few toe-poppers for the team
 
 secondary:
   name: vn_hd
@@ -78,13 +79,13 @@ secondary:
 name: HM_MedicKit
 
 backpack:
-  contents:
+  contents: # 15.60 lbs
     ACE_tourniquet: 2
     ACE_splint: 2
     ACE_personalAidKit: 1
     ACE_morphine: 10
     ACE_epinephrine: 10
-    ACE_fieldDressing: 30
+    ACE_fieldDressing: 20
     ACE_bloodIV_500: 20
 
 ---
@@ -123,9 +124,9 @@ uniform:
 #  - vn_b_pack_trp_04_02- 'Army Tropical RTO'; largest RTO pack; holds 28 lbs
 # looks to be a couple of good SOG ones - to look at?
 
-## Riflemen
+## Base loadouts
 
-name: HM_SOG_RiflemanCAR15
+name: HM_SOG_Rifleman_CAR15
 extends: [HM_Uniform_SOG, HM_BasicKit]
 
 vest:
@@ -137,7 +138,6 @@ backpack:
   name: vn_b_pack_lw_01
   contents:
     pk_556_45_clip_bandolier: 2
-  
 
 primary:
   name: vn_xm177e1
@@ -170,7 +170,11 @@ primary:
 ### Medics
 
 name: HM_SOG_Medic_CAR15
-extends: [HM_SOG_RiflemanCAR15, HM_MedicKit]
+extends: [HM_SOG_Rifleman_CAR15, HM_MedicKit]
+
+backpack:
+  contents:
+    pk_556_45_clip_bandolier: 1 # trade ammo for med kit
 
 ---
 
@@ -201,7 +205,7 @@ uniform:
 ## - vn_b_pack_p44_02    - 'P44 2'; medium size pack w/entrenching tool; holds 29 lbs
 ## - vn_b_pack_pfield_02 - 'Field 2'; large pack w/entrenching tool; holds 32 lbs
 
-## Riflemen
+## Base loadouts
 
 name: HM_SAS_Rifleman_SLR
 extends: [HM_Uniform_SAS, HM_BasicKit]
@@ -209,7 +213,7 @@ extends: [HM_Uniform_SAS, HM_BasicKit]
 vest:
   name: vn_b_vest_anzac_02
   contents:
-    vn_l1a1_20_mag: 4
+    vn_l1a1_20_t_mag: 4
 
 backpack:
   name: vn_b_pack_p44_02
@@ -220,7 +224,7 @@ backpack:
 
 primary:
   name: vn_l1a1_01
-  magazine: vn_l1a1_20_mag
+  magazine: vn_l1a1_20_t_mag
   rail: ""
   sight: ""
   muzzle: ""
@@ -262,7 +266,7 @@ vest:
 backpack:
   name: vn_b_pack_p44_02
   contents:
-    pk_762_51_100Rnd_belt: 4
+    pk_762_51_100Rnd_belt: 3
     ACE_SpareBarrel_Item: 1
 
 primary:
@@ -278,7 +282,16 @@ extends: [HM_SAS_Rifleman_SLR, HM_MedicKit]
 
 backpack:
   name: vn_b_pack_pfield_02
+  contents:
+    pk_762_51_60Rnd_clip_bandolier: 2
+    vn_mine_m14_mag: 0 # sacrifice toe-poppers to prevent overloading
 
+---
 
+name: HM_SAS_Medic_F1
+extends: [HM_SAS_Rifleman_F1, HM_MedicKit]
 
-    #toe poppers for everyone
+backpack:
+  name: vn_b_pack_pfield_02
+  contents:
+    pk_9_19_10Rnd_clip: 20
