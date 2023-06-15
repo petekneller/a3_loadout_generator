@@ -4,11 +4,11 @@ identity: vn_b_WhiteHead_15_11
 insignia: BI
 voice: male01gre
 
----
-
 ##
 ## Standard Kit
 ##
+
+---
 
 name: HM_BasicKit
 
@@ -88,8 +88,6 @@ backpack:
     ACE_fieldDressing: 20
     ACE_bloodIV_500: 20
 
----
-
 ###
 ### SOG
 #########
@@ -98,6 +96,8 @@ backpack:
 #  - vn_b_uniform_macv_06_02 - 'MACV 6'; holds 6 lbs - _02 is tiger stripe trousers, black tee
 #  - vn_b_uniform_sog_02_05  - 'SOG 2'; holds 8 lbs - _05 is tiger stripe jacket, black trousers, fingerless gloves
 
+---
+
 name: HM_Uniform_SOG
 extends: [HM_Identity]
 
@@ -105,8 +105,6 @@ headgear: vn_b_boonie_05_02
 facewear: vn_o_scarf_01_03
 uniform:
   name: vn_b_uniform_sog_02_05
-
----
 
 ## Vests
 # - vn_b_vest_usarmy_02 - 'Rifleman 1'; US army; one of the best 'normal' vests for load (outside of S&S); holds 8 lbs
@@ -126,6 +124,8 @@ uniform:
 
 ## Base loadouts
 
+---
+
 name: HM_SOG_Rifleman_CAR15
 extends: [HM_Uniform_SOG, HM_BasicKit]
 
@@ -143,9 +143,9 @@ primary:
   name: vn_xm177e1
   magazine: vn_m16_20_t_mag
 
----
-
 ## LMGs
+
+---
 
 name: HM_SOG_LMG_RPD
 extends: [HM_Uniform_SOG, HM_BasicKit]
@@ -165,9 +165,9 @@ primary:
   name: vn_rpd_shorty_01
   magazine: vn_rpd_125_mag
 
----
-
 ### Medics
+
+---
 
 name: HM_SOG_Medic_CAR15
 extends: [HM_SOG_Rifleman_CAR15, HM_MedicKit]
@@ -176,8 +176,6 @@ backpack:
   contents:
     pk_556_45_clip_bandolier: 1 # trade ammo for med kit
 
----
-
 ###
 ### SAS
 #########
@@ -185,14 +183,14 @@ backpack:
 ## Uniforms
 #  - vn_b_uniform_aus_06_01 - 'AUS 6'; olive BDUs, sleeves rolled up; holds 8 lbs
 
+---
+
 name: HM_Uniform_SAS
 
 headgear: vn_b_boonie_07_01
 facewear: vn_b_acc_towel_01
 uniform:
   name: vn_b_uniform_aus_06_01
-
----
 
 ## Vests
 ## - vn_b_vest_anzac_01 - 'Rifleman 1'; holds 8 lbs
@@ -206,6 +204,8 @@ uniform:
 ## - vn_b_pack_pfield_02 - 'Field 2'; large pack w/entrenching tool; holds 32 lbs
 
 ## Base loadouts
+
+---
 
 name: HM_SAS_Rifleman_SLR
 extends: [HM_Uniform_SAS, HM_BasicKit]
@@ -251,9 +251,9 @@ primary:
   sight: ""
   muzzle: "vn_b_l1a1" # bayonet
 
----
-
 ## LMGs
+
+---
 
 name: HM_SAS_LMG_M60
 extends: [HM_Uniform_SAS, HM_BasicKit]
@@ -273,9 +273,9 @@ primary:
   name: vn_m60
   magazine: vn_m60_100_mag
 
----
-
 ### Medics
+
+---
 
 name: HM_SAS_Medic_SLR
 extends: [HM_SAS_Rifleman_SLR, HM_MedicKit]
