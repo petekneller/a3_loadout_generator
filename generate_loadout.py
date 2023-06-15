@@ -6,9 +6,6 @@ from pathlib import Path
 import sys
 import yaml
 
-config_dir_name = sys.argv[1]
-output_dir_name = sys.argv[2]
-
 def read_file(dir_entry):
     print(f"Reading [{dir_entry}]")
 
@@ -43,9 +40,9 @@ def resolve_config(config_name, configs):
     inherited.append(config)
     return reduce(merge_configs, inherited)
 
-def main(config_dir_name, output_dir_name):
+def main(config_file_names, output_dir_name):
     configs = dict([config
-                    for entry in Path(config_dir_name).iterdir()
+                    for entry in config_file_names
                     for config in read_file(entry)])
 
     env = Environment(
@@ -82,4 +79,8 @@ def main(config_dir_name, output_dir_name):
                 print(f"Writing loadout [{file_name}]")
                 output_file.write(weight_template.render(config=config, weights=weights))
 
-main(config_dir_name, output_dir_name)
+if (__name__ == "__main__"):
+    output_dir_name = sys.argv[1]
+    config_file_names = sys.argv[2:]
+
+    main(config_file_names, output_dir_name)
