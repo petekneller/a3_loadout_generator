@@ -85102,6 +85102,7 @@ vn_b_pack_ba22_01:
 vn_b_pack_lw_01:
   mass: 59.45
   from: CfgVehicles
+  capacity: 330
 vn_b_pack_lw_01_m16_m72_pl:
   mass: 59.45
   from: CfgVehicles
@@ -85129,6 +85130,7 @@ vn_b_pack_lw_01_m79_pl:
 vn_b_pack_lw_02:
   mass: 62.8
   from: CfgVehicles
+  capacity: 340
 vn_b_pack_lw_02_m16_pl:
   mass: 62.8
   from: CfgVehicles
@@ -85144,6 +85146,7 @@ vn_b_pack_lw_02_rpd_pl:
 vn_b_pack_lw_03:
   mass: 56.2
   from: CfgVehicles
+  capacity: 320
 vn_b_pack_lw_03_m16_pl:
   mass: 56.2
   from: CfgVehicles
@@ -85195,6 +85198,7 @@ vn_b_pack_lw_04_m36_pl:
 vn_b_pack_lw_05:
   mass: 69.8
   from: CfgVehicles
+  capacity: 360
 vn_b_pack_lw_05_m1897_pl:
   mass: 69.8
   from: CfgVehicles
@@ -85399,6 +85403,7 @@ vn_b_pack_p44_01_medic_l1a1_pl:
 vn_b_pack_p44_02:
   mass: 47.05
   from: CfgVehicles
+  capacity: 290
 vn_b_pack_p44_02_eng_f1_pl:
   mass: 47.05
   from: CfgVehicles
@@ -85444,6 +85449,7 @@ vn_b_pack_pfield_01_m60_pl:
 vn_b_pack_pfield_02:
   mass: 56.2
   from: CfgVehicles
+  capacity: 320
 vn_b_pack_pfield_02_eng_m16_pl:
   mass: 56.2
   from: CfgVehicles
@@ -85528,6 +85534,7 @@ vn_b_pack_trp_01:
 vn_b_pack_trp_01_02:
   mass: 66.25
   from: CfgVehicles
+  capacity: 350
 vn_b_pack_trp_01_02_m60_pl:
   mass: 66.25
   from: CfgVehicles
@@ -85597,6 +85604,7 @@ vn_b_pack_trp_04:
 vn_b_pack_trp_04_02:
   mass: 44.2
   from: CfgVehicles
+  capacity: 280
 vn_b_pack_trp_04_02_m16_pl:
   mass: 44.2
   from: CfgVehicles
@@ -85612,33 +85620,43 @@ vn_b_type56:
 vn_b_uniform_aus_01_01:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_aus_02_01:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_aus_03_01:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_aus_04_01:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_aus_05_01:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_aus_06_01:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_aus_07_01:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_aus_08_01:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_aus_09_01:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_aus_10_01:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_base:
   mass: 5
   from: CfgWeapons
@@ -85861,33 +85879,43 @@ vn_b_uniform_macv_05_18:
 vn_b_uniform_macv_06_01:
   mass: 60
   from: CfgWeapons
+  capacity: 6
 vn_b_uniform_macv_06_02:
   mass: 60
   from: CfgWeapons
+  capacity: 6
 vn_b_uniform_macv_06_05:
   mass: 60
   from: CfgWeapons
+  capacity: 6
 vn_b_uniform_macv_06_06:
   mass: 60
   from: CfgWeapons
+  capacity: 6
 vn_b_uniform_macv_06_07:
   mass: 60
   from: CfgWeapons
+  capacity: 6
 vn_b_uniform_macv_06_08:
   mass: 60
   from: CfgWeapons
+  capacity: 6
 vn_b_uniform_macv_06_15:
   mass: 60
   from: CfgWeapons
+  capacity: 6
 vn_b_uniform_macv_06_16:
   mass: 60
   from: CfgWeapons
+  capacity: 6
 vn_b_uniform_macv_06_17:
   mass: 60
   from: CfgWeapons
+  capacity: 6
 vn_b_uniform_macv_06_18:
   mass: 60
   from: CfgWeapons
+  capacity: 6
 vn_b_uniform_nz_01_01:
   mass: 80
   from: CfgWeapons
@@ -86011,39 +86039,51 @@ vn_b_uniform_seal_09_01:
 vn_b_uniform_sog_01_01:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_sog_01_02:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_sog_01_03:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_sog_01_04:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_sog_01_05:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_sog_01_06:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_sog_02_01:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_sog_02_02:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_sog_02_03:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_sog_02_04:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_sog_02_05:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_sog_02_06:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_vest_aircrew_01:
   mass: 20
   from: CfgWeapons
@@ -86068,9 +86108,11 @@ vn_b_vest_aircrew_07:
 vn_b_vest_anzac_01:
   mass: 30
   from: CfgWeapons
+  capacity: 80
 vn_b_vest_anzac_02:
   mass: 27.5
   from: CfgWeapons
+  capacity: 70
 vn_b_vest_anzac_03:
   mass: 25
   from: CfgWeapons
@@ -86104,12 +86146,15 @@ vn_b_vest_diver_base:
 vn_b_vest_sas_01:
   mass: 35
   from: CfgWeapons
+  capacity: 100
 vn_b_vest_sas_02:
   mass: 40
   from: CfgWeapons
+  capacity: 120
 vn_b_vest_sas_03:
   mass: 42.5
   from: CfgWeapons
+  capacity: 130
 vn_b_vest_sas_04:
   mass: 37.5
   from: CfgWeapons
@@ -86122,12 +86167,14 @@ vn_b_vest_seal_02:
 vn_b_vest_seal_03:
   mass: 65
   from: CfgWeapons
+  capacity: 220
 vn_b_vest_seal_04:
   mass: 60
   from: CfgWeapons
 vn_b_vest_seal_05:
   mass: 60
   from: CfgWeapons
+  capacity: 200
 vn_b_vest_seal_06:
   mass: 60
   from: CfgWeapons
@@ -86143,12 +86190,14 @@ vn_b_vest_sog_02:
 vn_b_vest_sog_03:
   mass: 45
   from: CfgWeapons
+  capacity: 140
 vn_b_vest_sog_04:
   mass: 47.5
   from: CfgWeapons
 vn_b_vest_sog_05:
   mass: 47.5
   from: CfgWeapons
+  capacity: 150
 vn_b_vest_sog_06:
   mass: 50
   from: CfgWeapons
@@ -86161,6 +86210,7 @@ vn_b_vest_usarmy_01:
 vn_b_vest_usarmy_02:
   mass: 30
   from: CfgWeapons
+  capacity: 80
 vn_b_vest_usarmy_03:
   mass: 27.5
   from: CfgWeapons
