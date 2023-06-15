@@ -1,13 +1,17 @@
 {# Macros -#}
 
+{% macro format_weight(weight) %}
+{{ "{:.2f} lbs".format(weight) -}}
+{% endmacro %}
+
 {% macro render_item(item_name) %}
 {% if item_name %}
-{{ item_name }} # {% if weights[item_name] %}{{ "{:.2f} kg".format(weights[item_name]) }}{% else %}???{% endif %}
-{% endif %}
+{{ item_name }} # {% if weights[item_name] %}{{ format_weight(weights[item_name]) }}{% else %}???{% endif %}
+{%- endif %}
 {% endmacro -%}
 
 {% macro render_items(item_name, qty) %}
-{{ item_name }}: {{ qty }} # {% if weights[item_name] %}{{ "{} x {:.2f} = {:.2f} kg".format(qty, weights[item_name], qty * weights[item_name]) }}{% else %}???{% endif %}
+{{ item_name }}: {{ qty }} # {% if weights[item_name] %}{{ "{} x {:.2f} = {:.2f} lbs".format(qty, weights[item_name], qty * weights[item_name]) }}{% else %}???{% endif %}
 {% endmacro -%}
 
 {% macro render_weapon_weight(weapon) %}
@@ -17,7 +21,7 @@
 {% set weight_sight = weights[weapon['sight']] if weapon['sight'] and weights[weapon['sight']] else 0 %}
 {% set weight_muzzle = weights[weapon['muzzle']] if weapon['muzzle'] and weights[weapon['muzzle']] else 0 %}
 {% set weight_bipod = weights[weapon['bipod']] if weapon['bipod'] and weights[weapon['bipod']] else 0 %}
-# {{ "{:.2f}".format([weight_weapon, weight_magazine, weight_rail, weight_sight, weight_muzzle, weight_bipod] | sum) }} kg
+# {{ format_weight([weight_weapon, weight_magazine, weight_rail, weight_sight, weight_muzzle, weight_bipod] | sum) }}
 {%- endmacro -%}
 
 {% macro render_container_contents_weight(container) %}
@@ -28,7 +32,7 @@
   {% set item_weight = (weights[item] * qty) if weights[item] else 0 %}
   {% set ns.weight = ns.weight + item_weight %}
 {% endfor %}
-# {{ "{:.2f}".format(ns.weight) }} kg
+# {{ format_weight(ns.weight) }}
 {%- endif %}
 {% endmacro -%}
 
@@ -41,7 +45,7 @@
   {% set ns.weight = ns.weight + item_weight %}
 {% endfor %}
 {% endif %}
-# {{ "{:.2f}".format(ns.weight) }} kg
+# {{ format_weight(ns.weight) }}
 {%- endmacro -%}
 
 {% macro render_total_weight() -%}
@@ -107,7 +111,7 @@
     {% endfor %}
   {% endif %}
 {% endif %}
-# {{ "{:.2f}".format(ns.weight) }} kg
+# {{ format_weight(ns.weight) }}
 {% endmacro %}
 
 {# Template -#}
@@ -123,7 +127,7 @@ facewear: {{ render_item(config['facewear']) }}
 {% set weight_radio = weights[config['radio']] if config['radio'] and weights[config['radio']] else 0 %}
 {% set weight_terminal = weights[config['terminal']] if config['terminal'] and weights[config['terminal']] else 0 %}
 {% set weight_nvgs = weights[config['nvgs']] if config['nvgs'] and weights[config['nvgs']] else 0 %}
-# {{ "{:.2f}".format([weight_binoculars, weight_map, weight_compass, weight_watch, weight_radio, weight_terminal, weight_nvgs] | sum) }} kg
+# {{ format_weight([weight_binoculars, weight_map, weight_compass, weight_watch, weight_radio, weight_terminal, weight_nvgs] | sum) }}
 binoculars: {{ render_item(config['binoculars']) }}
 map: {{ render_item(config['map']) }}
 compass: {{ render_item(config['compass']) }}

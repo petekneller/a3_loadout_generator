@@ -60,7 +60,7 @@ def main(config_dir_name, output_dir_name):
 
     with open("weights.yaml", "r") as weights_file:
         weights_info = yaml.safe_load(weights_file)
-        weights = dict([(key, value["mass"] / 10 / 2.205) for key, value in weights_info.items()])
+        weights = dict([(key, value["mass"] / 10) for key, value in weights_info.items()])
         magazines = [key for key, value in weights_info.items() if ("magazine" in value and value["magazine"] is True)]
 
         for config_name in iter(configs):
