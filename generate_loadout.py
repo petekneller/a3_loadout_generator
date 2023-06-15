@@ -40,6 +40,26 @@ def resolve_config(config_name, configs):
     inherited.append(config)
     return reduce(merge_configs, inherited)
 
+def verify_container_not_overflowing(container_name, config, weights, capacities):
+    lowercase_container_name = container_name.lower()
+    if ((lowercase_container_name in config) and ("name" in config[lowercase_container_name]) and ("contents" in config[lowercase_container_name])):
+        container_class = config[lowercase_container_name]["name"]
+        container_contents = config[lowercase_container_name]["contents"]
+        if ((container_class in capacities) and all(map(lambda item: item in weights, container_contents.keys()))):
+            total_weight = sum([(weights[item] * qty) for (item, qty) in container_contents.items()])
+            capacity = capacities[container_class]
+            if (total_weight > capacity):
+                print(f"\x1b[1;31m{container_name} is overloaded! Weight of contents [{total_weight} lbs] exceeds capacity [{capacity} lbs]\x1b[0m")
+            else:
+                print(f"\x1b[32m{container_name} contents are within capacity: [{total_weight} of {capacity} lbs]\x1b[0m")
+        else:
+            if (container_class not in capacities):
+                print(f"\x1b[1;33mNo capacity available for {lowercase_container_name} [{container_class}]; cannot validate that {lowercase_container_name} is not overloaded\x1b[0m")
+
+            for item in container_contents.keys():
+                if (item not in weights):
+                    print(f"\x1b[1;33mNo weight information for item [{item}]; cannot validate that {lowercase_container_name} is not overloaded\x1b[0m")
+
 def main(config_file_names, output_dir_name):
     configs = dict([config
                     for entry in config_file_names
@@ -79,6 +99,10 @@ def main(config_file_names, output_dir_name):
             with open(file_name, "w") as output_file:
                 print(f"Writing loadout [{file_name}]")
                 output_file.write(weight_template.render(config=config, weights=weights, capacities=capacities))
+
+            verify_container_not_overflowing("Uniform", config, weights, capacities)
+            verify_container_not_overflowing("Vest", config, weights, capacities)
+            verify_container_not_overflowing("Backpack", config, weights, capacities)
 
 if (__name__ == "__main__"):
     output_dir_name = sys.argv[1]
