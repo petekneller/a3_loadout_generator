@@ -58,6 +58,7 @@ def main(config_file_names, output_dir_name):
     with open("weights.yaml", "r") as weights_file:
         weights_info = yaml.safe_load(weights_file)
         weights = dict([(key, value["mass"] / 10) for key, value in weights_info.items()])
+        capacities = dict([(key, value["capacity"] / 10) for key, value in weights_info.items() if ("capacity" in value)])
         magazines = [key for key, value in weights_info.items() if ("magazine" in value and value["magazine"] is True)]
 
         for config_name in iter(configs):
@@ -77,7 +78,7 @@ def main(config_file_names, output_dir_name):
             file_name = Path(output_dir_name) / f"{config_name}.weights.yaml"
             with open(file_name, "w") as output_file:
                 print(f"Writing loadout [{file_name}]")
-                output_file.write(weight_template.render(config=config, weights=weights))
+                output_file.write(weight_template.render(config=config, weights=weights, capacities=capacities))
 
 if (__name__ == "__main__"):
     output_dir_name = sys.argv[1]

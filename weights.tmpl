@@ -32,7 +32,7 @@
   {% set item_weight = (weights[item] * qty) if weights[item] else 0 %}
   {% set ns.weight = ns.weight + item_weight %}
 {% endfor %}
-# {{ format_weight(ns.weight) }}
+# {{ format_weight(ns.weight) }}{% if container['name'] and capacities[container['name']] %} / {{ format_weight(capacities[container['name']]) }} capacity{% endif %}
 {%- endif %}
 {% endmacro -%}
 
