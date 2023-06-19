@@ -1,3 +1,13 @@
+# todo
+# - the uzi would be a good lightweight gun for heavy loadouts (medic and demo) and with the silencer as a scout gun; the silenced secondary could prob be dropped
+# - a series of loadouts using the M2 as a lightweight gun for heavy loadouts (medic and demo); perhaps a few rifle grenades for demo purposes
+
+# need to re-save:
+# - car15 scout
+# - car15 demo
+
+
+
 name: HM_Identity
 
 identity: vn_b_WhiteHead_15_11
@@ -95,19 +105,25 @@ backpack:
 ## Uniforms
 #  - vn_b_uniform_macv_06_02 - 'MACV 6'; holds 6 lbs - _02 is tiger stripe trousers, black tee
 #  - vn_b_uniform_sog_02_05  - 'SOG 2'; holds 8 lbs - _05 is tiger stripe jacket, black trousers, fingerless gloves
+#  - vn_b_uniform_sog_02_06  - 'SOG 2' sprayed-OD jacket, black trousers
+#                            - all 'SOG 1' and '2' hold 8 lbs; the 'SOG 1's have full length gloves; the 'SOG 2' all fingerless gloves
+
+## Headgear
+#  - vn_b_boonie_05_02       - Tiger stripe boonie w/right side up
+#  - vn_b_boonie_02_04       - Sprayed-OD boonie
 
 ---
 
 name: HM_Uniform_SOG
 extends: [HM_Identity]
 
-headgear: vn_b_boonie_05_02
+headgear: vn_b_boonie_02_04
 facewear: vn_o_scarf_01_03
 uniform:
-  name: vn_b_uniform_sog_02_05
+  name: vn_b_uniform_sog_02_06
 
 ## Vests
-# - vn_b_vest_usarmy_02 - 'Rifleman 1'; US army; one of the best 'normal' vests for load (outside of S&S); holds 8 lbs
+# - vn_b_vest_usarmy_02 - 'Rifleman 1'; US army; LBE + a pair of bandoliers; one of the best 'normal' vests for load (outside of S&S); holds 8 lbs
 # - vn_b_vest_seal_03   - 'SEAL MG'; looks relatively normal; army belt with dual MG belts; holds 22 lbs
 # - vn_b_vest_seal_05   - 'SEAL scout'; army belt with NVA chest rig; holds 20 lbs
 # - vn_b_vest_sog_03    - 'SOG Demo'; holds 14 lbs
@@ -118,9 +134,11 @@ uniform:
 #  - vn_b_pack_lw_02    - 'Army MG'; lighter than the _05 by 0.7 lbs but only holds 34 lbs
 #  - vn_b_pack_lw_01    - 'Army Rifleman'; holds 33 lbs
 #  - vn_b_pack_lw_03    - 'Army Scout'; has entrenching tool; holds 32 lbs
+#  - vn_b_pack_lw_07    - 'Army Medic'; holds 32 lbs
 #  - vn_b_pack_trp_01_02- 'Army Tropical MG'; holds 35 lbs
 #  - vn_b_pack_trp_04_02- 'Army Tropical RTO'; largest RTO pack; holds 28 lbs
-# looks to be a couple of good SOG ones - to look at?
+#  - vn_b_pack_01       - 'SOG CISO'; small-looking pack, good for a scout; holds 30 lbs
+#  - vn_b_pack_04       - 'SOG CISO Scout'; just like the CISO above, but has a machette; holds 32 lbs
 
 ## Base loadouts
 
@@ -140,8 +158,33 @@ backpack:
     pk_556_45_clip_bandolier: 2
 
 primary:
-  name: vn_xm177e1
+  name: vn_xm177
   magazine: vn_m16_20_t_mag
+
+---
+
+name: HM_SOG_Grenadier_CAR15M203
+extends: [HM_SOG_Rifleman_CAR15]
+
+vest:
+  name: vn_b_vest_sog_05
+  contents:
+    vn_40mm_m381_he_mag: 8 # HE
+    vn_40mm_m433_hedp_mag: 2 # HEDP
+    vn_40mm_m397_ab_mag: 2 # HE airburst
+    # - marking smoke
+    vn_40mm_m682_smoke_r_mag: 1 # red smoke
+    vn_40mm_m716_smoke_y_mag: 1 # yellow smoke
+    vn_40mm_m717_smoke_p_mag: 1 # purple smoke
+
+backpack:
+  contents:
+    vn_40mm_m381_he_mag: 10 # HE
+    vn_40mm_m433_hedp_mag: 2 # HEDP
+    vn_40mm_m397_ab_mag: 2 # HE airburst
+
+primary:
+  name: vn_xm177_m203
 
 ## LMGs
 
@@ -173,8 +216,126 @@ name: HM_SOG_Medic_CAR15
 extends: [HM_SOG_Rifleman_CAR15, HM_MedicKit]
 
 backpack:
+  name: vn_b_pack_lw_07
   contents:
     pk_556_45_clip_bandolier: 1 # trade ammo for med kit
+
+primary:
+  name: vn_xm177_short # heavily-burdened roles carry the _marginally_ lighter shortened version
+
+### Demolitions
+
+---
+
+name: HM_SOG_Demo_CAR15
+extends: [HM_SOG_Rifleman_CAR15]
+
+vest:
+  name: vn_b_vest_sog_03
+  contents:
+    # - demolitions
+    vn_mine_m112_remote_mag: 3 # breaching charge
+    # - mines
+    vn_mine_m14_mag: 15 # extra toe poppers
+
+backpack:
+  name: vn_b_pack_lw_05
+  contents:
+    # - demolitions
+    vn_m14_grenade_mag: 2 # 1 x extra demo grenade over rifleman
+    vn_mine_satchel_remote_02_mag: 1 # satchel charge
+    # - defensive positions - extra to vanilla rifleman
+    vn_mine_m18_mag: 3 # claymore
+    ace_marker_flags_blue: 3
+    # - mines
+    vn_mine_tripwire_m16_04_mag: 10 # 4m trip wire mines
+
+primary:
+  name: vn_xm177_short # heavily-burdened roles carry the _marginally_ lighter shortened version
+
+# Scouts
+
+---
+
+name: HM_SOG_Scout_CAR15M203
+extends: [HM_SOG_Grenadier_CAR15M203]
+
+backpack:
+  name: vn_b_pack_lw_03
+
+---
+
+name: HM_SOG_Scout_IndigBase # Indigenous weapons scout base
+extends: [HM_Uniform_SOG, HM_BasicKit]
+
+vest:
+  name: vn_b_vest_seal_05
+
+backpack:
+  name: vn_b_pack_01 # nice, small scout pack, since most of the kit is in the vest
+
+---
+
+name: HM_SOG_Scout_PPSH
+extends: [HM_SOG_Scout_IndigBase]
+
+vest:
+  contents:
+    vn_ppsh41_71_t_mag: 2 # hoping 3 x drums is enough for a firefight
+    vn_ppsh41_35_t_mag: 2 # but a couple of extra stick mags just in case (drums weigh more per round than sticks)
+    pk_762_25_8Rnd_clip: 50
+
+primary:
+  name: vn_ppsh41
+  magazine: vn_ppsh41_71_t_mag
+
+---
+
+name: HM_SOG_Scout_Type64
+extends: [HM_SOG_Scout_IndigBase]
+
+uniform:
+  contents:
+    # the primary weapon is silenced, so drop the silenced secondary to save weight
+    vn_hd_mag: 0
+    pk_22LR_50Rnd_box: 0
+
+vest:
+  contents:
+    vn_type64_smg_mag: 14
+
+primary:
+  name: vn_type64_smg
+  magazine: vn_type64_smg_mag
+
+secondary:
+  name: ""
+
+# RTOs
+
+---
+
+name: HM_SOG_RTO_CAR15M203
+extends: [HM_SOG_Grenadier_CAR15M203]
+
+vest:
+  contents:
+    # - marking smoke, extra over the base grenadier
+    vn_40mm_m682_smoke_r_mag: 2 # red smoke
+    vn_40mm_m716_smoke_y_mag: 2 # yellow smoke
+    vn_40mm_m717_smoke_p_mag: 2 # purple smoke
+    # - drop non-personnel grenades to save weight
+    vn_40mm_m433_hedp_mag: 0
+    vn_40mm_m397_ab_mag: 0
+
+backpack:
+  name: vn_b_pack_trp_04_02
+  contents:
+    # - drop non-personnel grenades to save weight
+    vn_40mm_m433_hedp_mag: 0
+    vn_40mm_m397_ab_mag: 0
+
+
 
 ###
 ### SAS
@@ -182,6 +343,7 @@ backpack:
 
 ## Uniforms
 #  - vn_b_uniform_aus_06_01 - 'AUS 6'; olive BDUs, sleeves rolled up; holds 8 lbs
+#  - vn_b_uniform_sas_01_?? - the 'BDU SAS ?' uniforms hold 8 lbs; though they only come in ERDL
 
 ---
 

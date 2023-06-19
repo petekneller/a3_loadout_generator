@@ -84784,6 +84784,7 @@ vn_b_melee_m43_etool_01:
 vn_b_pack_01:
   mass: 50
   from: CfgVehicles
+  capacity: 300
 vn_b_pack_01_02:
   mass: 50
   from: CfgVehicles
@@ -84925,6 +84926,7 @@ vn_b_pack_03_xm177_pl:
 vn_b_pack_04:
   mass: 56.2
   from: CfgVehicles
+  capacity: 320
 vn_b_pack_04_02:
   mass: 56.2
   from: CfgVehicles
@@ -85217,6 +85219,7 @@ vn_b_pack_lw_06_m16_pl:
 vn_b_pack_lw_07:
   mass: 56.2
   from: CfgVehicles
+  capacity: 320
 vn_b_pack_lw_07_mat49_pl:
   mass: 56.2
   from: CfgVehicles
@@ -85879,43 +85882,43 @@ vn_b_uniform_macv_05_18:
 vn_b_uniform_macv_06_01:
   mass: 60
   from: CfgWeapons
-  capacity: 6
+  capacity: 60
 vn_b_uniform_macv_06_02:
   mass: 60
   from: CfgWeapons
-  capacity: 6
+  capacity: 60
 vn_b_uniform_macv_06_05:
   mass: 60
   from: CfgWeapons
-  capacity: 6
+  capacity: 60
 vn_b_uniform_macv_06_06:
   mass: 60
   from: CfgWeapons
-  capacity: 6
+  capacity: 60
 vn_b_uniform_macv_06_07:
   mass: 60
   from: CfgWeapons
-  capacity: 6
+  capacity: 60
 vn_b_uniform_macv_06_08:
   mass: 60
   from: CfgWeapons
-  capacity: 6
+  capacity: 60
 vn_b_uniform_macv_06_15:
   mass: 60
   from: CfgWeapons
-  capacity: 6
+  capacity: 60
 vn_b_uniform_macv_06_16:
   mass: 60
   from: CfgWeapons
-  capacity: 6
+  capacity: 60
 vn_b_uniform_macv_06_17:
   mass: 60
   from: CfgWeapons
-  capacity: 6
+  capacity: 60
 vn_b_uniform_macv_06_18:
   mass: 60
   from: CfgWeapons
-  capacity: 6
+  capacity: 60
 vn_b_uniform_nz_01_01:
   mass: 80
   from: CfgWeapons
@@ -85937,12 +85940,15 @@ vn_b_uniform_nz_06_01:
 vn_b_uniform_sas_01_06:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_sas_02_06:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_sas_03_06:
   mass: 80
   from: CfgWeapons
+  capacity: 80
 vn_b_uniform_seal_01_01:
   mass: 70
   from: CfgWeapons
