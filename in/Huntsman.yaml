@@ -1,6 +1,10 @@
 # todo
 # - the uzi would be a good lightweight gun for heavy loadouts (medic and demo) and with the silencer as a scout gun; the silenced secondary could prob be dropped
 # - a series of loadouts using the M2 as a lightweight gun for heavy loadouts (medic and demo); perhaps a few rifle grenades for demo purposes
+# - SAS
+#   - grenadier L2
+#   - scout L2
+#   - LMG L4
 
 # need to re-save:
 # - car15 scout
@@ -97,6 +101,28 @@ backpack:
     ACE_epinephrine: 10
     ACE_fieldDressing: 20
     ACE_bloodIV_500: 20
+
+---
+
+name: HM_DemoKit
+
+vest:
+  contents:
+    # - demolitions
+    vn_mine_m112_remote_mag: 3 # breaching charge
+    # - mines
+    vn_mine_m14_mag: 15 # extra toe poppers
+
+backpack:
+  contents:
+    # - demolitions
+    vn_m14_grenade_mag: 2 # 1 x extra demo grenade over rifleman
+    vn_mine_satchel_remote_02_mag: 1 # satchel charge
+    # - defensive positions - extra to vanilla rifleman
+    vn_mine_m18_mag: 3 # claymore
+    ace_marker_flags_blue: 3
+    # - mines
+    vn_mine_tripwire_m16_04_mag: 10 # 4m trip wire mines
 
 ###
 ### SOG
@@ -228,27 +254,13 @@ primary:
 ---
 
 name: HM_SOG_Demo_CAR15
-extends: [HM_SOG_Rifleman_CAR15]
+extends: [HM_SOG_Rifleman_CAR15, HM_DemoKit]
 
 vest:
   name: vn_b_vest_sog_03
-  contents:
-    # - demolitions
-    vn_mine_m112_remote_mag: 3 # breaching charge
-    # - mines
-    vn_mine_m14_mag: 15 # extra toe poppers
 
 backpack:
   name: vn_b_pack_lw_05
-  contents:
-    # - demolitions
-    vn_m14_grenade_mag: 2 # 1 x extra demo grenade over rifleman
-    vn_mine_satchel_remote_02_mag: 1 # satchel charge
-    # - defensive positions - extra to vanilla rifleman
-    vn_mine_m18_mag: 3 # claymore
-    ace_marker_flags_blue: 3
-    # - mines
-    vn_mine_tripwire_m16_04_mag: 10 # 4m trip wire mines
 
 primary:
   name: vn_xm177_short # heavily-burdened roles carry the _marginally_ lighter shortened version
@@ -413,6 +425,28 @@ primary:
   sight: ""
   muzzle: "vn_b_l1a1" # bayonet
 
+---
+
+name: HM_SAS_Rifleman_L2
+extends: [HM_Uniform_SAS, HM_BasicKit]
+
+vest:
+  name: vn_b_vest_anzac_01
+  contents:
+    vn_f1_smg_t_mag: 4
+
+backpack:
+  name: vn_b_pack_p44_02
+  contents:
+    pk_9_19_10Rnd_clip: 30
+
+primary:
+  name: vn_l2a3
+  magazine: vn_f1_smg_t_mag
+  rail: ""
+  sight: ""
+  muzzle: ""
+
 ## LMGs
 
 ---
@@ -458,7 +492,26 @@ backpack:
   contents:
     pk_9_19_10Rnd_clip: 20
 
+---
 
-# todo: add for Friday's SOG patrol loadouts for:
-# - scout, which is a grenadier
-# - demo
+name: HM_SAS_Medic_L2
+extends: [HM_SAS_Rifleman_L2, HM_MedicKit]
+
+backpack:
+  name: vn_b_pack_pfield_02
+  contents:
+    pk_9_19_10Rnd_clip: 20
+
+### Demo
+
+---
+
+name: HM_SAS_Demo_L2
+extends: [HM_SAS_Rifleman_L2, HM_DemoKit]
+
+vest:
+  name: vn_b_vest_sas_03
+
+backpack:
+  name: vn_b_pack_pfield_02
+
