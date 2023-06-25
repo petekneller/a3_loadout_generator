@@ -85355,6 +85355,7 @@ vn_b_pack_p08_01_m16_pl:
 vn_b_pack_p08_02:
   mass: 38.8
   from: CfgVehicles
+  capacity: 260
 vn_b_pack_p08_02_m16_m203_pl:
   mass: 38.8
   from: CfgVehicles

@@ -374,6 +374,7 @@ uniform:
 ## - vn_b_vest_sas_03   - 'SAS MG'; nothing really MG-ish about it, just lots of large pouches; holds 13 lbs
 
 ## Backpacks
+## - vn_b_pack_p08_02    - 'P08 2'; small size pack w/entrenching tool; holds 26 lbs
 ## - vn_b_pack_p44_02    - 'P44 2'; medium size pack w/entrenching tool; holds 29 lbs
 ## - vn_b_pack_pfield_02 - 'Field 2'; large pack w/entrenching tool; holds 32 lbs
 
@@ -447,6 +448,44 @@ primary:
   sight: ""
   muzzle: ""
 
+---
+
+name: HM_SAS_Grenadier_L2XM148
+extends: [HM_SAS_Rifleman_L2]
+
+uniform:
+  contents:
+    # discard secondary as primary weapons is silenced
+    vn_hd_mag: 0
+    pk_22LR_50Rnd_box: 0
+
+vest:
+  name: vn_b_vest_sas_02
+  contents:
+    vn_40mm_m381_he_mag: 4 # HE
+    vn_40mm_m433_hedp_mag: 2 # HEDP
+    vn_40mm_m397_ab_mag: 2 # HE airburst
+    # - marking smoke
+    vn_40mm_m682_smoke_r_mag: 1 # red smoke
+    vn_40mm_m716_smoke_y_mag: 1 # yellow smoke
+    vn_40mm_m717_smoke_p_mag: 1 # purple smoke
+
+backpack:
+  contents:
+    vn_40mm_m381_he_mag: 14 # HE
+    vn_40mm_m433_hedp_mag: 2 # HEDP
+    vn_40mm_m397_ab_mag: 2 # HE airburst
+
+primary:
+  name: vn_l34a1_xm148
+  magazine: vn_f1_smg_t_mag
+  rail: ""
+  sight: ""
+  muzzle: ""
+
+secondary: # discard secondary as primary weapons is silenced
+  name: ""
+
 ## LMGs
 
 ---
@@ -468,6 +507,26 @@ backpack:
 primary:
   name: vn_m60
   magazine: vn_m60_100_mag
+
+---
+
+name: HM_SAS_LMG_L4
+extends: [HM_Uniform_SAS, HM_BasicKit]
+
+vest:
+  name: vn_b_vest_sas_03
+  contents:
+    vn_l1a1_30_02_t_mag: 6
+
+backpack:
+  name: vn_b_pack_pfield_02
+  contents:
+    pk_762_51_60Rnd_clip_bandolier: 6
+    ACE_Canteen: 2 # for cooling barrels
+
+primary:
+  name: vn_l4
+  magazine: vn_l1a1_30_02_t_mag
 
 ### Medics
 
@@ -502,7 +561,7 @@ backpack:
   contents:
     pk_9_19_10Rnd_clip: 20
 
-### Demo
+### Demolitions
 
 ---
 
@@ -515,3 +574,12 @@ vest:
 backpack:
   name: vn_b_pack_pfield_02
 
+### Scouts
+
+---
+
+name: HM_SAS_Scout_L2
+extends: [HM_SAS_Grenadier_L2XM148]
+
+backpack:
+  name: vn_b_pack_p08_02
