@@ -65,8 +65,9 @@ backpack:
     # Torch
     vn_mx991_red: 1
     # Grenades
-    vn_m34_grenade_mag: 2
+    vn_m34_grenade_mag: 1
     vn_v40_grenade_mag: 2
+    vn_m7_grenade_mag: 1 # CS gas
     # - basic smoke marking
     vn_m18_red_mag: 1
     vn_m18_purple_mag: 1
