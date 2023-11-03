@@ -181,6 +181,26 @@ primary:
 
 ---
 
+name: HM_SOG_Rifleman_M14
+extends: [HM_Uniform_SOG, HM_BasicKit]
+
+vest:
+  name: vn_b_vest_sog_05
+  contents:
+    vn_m14_t_mag: 6
+
+backpack:
+  name: vn_b_pack_lw_01
+  contents:
+    pk_762_51_60Rnd_clip_bandolier: 3
+    vn_o_9x_m14: 1
+
+primary:
+  name: vn_m14
+  magazine: vn_m14_t_mag
+
+---
+
 name: HM_SOG_Grenadier_CAR15M203
 extends: [HM_SOG_Rifleman_CAR15]
 
@@ -240,6 +260,16 @@ backpack:
 
 primary:
   name: vn_xm177_short # heavily-burdened roles carry the _marginally_ lighter shortened version
+
+---
+
+name: HM_SOG_Medic_M14
+extends: [HM_SOG_Rifleman_M14, HM_MedicKit]
+
+backpack:
+  name: vn_b_pack_lw_07
+  contents:
+    pk_762_51_60Rnd_clip_bandolier: 2 # trade ammo for med kit
 
 ### Demolitions
 
