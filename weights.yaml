@@ -1805,6 +1805,9 @@ ACE_40mm_Flare_white:
   mass: 4
   magazine: true
   from: CfgMagazines
+ACE_Adenosine:
+  mass: 1
+  from: CfgWeapons
 ACE_Banana:
   mass: 1
   from: CfgWeapons
@@ -5138,6 +5141,10 @@ ACE_morphine:
 ACE_packingBandage:
   mass: 1
   from: CfgWeapons
+ACE_painkillers:
+  mass: 1
+  magazine: true
+  from: CfgMagazines
 ACE_personalAidKit:
   mass: 10
   from: CfgWeapons
@@ -39682,6 +39689,30 @@ SmokeShellRed:
   from: CfgMagazines
 SmokeShellYellow:
   mass: 4
+  magazine: true
+  from: CfgMagazines
+taro_MEGABRIGHT_Chemlight_Blue_mag:
+  mass: 2
+  magazine: true
+  from: CfgMagazines
+taro_MEGABRIGHT_Chemlight_Green_mag:
+  mass: 2
+  magazine: true
+  from: CfgMagazines
+taro_MEGABRIGHT_Chemlight_orange_mag:
+  mass: 2
+  magazine: true
+  from: CfgMagazines
+taro_MEGABRIGHT_Chemlight_red_mag:
+  mass: 2
+  magazine: true
+  from: CfgMagazines
+taro_MEGABRIGHT_Chemlight_White_mag:
+  mass: 2
+  magazine: true
+  from: CfgMagazines
+taro_MEGABRIGHT_Chemlight_yellow_mag:
+  mass: 2
   magazine: true
   from: CfgMagazines
 TFAR_anarc164:
