@@ -1,0 +1,179 @@
+name: HM_SPE_Identity
+
+identity: vn_b_WhiteHead_15_11
+insignia: BI
+voice: male01gre
+
+##
+## Standard Kit
+##
+
+---
+
+name: HM_SPE_BasicKit
+
+binoculars: SPE_Binocular_US
+map: ItemMap
+compass: SPE_US_ItemCompass
+watch: SPE_US_ItemWatch
+radio: ""
+terminal: ""
+
+uniform:
+  contents: # 5.7 lbs
+    # Navigation
+    grad_paceCountBeads_functions_paceCountBeads: 1
+    ACE_MapTools: 1
+    ZSN_Whistle: 1
+    # Explosives
+    ACE_DefusalKit: 1
+    ACE_Clacker: 1
+    # Personal medical
+    ACE_tourniquet: 2
+    ACE_splint: 1
+    ACE_morphine: 5
+    ACE_epinephrine: 5
+    ACE_fieldDressing: 10
+    ACE_bloodIV_500: 2
+    ACE_personalAidKit: 1
+    ACE_painkillers: 1
+    ACE_adenosine: 1
+    # Secondary weapon TODO
+
+vest:
+  contents: # 7.66 lbs
+    # Grenades
+    SPE_US_Mk_2: 4 # Mk 2 frag
+    SPE_US_M18: 2 # M8 white smoke
+
+backpack:
+  contents: # 5.92 lbs
+    # Torch
+    SPE_US_FL_TL122: 1
+    # Grenades
+    # - basic smoke marking
+    SPE_US_M18_Yellow: 1
+    SPE_US_M18_Red: 1
+    SPE_US_M18_Violet: 1
+    # - demolitions
+    SPE_US_AN_M14: 1 # incendiary grenade
+
+secondary:
+  name: "" 
+  magazine: ""
+  rail: ""
+  sight: ""
+  muzzle: ""
+
+---
+
+name: HM_SPE_MedicKit
+
+backpack:
+  contents: # 15.60 lbs
+    ACE_tourniquet: 2
+    ACE_splint: 2
+    ACE_personalAidKit: 1
+    ACE_morphine: 10
+    ACE_epinephrine: 10
+    ACE_fieldDressing: 20
+    ACE_bloodIV_500: 20
+
+# TODO: demo kit?
+
+###
+### US
+#########
+
+## Uniforms
+# pretty much all US uniforms hold 4 lbs, 
+#   aside from the US HBT 1938 coveralls (which don't look great) and the US Winter Jackets,
+#   both of which hold 6 lbs
+#
+# - U_SPE_US_Tank_Crew4 - US Winter Jacket HBT Leggings; holds 6 lbs
+
+## Headgear
+
+---
+
+name: HM_SPE_Uniform
+extends: [HM_SPE_Identity]
+
+headgear: H_SPE_US_Helmet
+facewear: ""
+uniform:
+  name: U_SPE_US_Tank_Crew4
+
+## Vests
+# - V_SPE_US_Vest_Garand_gp - US Cartridge Belt, M1923 (Ammo Bag); holds 16 lbs
+
+## Backpacks
+# - B_SPE_US_Backpack_roll_gp - US Haversack, M1928 (Blanket/GP Bag); holds 22 lbs
+
+## Base loadouts
+
+---
+
+name: HM_SPE_Rifleman_Garand
+extends: [HM_SPE_Uniform, HM_SPE_BasicKit]
+
+vest:
+  name: V_SPE_US_Vest_Garand_gp
+  contents:
+    SPE_8Rnd_762x63: 26
+    SPE_ACC_M1_Bayo: 1 # bayonet for Garand
+
+backpack:
+  name: B_SPE_US_Backpack_roll_gp
+  contents: {} # leaves lots of space to carry other roles' kit
+
+primary:
+  name: SPE_M1_Garand
+  magazine: SPE_8Rnd_762x63
+
+
+## Grenadiers
+
+---
+
+name: HM_SPE_Grenadier_Garand
+extends: [HM_SPE_Rifleman_Garand]
+
+vest:
+  contents:
+    SPE_ACC_M1_Bayo: 0 # can't really be used alongside the grenade adapter
+    SPE_8Rnd_762x63: 20 # reduced to carry rifle grenads in the vest
+    SPE_1Rnd_G_Mk2: 2
+
+backpack:
+  contents:
+    # rifle grenades
+    SPE_1Rnd_G_Mk2: 8 # frag
+    SPE_1Rnd_G_M9A1: 2 # HEAT
+
+primary:
+  muzzle: SPE_ACC_GL_M7
+
+## Medics
+
+---
+
+name: HM_SPE_Medic_Garand
+extends: [HM_SPE_Rifleman_Garand, HM_SPE_MedicKit]
+
+headgear: H_SPE_US_Helmet_Med
+
+backpack: {} # no special medic backpack available
+
+# ## MGs
+
+
+# ## Anti-tank ??
+
+# ## Flamethrower ??
+
+# ## Demolitions ??
+
+# ## Scouts ??
+
+# ## RTOs ??

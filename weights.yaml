@@ -26928,6 +26928,7 @@ B_SPE_US_Backpack_roll:
   from: CfgVehicles
 B_SPE_US_Backpack_roll_gp:
   mass: 50
+  capacity: 220
   from: CfgVehicles
 B_SPE_US_Bandoleer:
   mass: 10
@@ -93419,33 +93420,43 @@ U_SPE_US_Tank_Coverall_Trop_Legging:
   from: CfgWeapons
 U_SPE_US_Tank_Crew:
   mass: 60
+  capacity: 60
   from: CfgWeapons
 U_SPE_US_Tank_Crew2:
   mass: 60
+  capacity: 60
   from: CfgWeapons
 U_SPE_US_Tank_Crew3:
   mass: 60
+  capacity: 60
   from: CfgWeapons
 U_SPE_US_Tank_Crew4:
   mass: 60
+  capacity: 60
   from: CfgWeapons
 U_SPE_US_Tank_Crew5:
   mass: 60
+  capacity: 60
   from: CfgWeapons
 U_SPE_US_Tank_Crew6:
   mass: 60
+  capacity: 60
   from: CfgWeapons
 U_SPE_US_Tank_Crew_camo:
   mass: 60
+  capacity: 60
   from: CfgWeapons
 U_SPE_US_Tank_Crew_camo2:
   mass: 60
+  capacity: 60
   from: CfgWeapons
 U_SPE_US_Tank_Crew_medic:
   mass: 60
+  capacity: 60
   from: CfgWeapons
 U_SPE_US_Tank_Crew_medic_camo:
   mass: 60
+  capacity: 60
   from: CfgWeapons
 U_SPE_US_Technician:
   mass: 40
@@ -96089,6 +96100,7 @@ V_SPE_US_Vest_Garand_eng:
   from: CfgWeapons
 V_SPE_US_Vest_Garand_gp:
   mass: 32
+  capacity: 160
   from: CfgWeapons
 V_SPE_US_Vest_Garand_jfak:
   mass: 15
