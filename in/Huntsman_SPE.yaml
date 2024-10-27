@@ -96,26 +96,36 @@ backpack:
 
 ---
 
-name: HM_SPE_Uniform
+name: HM_SPE_Uniform_GI
 extends: [HM_SPE_Identity]
 
 headgear: H_SPE_US_Helmet
 facewear: ""
 uniform:
   name: U_SPE_US_Tank_Crew4
+backpack:
+  name: B_SPE_US_Backpack_roll_gp
 
 ## Vests
-# - V_SPE_US_Vest_Garand_gp - US Cartridge Belt, M1923 (Ammo Bag); holds 16 lbs
+# - V_SPE_US_Vest_Garand_gp       - US Cartridge Belt, M1923 (Ammo Bag); holds 16 lbs
+# - V_SPE_US_Vest_Bar             - US BAR Belt, M1937 (Gunner); holds 9 lbs
+# - V_SPE_US_Vest_Bar_assist      - US BAR Belt, M1937 (Assistant); holds 12 lbs, adds a general ammo pouch to the basic BAR belt
+# - V_SPE_US_Vest_Bar_M43         - US BAR Belt, M1937 (M43); holds 12 lbs
+# - V_SPE_US_Vest_Bar_jfak        - US Jungle BAR Belt, M1937 (Gunner); holds 9 lbs, adds grenade pouches to the basic BAR belt
+# - V_SPE_US_Vest_Bar_jfak_assist - US Jungle BAR Belt, M1937 (Assistant); holds 12 lbs, adds grenade pouches and general ammo bag to the basic BAR belt
+# - V_SPE_US_Vest_Asst_MG         - US Web Gear, M1936 (Ammo bag); holds 16 lbs, carbine pouches and GP ammo bag
+# - V_SPE_US_Vest_Asst_MG_jfak    - US Jungle Web Gear, M1936 (Ammo bag); holds 16 lbs, same as non-jungle with addition of grenade pouches
 
 ## Backpacks
-# - B_SPE_US_Backpack_roll_gp - US Haversack, M1928 (Blanket/GP Bag); holds 22 lbs
+# - B_SPE_US_Backpack_roll_gp     - US Haversack, M1928 (Blanket/GP Bag); holds 22 lbs
+# - B_SPE_US_Suspender_RocketBag - US Suspenders, M1936 (Bandoleer, M6); holds 21 lbs, just suspenders with a .30 bandoleer and Bazooka rocket bag
 
 ## Base loadouts
 
 ---
 
 name: HM_SPE_Rifleman_Garand
-extends: [HM_SPE_Uniform, HM_SPE_BasicKit]
+extends: [HM_SPE_Uniform_GI, HM_SPE_BasicKit]
 
 vest:
   name: V_SPE_US_Vest_Garand_gp
@@ -124,7 +134,6 @@ vest:
     SPE_ACC_M1_Bayo: 1 # bayonet for Garand
 
 backpack:
-  name: B_SPE_US_Backpack_roll_gp
   contents: {} # leaves lots of space to carry other roles' kit
 
 primary:
@@ -132,7 +141,7 @@ primary:
   magazine: SPE_8Rnd_762x63
 
 
-## Grenadiers
+## Grenadier
 
 ---
 
@@ -154,7 +163,7 @@ backpack:
 primary:
   muzzle: SPE_ACC_GL_M7
 
-## Medics
+## Medic
 
 ---
 
@@ -165,10 +174,65 @@ headgear: H_SPE_US_Helmet_Med
 
 backpack: {} # no special medic backpack available
 
-# ## MGs
+## MG
 
+---
 
-# ## Anti-tank ??
+name: HM_SPE_MG_BAR
+extends: [HM_SPE_Uniform_GI, HM_SPE_BasicKit]
+
+vest:
+  name: V_SPE_US_Vest_Bar_M43
+  contents:
+    SPE_7Rnd_45ACP_1911: 2
+    SPE_20Rnd_762x63: 6
+
+backpack:
+  contents:
+    SPE_20Rnd_762x63: 20
+
+primary:
+  name: SPE_M1918A2_erla_BAR
+  magazine: SPE_20Rnd_762x63
+
+secondary:
+  name: SPE_M1911
+  magazine: SPE_7Rnd_45ACP_1911
+
+## Anti-tank
+
+---
+
+name: HM_SPE_AT_M1
+extends: [HM_SPE_Uniform_GI, HM_SPE_BasicKit]
+
+vest:
+  name: V_SPE_US_Vest_Asst_MG_jfak
+  contents:
+    SPE_15Rnd_762x33: 16
+    # marking smoke shifted into the vest
+    SPE_US_M18_Yellow: 1
+    SPE_US_M18_Red: 1
+    SPE_US_M18_Violet: 1
+
+backpack:
+  name: B_SPE_US_Suspender_RocketBag
+  contents:
+    SPE_1Rnd_60mm_M6: 3
+    # no grenades - more space for rockets
+    SPE_US_M18_Yellow: 0
+    SPE_US_M18_Red: 0
+    SPE_US_M18_Violet: 0
+    SPE_US_AN_M14: 0
+
+primary:
+  name: SPE_M1_Carbine
+  magazine: SPE_15Rnd_762x33
+
+launcher:
+  name: SPE_M1A1_Bazooka
+  magazine: SPE_1Rnd_60mm_M6
+
 
 # ## Flamethrower ??
 

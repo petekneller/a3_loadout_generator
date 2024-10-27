@@ -27100,6 +27100,7 @@ B_SPE_US_Suspender:
   from: CfgVehicles
 B_SPE_US_Suspender_RocketBag:
   mass: 30
+  capacity: 210
   from: CfgVehicles
 B_SPE_US_Suspender_RocketBag_loaded:
   mass: 30
@@ -96028,24 +96029,31 @@ V_SPE_US_Vest_AB_padded_thompson_45_map:
   from: CfgWeapons
 V_SPE_US_Vest_Asst_MG:
   mass: 32
+  capacity: 160
   from: CfgWeapons
 V_SPE_US_Vest_Asst_MG_jfak:
   mass: 32
+  capacity: 160
   from: CfgWeapons
 V_SPE_US_Vest_Bar:
   mass: 17
+  capacity: 90
   from: CfgWeapons
 V_SPE_US_Vest_Bar_M43:
   mass: 25
+  capacity: 120
   from: CfgWeapons
 V_SPE_US_Vest_Bar_assist:
   mass: 25
+  capacity: 120
   from: CfgWeapons
 V_SPE_US_Vest_Bar_jfak:
   mass: 17
+  capacity: 90
   from: CfgWeapons
 V_SPE_US_Vest_Bar_jfak_assist:
   mass: 25
+  capacity: 120
   from: CfgWeapons
 V_SPE_US_Vest_Carbine:
   mass: 15
@@ -96176,18 +96184,23 @@ V_SPE_US_Vest_OD7_Asst_MG_jfak:
   from: CfgWeapons
 V_SPE_US_Vest_OD7_Bar:
   mass: 17
+  capacity: 90
   from: CfgWeapons
 V_SPE_US_Vest_OD7_Bar_M43:
   mass: 25
+  capacity: 120
   from: CfgWeapons
 V_SPE_US_Vest_OD7_Bar_assist:
   mass: 25
+  capacity: 120
   from: CfgWeapons
 V_SPE_US_Vest_OD7_Bar_jfak:
   mass: 17
+  capacity: 90
   from: CfgWeapons
 V_SPE_US_Vest_OD7_Bar_jfak_assist:
   mass: 25
+  capacity: 120
   from: CfgWeapons
 V_SPE_US_Vest_OD7_Carbine:
   mass: 15
