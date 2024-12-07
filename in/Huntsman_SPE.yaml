@@ -114,6 +114,7 @@ backpack:
 # - V_SPE_US_Vest_Bar_jfak        - US Jungle BAR Belt, M1937 (Gunner); holds 9 lbs, adds grenade pouches to the basic BAR belt
 # - V_SPE_US_Vest_Bar_jfak_assist - US Jungle BAR Belt, M1937 (Assistant); holds 12 lbs, adds grenade pouches and general ammo bag to the basic BAR belt
 # - V_SPE_US_Vest_Asst_MG         - US Web Gear, M1936 (Ammo bag); holds 16 lbs, carbine pouches and GP ammo bag
+# - V_SPE_US_Vest_M1919           - US Web Gear, M1936 (M1919); holds 10 lbs, fairly bare belt with pistol mags, GP ammo bag
 # - V_SPE_US_Vest_Asst_MG_jfak    - US Jungle Web Gear, M1936 (Ammo bag); holds 16 lbs, same as non-jungle with addition of grenade pouches
 
 ## Backpacks
@@ -198,6 +199,32 @@ primary:
 secondary:
   name: SPE_M1911
   magazine: SPE_7Rnd_45ACP_1911
+
+---
+
+name: HM_SPE_MG_M1919A4
+extends: [HM_SPE_Uniform_GI, HM_SPE_BasicKit]
+
+vest:
+  name: V_SPE_US_Vest_M1919
+  contents:
+    SPE_7Rnd_45ACP_1911: 2
+
+backpack:
+  name: B_SPE_US_Backpack_roll_gp
+  contents:
+    SPE_100Rnd_762x63: 5
+
+primary:
+  name: SPE_M1919A4
+  magazine: SPE_50Rnd_762x63
+
+secondary:
+  name: SPE_M1911
+  magazine: SPE_7Rnd_45ACP_1911
+
+launcher:
+  name: SPE_M2_Tripod
 
 ## Anti-tank
 

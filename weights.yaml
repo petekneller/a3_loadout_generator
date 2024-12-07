@@ -96139,6 +96139,7 @@ V_SPE_US_Vest_Grenadier:
   from: CfgWeapons
 V_SPE_US_Vest_M1919:
   mass: 19
+  capacity: 100
   from: CfgWeapons
 V_SPE_US_Vest_M1919_jfak:
   mass: 19
